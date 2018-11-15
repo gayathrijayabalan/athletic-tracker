@@ -21,6 +21,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
+import { AdminComponent } from './src/app/admin/admin.component';
+import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { AdminHeaderComponent } from './admin/admin-header/admin-header.componen
     WeatherComponent,
     DietComponent,
     NavbarComponent,
-    AdminHeaderComponent
+    AdminHeaderComponent,
+    AdminComponent,
+    AdminSidenavComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

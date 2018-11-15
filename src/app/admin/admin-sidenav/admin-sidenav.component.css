@@ -1,0 +1,10 @@
+.sidenav{
+    background-color: #232F3D;
+    min-height:65vw;
+}
+.title{
+    display: block;
+    float: none;
+    margin-left: auto;
+    line-height: 25px;
+}
