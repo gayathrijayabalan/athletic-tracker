@@ -1,0 +1,16 @@
+.header{
+    background-image: url('/assets/icons/loginbg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.rectangle{
+    height:70vh;
+    width: 40vw;
+    background-color: #232f3d;
+    opacity:0.3;
+    margin-top:7rem;
+}
+@media screen and(max-width:750){
+    
+}
