@@ -20,6 +20,7 @@ import { DietComponent } from './coach/diet/diet.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EventsComponent } from './coach/events/events.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ConditionComponent,
     WeatherComponent,
     DietComponent,
-    NavbarComponent
+    NavbarComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
