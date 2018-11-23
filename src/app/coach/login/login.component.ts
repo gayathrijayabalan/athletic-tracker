@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoachserviceService } from '../../shared/coachservice.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  error:{name:string,  message: string}= { name: '', message: '' }; 
 
-  constructor() { }
+  constructor(private coachser:CoachserviceService) { }
+  login(email,password){
+    
+
+  }
 
   ngOnInit() {
+    
+
   }
 
 }
