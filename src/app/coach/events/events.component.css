@@ -94,3 +94,8 @@ color: black;
 position: relative;
 padding-left: 45px;
 }
+.text-center{
+	text-align: center!important;
+	margin-top: 10rem;
+	padding-left: 10rem;
+}

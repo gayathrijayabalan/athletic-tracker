@@ -1,0 +1,13 @@
+    
+.wid-stats:before {
+    position: absolute;
+    top: 0;
+    left: -28px;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    height: 75px;
+    background-color: #fff;
+    content: " ";
+    transform: skewX(30deg);
+}
