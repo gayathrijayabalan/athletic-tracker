@@ -8,6 +8,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { ConditionComponent } from './coach/condition/condition/condition.component';
 import { LoginComponent } from './coach/login/login.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
+import { ReportsComponent } from './coach/reports/reports.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'navbar',component:NavbarComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
  {path:'admin-dashboard',component:AdminDashboardComponent},
  {path:'condition',component:ConditionComponent},
  {path:'login',component:LoginComponent},
- {path:'athlete',component:AthleteComponent}
+ {path:'athlete',component:AthleteComponent},
+ {path:'reports',component:ReportsComponent}
  
 ];
 

@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
+
 import { Router } from '@angular/router';
-import * as firebase from 'firebase/app';
-import {} from '@firebase/auth';
-import 'firebase/firestore';
+
+import { BehaviorSubject, Observable} from 'rxjs';
+import { switchMap, finalize } from 'rxjs/operators';
+
+
 
 
 @Injectable({
