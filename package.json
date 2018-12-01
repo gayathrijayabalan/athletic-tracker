@@ -30,6 +30,7 @@
     "bootstrap": "^4.0.0-beta",
     "bootstrap-material-design": "^4.1.1",
     "core-js": "^2.5.4",
+    "form-builder": "0.0.1",
     "lato-font": "^3.0.0",
     "npm": "^6.4.1",
     "rxjs": "~6.3.3",

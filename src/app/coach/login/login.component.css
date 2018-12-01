@@ -1,16 +1,44 @@
 .header{
-    background-image: url('/assets/icons/loginbg1.png');
+    background-image: url('/assets/icons/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
 .rectangle{
-    height:70vh;
-    width: 40vw;
-    background-color: #232f3d;
-    opacity:0.3;
-    margin-top:7rem;
+    height:60vh;
+    width: 25vw;
+    background-color: rgba(22, 9, 60,.30);
+    margin-top:8rem;
 }
-@media screen and(max-width:750){
+#email,#pwd{
+    background: transparent;
+    border:none;
+    height: 30px; 
+    /* width: 20vw; */
+    border-bottom: 1px solid;
+}
+/* .line{
+    position: relative;
+    height:35px;
+    border-bottom: 1px solid #fff
+} */
+input::placeholder{
+    color: #fff
+}
+/* .iconawe{
+    margin-bottom: 10px;
+} */
+.btn{
+    border-radius: 20px;
+    background-color: #f79431;
+ 
+}
+@media (min-width:300px) and (max-width:768px){
+    .rectangle{
+        height: 70vh;
+        width: 65vw;
+        background-color:  rgba(22, 9, 60,.30);
+        margin-top:6rem;
+    }
     
 }
