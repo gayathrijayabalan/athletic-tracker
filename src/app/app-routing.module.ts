@@ -7,8 +7,11 @@ import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.compo
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { ConditionComponent } from './coach/condition/condition/condition.component';
 import { LoginComponent } from './coach/login/login.component';
+import { EventsComponent } from './coach/events/events.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { ReportsComponent } from './coach/reports/reports.component';
+import { HeaderComponent } from './coach/header/header.component';
+import { StudentComponent } from './coach/student/student.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'navbar',component:NavbarComponent},
@@ -18,7 +21,10 @@ const routes: Routes = [
  {path:'condition',component:ConditionComponent},
  {path:'login',component:LoginComponent},
  {path:'athlete',component:AthleteComponent},
- {path:'reports',component:ReportsComponent}
+ {path:'reports',component:ReportsComponent},
+ {path:'events',component:EventsComponent},
+ {path:'header',component:HeaderComponent},
+ {path:'student',component:StudentComponent} 
  
 ];
 

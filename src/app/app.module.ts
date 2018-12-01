@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { AdminComponent } from './src/app/admin/admin.component';
- 
+import { EventsComponent } from './coach/events/events.component'; 
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
@@ -70,6 +70,7 @@ import {  MatAutocompleteModule,
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './coach/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -91,9 +92,11 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     AdminHeaderComponent,
     AdminComponent,
+    EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
     AthleteComponent,
+    FooterComponent,
 
   
 
