@@ -71,6 +71,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
+import { ForgetComponent } from './coach/forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { FooterComponent } from './coach/footer/footer.component';
     AdminDashboardComponent,
     AthleteComponent,
     FooterComponent,
+    ForgetComponent,
 
   
 
