@@ -1,5 +1,7 @@
-.avatar{
-    height: 20vh;
-    width: 20vh;
-    margin-bottom:  10px;
+table{
+    width:68vw;
+}
+.tab{
+    padding: 3rem;
+    padding-left: 0rem;
 }
