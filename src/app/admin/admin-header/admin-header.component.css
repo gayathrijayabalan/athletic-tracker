@@ -1,0 +1,127 @@
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1999;
+    width: 100%;
+    max-height: 60px;
+    min-height: 60px;
+    background-color: #37474f;
+}   
+.headerimg{
+    background-image: url('/assets/image/background/desktop/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+}
+.size{
+    overflow-x: hidden;
+}
+
+.left-nav {
+    display: block;
+    float: left;
+    width: 200px;
+    min-height: 60px;
+    background-color: #ff6e40;
+    
+}
+.fa{
+    color: #B0BEC5;
+    font-size: 1.2rem;
+}
+.quick-area .slantit {
+    position: relative;
+}
+ .logo-area {
+    display: block;
+    float: left;
+   
+    min-height: 60px;
+    
+}
+
+.line {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    z-index: 2;
+    width: 60px;
+    height: 3px;
+    background-color: #ff6e40;
+}
+h1{
+    
+    padding: 25px 45px 0 55px;
+ 
+    font-size: 28px;
+   
+   
+    text-transform: uppercase;
+   margin-left:-5rem;
+}
+.img1{
+    right: 10px;
+    width: 4vw;
+    height: 4vw;
+    
+}
+
+.pagetitle {
+    position: relative;
+    background-color: #fff;
+}
+.wid-stats {
+    position: relative;
+    height: 75px;
+    padding: 0 0 15px 0;
+    padding-right: 0;
+    margin-right: 45px;
+    margin-left: 45px;
+  
+}
+.wid-stats:before {
+    position: absolute;
+    top: -8px;
+    left: -28px;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    height: 75px;
+    background-color: #fff;
+    content: " ";
+    transform: skewX(30deg);
+}
+
+
+.wid-stats .stats-data {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0 0 15px;
+}
+
+.wid-stats:after {
+    position: absolute;
+    top: 1px;
+    right: -9rem;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 66px;
+    background-color: #fff;
+    content: " ";
+    transform: skewX(30deg);
+ 
+}
+.profile{
+    width:5vw;
+}
+.wid-stats .stats-data {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0 0 15px;
+}

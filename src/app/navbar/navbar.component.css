@@ -1,0 +1,13 @@
+.navbg{
+    background-color: #232f3d;
+    height: 70px;
+}
+.bg-primary {
+    background-color: #37474F !important;
+}
+.user{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}       
