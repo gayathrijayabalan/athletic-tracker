@@ -12,6 +12,7 @@ import { AthleteComponent } from './admin/athlete/athlete.component';
 import { ReportsComponent } from './coach/reports/reports.component';
 import { HeaderComponent } from './coach/header/header.component';
 import { StudentComponent } from './coach/student/student.component';
+import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'navbar',component:NavbarComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
  {path:'reports',component:ReportsComponent},
  {path:'events',component:EventsComponent},
  {path:'header',component:HeaderComponent},
- {path:'student',component:StudentComponent} 
+ {path:'student',component:StudentComponent},
+ {path:'viewdetail',component:ViewdetailComponent}
  
 ];
 
