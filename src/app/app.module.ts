@@ -73,6 +73,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
+import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +102,7 @@ import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
     FooterComponent,
     ForgetComponent,
     ViewdetailComponent,
+    EditprofileComponent,
 
   
 

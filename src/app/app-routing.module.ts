@@ -13,6 +13,8 @@ import { ReportsComponent } from './coach/reports/reports.component';
 import { HeaderComponent } from './coach/header/header.component';
 import { StudentComponent } from './coach/student/student.component';
 import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
+import { ForgetComponent } from './coach/forget/forget.component';
+import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'navbar',component:NavbarComponent},
@@ -26,7 +28,10 @@ const routes: Routes = [
  {path:'events',component:EventsComponent},
  {path:'header',component:HeaderComponent},
  {path:'student',component:StudentComponent},
- {path:'viewdetail',component:ViewdetailComponent}
+ {path:'viewdetail',component:ViewdetailComponent},
+ {path:'student',component:StudentComponent}, 
+ {path:'forget', component:ForgetComponent},
+ {path:'editprofile',component:EditprofileComponent}
  
 ];
 
