@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forget.component.css']
 })
 export class ForgetComponent implements OnInit {
-
+  model: any={};
   constructor() { }
 
   ngOnInit() {

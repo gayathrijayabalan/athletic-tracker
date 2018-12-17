@@ -72,6 +72,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
 import { ForgetComponent } from './coach/forget/forget.component';
+import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { ForgetComponent } from './coach/forget/forget.component';
     AthleteComponent,
     FooterComponent,
     ForgetComponent,
+    EditprofileComponent,
 
   
 
