@@ -18,7 +18,7 @@
               <mat-horizontal-stepper linear #stepper>
                 <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
                   <form [formGroup]="firstFormGroup">
-                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <ng-template matStepLabel>Personal details</ng-template>
                     <div class="row">
                       <div class="col-md-4">
                     <mat-form-field>
@@ -74,7 +74,7 @@
                 </mat-step>
                 <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
                   <form [formGroup]="secondFormGroup">
-                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <ng-template matStepLabel>Medical</ng-template>
                     <div class="row">
                         <div class="col-md-6">
                       <mat-form-field>
@@ -111,7 +111,7 @@
                 </mat-step>
                 <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
                   <form [formGroup]="thirdFormGroup">
-                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <ng-template matStepLabel>Picture</ng-template>
                     <mat-form-field>
                       <input matInput placeholder="image" formControlName="thirdCtrl" required>
                     

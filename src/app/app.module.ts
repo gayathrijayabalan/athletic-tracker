@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CoachserviceService } from './shared/coachservice.service';
+import { AuthGuardService } from './shared/auth-guard.service';
+import{AuthService}  from './shared/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -28,6 +30,11 @@ import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.compo
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
   Validators,ReactiveFormsModule  } from '@angular/forms';
+ import {AngularFirestore} from 'angularfire2/firestore';
+ import {AngularFireModule} from 'angularfire2';
+
+
+
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -69,8 +76,12 @@ import {  MatAutocompleteModule,
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
+import { ExerciseComponent } from './coach/exercise/exercise.component';
+import { initializeApp } from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -97,6 +108,7 @@ import { FooterComponent } from './coach/footer/footer.component';
     AdminDashboardComponent,
     AthleteComponent,
     FooterComponent,
+    ExerciseComponent,
 
   
 
@@ -144,13 +156,16 @@ import { FooterComponent } from './coach/footer/footer.component';
     MatTooltipModule,
     MatTreeModule,
     HttpClientModule,  
-  
+    HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
   
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [CoachserviceService],
+  providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AngularFirestore,AuthService],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
