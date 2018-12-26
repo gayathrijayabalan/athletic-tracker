@@ -24,20 +24,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
-import { AdminComponent } from './src/app/admin/admin.component';
+
 import { EventsComponent } from './coach/events/events.component'; 
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
   Validators,ReactiveFormsModule  } from '@angular/forms';
- import {AngularFirestore} from 'angularfire2/firestore';
+ import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
  import {AngularFireModule} from 'angularfire2';
 
-
-
+import { ForgetComponent } from './coach/forget/forget.component';
+import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -102,15 +103,15 @@ import { AngularFireAuth } from 'angularfire2/auth';
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-    AdminComponent,
+   
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
     AthleteComponent,
     FooterComponent,
     ExerciseComponent,
-
-  
+    ForgetComponent,
+    EditprofileComponent
 
   ],
   imports: [
@@ -159,6 +160,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
 
   

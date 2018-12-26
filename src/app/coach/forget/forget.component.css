@@ -4,7 +4,6 @@
     background-size: cover;
     min-height: 100vh;
 }
-
 .rectangle{
     height:60vh;
     width: 25vw;
@@ -18,17 +17,6 @@
     /* width: 20vw; */
     border-bottom: 1px solid;
 }
-/* .line{
-    position: relative;
-    height:35px;
-    border-bottom: 1px solid #fff
-} */
-input::placeholder{
-    color: #fff
-}
-/* .iconawe{
-    margin-bottom: 10px;
-} */
 .btn{
     border-radius: 20px;
     background-color: #f79431;

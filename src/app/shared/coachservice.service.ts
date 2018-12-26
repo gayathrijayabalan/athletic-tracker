@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
+import{User} from './user.model';
 
-
-import{} from 'angularfire2/firestore';
+import{ AngularFirestore } from 'angularfire2/firestore';
 import { Router } from '@angular/router';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { BehaviorSubject, Observable} from 'rxjs';
@@ -14,17 +14,10 @@ import { switchMap, finalize } from 'rxjs/operators';
   providedIn: 'root'  
 })
 export class CoachserviceService {
-  displayName: string;  
-  email;
-  phone;
-  dob;
+formData:User;
+  constructor(private router:Router, private afs:AngularFirestore) { }
+getUser(){
+  return this.afs.collection('user').snapshotChanges();
+}  
 
-  constructor(private router:Router) { }
-  
-  clientlogin(email,pass)
-  {
-    // this.uid$ = this.afAuth.auth.currentUser.uid;
-    // console.log(this.getuserdata(this.uid$)+"isis")
-    return this.clientlogin
-  } 
 } 

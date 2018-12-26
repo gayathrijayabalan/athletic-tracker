@@ -1,7 +1,11 @@
 table{
-    width:68vw;
+    width:100%;
 }
-.tab{
-    padding: 3rem;
-    padding-left: 0rem;
-}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  th.mat-sort-header-sorted {
+    color: black;
+  }
