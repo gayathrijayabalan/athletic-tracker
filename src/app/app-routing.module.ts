@@ -15,6 +15,7 @@ import { StudentComponent } from './coach/student/student.component';
 import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
+import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'navbar',component:NavbarComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
  {path:'viewdetail',component:ViewdetailComponent},
  {path:'student',component:StudentComponent}, 
  {path:'forget', component:ForgetComponent},
- {path:'editprofile',component:EditprofileComponent}
+ {path:'editprofile',component:EditprofileComponent},
+ {path:'addschedule',component:AddscheduleComponent},
  
 ];
 

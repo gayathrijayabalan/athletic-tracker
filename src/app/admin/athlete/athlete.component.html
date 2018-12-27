@@ -1,133 +1,123 @@
-
-<app-admin-header></app-admin-header>
-  <br>
+<app-admin-header>
+</app-admin-header>
+<br>
 <div class="row mt-4 ">
-   <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
-       <app-admin-sidenav></app-admin-sidenav>
-   </div>
-    <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 mx-auto mt-5">
-             <mat-horizontal-stepper linear #stepper>
-                <mat-step [stepControl]="firstFormGroup">
-                  <form [formGroup]="firstFormGroup">
-                    <ng-template matStepLabel>Personal Details</ng-template>
-                    <div class="row">
-                      <div class="col-md-4">
-                    <mat-form-field>
-                      <input matInput placeholder="Name" formControlName="firstCtrl" required>
-                      </mat-form-field>
-                      </div>
-                      <div class="col-md-4">
-                      <mat-form-field>
-                      <input matInput placeholder="Email" formControlName="emailCtrl" required>
-                    
-                    </mat-form-field>
-                  
-                    </div>
-                    <div class="col-md-4">
-                        <mat-form-field>
-                        <input matInput placeholder="Phonenumber" formControlName="phCtrl" required>
-                      
-                      </mat-form-field>
-                    
-                      </div>
-                      </div>
-                      <div class="row">
-              
-                          <div class="col-md-4">
-                              <mat-form-field>
-                              <input matInput placeholder="Dateofbirth" formControlName="dobCtrl" required>
-                            
-                            </mat-form-field>
-                          
-                            </div>
-                     
-                   
-                    <div class="col-md-4">
-                        <mat-form-field>
-                        <input matInput placeholder="class" formControlName="clCtrl" required>
-                      
-                      </mat-form-field>
-                    
-                      </div>
-                      <div class="col-md-4">
-                          <mat-form-field>
-                          <input matInput placeholder="Age" formControlName="ageCtrl" required>
-                        
-                        </mat-form-field>
-                      
-                        </div>
-                        
-                    </div>
-                      <div>
-                      <button mat-button matStepperNext  class="btn1">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                <mat-step [stepControl]="secondFormGroup" >
-                  <form [formGroup]="secondFormGroup">
-                    <ng-template matStepLabel>Medical</ng-template>
-                    <div class="row">
-                        <div class="col-md-6">
-                      <mat-form-field>
-                        <input matInput placeholder="Year of Admin" formControlName="yearCtrl" required>
-                        </mat-form-field>
-                        </div>
-                        
-                            <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput placeholder="BloodGroup" formControlName="bgCtrl" required>
-                            </mat-form-field>
-                            </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput placeholder="Height" formControlName="hgtCtrl" required>
-                            </mat-form-field>
-                            </div>
-                            
-                                <div class="col-md-6">
-                              <mat-form-field>
-                                <input matInput placeholder="Weight" formControlName="wtCtrl" required>
-                                </mat-form-field>
-                                </div>
-                                
-                            </div>
-                    <div>
-                      <button mat-button matStepperPrevious class="btn1 mr-2">Back</button>
-                      <button mat-button matStepperNext class="btn1">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                <mat-step [stepControl]="thirdFormGroup" >
-                  <form [formGroup]="thirdFormGroup">
-                    <ng-template matStepLabel>Profile</ng-template>
-                    <div>
-                      <input type="file" multiple=true (change)="importImages($event)">
-                    </div>
-                      
-                      
-                    
-                    <div>
-                      <button mat-button matStepperNext class="btn1 mt-3">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                  <div>
-                    <button mat-button matStepperPrevious class="btn1">Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
-                  </div>
-              
-              </mat-horizontal-stepper>
-              </div> 
-              
-              
-           
-       
-       
-        
-    
+  <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
+    <app-admin-sidenav></app-admin-sidenav>
+  </div>
+  <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 mx-auto mt-5">
+    <mat-horizontal-stepper linear #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Personal Details</ng-template>
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="Name" formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="Email" formControlName="emailCtrl" required>
+
+              </mat-form-field>
+
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="Phonenumber" formControlName="phCtrl" required>
+
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="Dateofbirth" formControlName="dobCtrl" required>
+
+              </mat-form-field>
+
+            </div>
+
+
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="class" formControlName="clCtrl" required>
+
+              </mat-form-field>
+
+            </div>
+            <div class="col-md-4">
+              <mat-form-field>
+                <input matInput placeholder="Age" formControlName="ageCtrl" required>
+
+              </mat-form-field>
+
+            </div>
+
+          </div>
+          <div>
+            <button mat-button matStepperNext class="btn1">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Medical</ng-template>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Year of Admin" formControlName="yearCtrl" required>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="BloodGroup" formControlName="bgCtrl" required>
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Height" formControlName="hgtCtrl" required>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Weight" formControlName="wtCtrl" required>
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div>
+            <button mat-button matStepperPrevious class="btn1 mr-2">Back</button>
+            <button mat-button matStepperNext class="btn1">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>Profile</ng-template>
+          <div>
+            <input type="file" multiple=true (change)="importImages($event)">
+          </div>
 
 
 
+          <div>
+            <button mat-button matStepperNext class="btn1 mt-3">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <div>
+        <button mat-button matStepperPrevious class="btn1">Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+
+    </mat-horizontal-stepper>
+  </div>
