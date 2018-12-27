@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { CoachserviceService } from './shared/coachservice.service';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -18,12 +18,13 @@ import { StrengtheningComponent } from './coach/strengthening/strengthening/stre
 import { ConditionComponent } from './coach/condition/condition/condition.component';
 import { WeatherComponent } from './coach/weather/weather.component';
 import { DietComponent } from './coach/diet/diet.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { AdminComponent } from './src/app/admin/admin.component';
-import { EventsComponent } from './coach/events/events.component'; 
+import{ AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
+import {AngularFireModule} from 'angularfire2';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
@@ -70,6 +71,13 @@ import {  MatAutocompleteModule,
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './coach/footer/footer.component';
+import { AddEventsComponent } from './admin/add-events/add-events.component';
+import { EventsComponent } from './admin/events/events.component';
+import { ModalComponent } from './admin/modal/modal.component';
+import { from } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { EventsService } from './shared/events.service';
 
 @NgModule({
   declarations: [
@@ -91,16 +99,23 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     AdminHeaderComponent,
     AdminComponent,
-    EventsComponent,
+  
     AdminSidenavComponent,
     AdminDashboardComponent,
     AthleteComponent,
+    FooterComponent,
+    AddEventsComponent,
+    EventsComponent,
+    ModalComponent,
 
   
 
   ],
   imports: [
     BrowserModule,
+   AngularFireModule.initializeApp(environment.firebaseConfig),
+   AngularFirestoreModule,
+   
     BrowserAnimationsModule,
     CommonModule,
     AppRoutingModule,
@@ -146,9 +161,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
   
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    
   ],
-  providers: [CoachserviceService],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

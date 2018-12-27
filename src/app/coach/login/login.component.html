@@ -1,27 +1,51 @@
-<div class="row header">
-    <div class="rectangle mx-auto">
-      <div class="row">
-          <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
-      </div>
-      <div class="row">    
-          <img src="/assets/icons/img.png" class="mx-auto ml-5">
-      </div>
-      <form class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12" #loginform="ngForm" (ngSubmit)="login(email.value, password.value)">
-      <div class="form-group mt-2">
-          <div class="row line w-50 mx-auto">
-                <p class="error text-center">{{ error.message }}</p>
-              <span class="iconsawe"> <i class="fa fa-user fa-md text-white"></i></span>
-              <input type="text" name="name" class="form-control text-white" id="name" placeholder="Username">         
-          </div>
-    
-          <div class="row line w-50 mx-auto">
-              <span class="iconsawe"> <i class="fa fa-unlock-alt fa-md text-white"></i></span>
-              <input type="password" name="name" class="form-control text-white" id="name" placeholder="password">         
-          </div>
-          <div class="row">
-              <button type="button" class="btn mx-auto mt-5 text-white">SIGN-IN</button>
-          </div>
-      </div>
-      </form>
+<div class="row">
+    <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 header mx-auto">
+        <div class="rectangle mx-auto">
+            <div class="row">
+                <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
+            </div>
+            <div class="row">
+                <img src="/assets/icons/img.png" class="mx-auto ml-5">
+            </div>
+            <form #loginform="ngForm" (ngSubmit)="login(email.value, password.value)">
+                <div class="mt-2">
+                    <div class="row mx-auto">
+                        <div class="col-lg-1 col-1">
+                            <span class="iconsawe mb-2"> <i class="fa fa-user fa-md text-white"></i></span>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                            <input type="text" name="email" class="form-control text-white" id="email" placeholder="Email" [(ngModel)]="model.email"
+                                #email="ngModel" [ngClass]="{ 'is-invalid': email.touched && email.invalid }" required email>
+                            <div *ngIf="email.touched && email.invalid" class="invalid-text">
+                                <div *ngIf="email.errors.required" class="text-danger">Email is required</div>
+                                <div *ngIf="email.errors.email" class="text-danger">Email must be a valid email address</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mx-auto mt-2">
+                        <div class="col-lg-1 col-1">
+                            <span class="iconsawe"> <i class="fa fa-unlock-alt fa-md text-white"></i></span>
+                        </div>
+                        <div class="col-lg-10 col-10">
+                            <input type="password" name="password" class="form-control text-white" id="pwd" placeholder="password" [(ngModel)]="model.pwd"
+                                #pwd="ngModel" [ngClass]="{ 'is-invalid': pwd.touched && pwd.invalid }" required minlength="6">
+                            <div *ngIf="pwd.touched && pwd.invalid" class="invalid-text">
+                                <div *ngIf="pwd.errors.required" class="text-danger">Password is required</div>
+                                <div *ngIf="pwd.errors.minlength" class="text-danger">Password must be at least 6 characters</div>
+                            </div>
+                        </div>
+                        <div class="row mx-auto mt-2">
+                            <a href="#">Forget Password?</a>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn mx-auto mt-5 text-white" value="submit" [disabled]="!loginform.valid">SIGN-IN</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>

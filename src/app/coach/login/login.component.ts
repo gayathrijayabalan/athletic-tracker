@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoachserviceService } from '../../shared/coachservice.service';
+import { FormBuilder, Validators, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +7,10 @@ import { CoachserviceService } from '../../shared/coachservice.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  error:{name:string,  message: string}= { name: '', message: '' }; 
-
-  constructor(private coachser:CoachserviceService) { }
-  login(email,password){
-    
-
-  }
+  model: any={};
+  constructor(){}
 
   ngOnInit() {
-    
 
-  }
-
+}
 }

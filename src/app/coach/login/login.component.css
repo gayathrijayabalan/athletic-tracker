@@ -1,45 +1,44 @@
 .header{
-    background-image: url('/assets/icons/loginbg1.png');
+    background-image: url('/assets/icons/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
 .rectangle{
-    height:70vh;
-    width: 40vw;
+    height:60vh;
+    width: 25vw;
     background-color: rgba(22, 9, 60,.30);
-    
-    margin-top:7rem;
+    margin-top:8rem;
 }
-#name {
+#email,#pwd{
     background: transparent;
     border:none;
-    position: absolute;
-    height: 30px;
-    margin: 0px 10px; 
+    height: 30px; 
+    /* width: 20vw; */
+    border-bottom: 1px solid;
 }
-.line{
+/* .line{
     position: relative;
     height:35px;
     border-bottom: 1px solid #fff
-}
+} */
 input::placeholder{
     color: #fff
 }
-.iconawe{
+/* .iconawe{
     margin-bottom: 10px;
-}
+} */
 .btn{
     border-radius: 20px;
     background-color: #f79431;
  
 }
-@media (min-width:300px) and (max-width:750px){
+@media (min-width:300px) and (max-width:768px){
     .rectangle{
-        height: 60vh;
-        width: 60vw;
+        height: 70vh;
+        width: 65vw;
         background-color:  rgba(22, 9, 60,.30);
-        margin-top:7rem;
+        margin-top:6rem;
     }
     
 }

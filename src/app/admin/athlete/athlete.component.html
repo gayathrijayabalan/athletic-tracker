@@ -1,47 +1,141 @@
-<button mat-raised-button (click)="isEditable = !isEditable">
-        {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
-      </button>
-      
-      <mat-horizontal-stepper linear #stepper>
-        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
-          <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Fill out your name</ng-template>
-            <mat-form-field>
-              <input matInput placeholder="Firstname" formControlName="firstCtrl" required>
-            
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
-          <form [formGroup]="secondFormGroup">
-            <ng-template matStepLabel>Fill out your address</ng-template>
-            <mat-form-field>
-              <input matInput placeholder="Address" formControlName="secondCtrl" required>
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-        <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
-          <form [formGroup]="thirdFormGroup">
-            <ng-template matStepLabel>Fill out your name</ng-template>
-            <mat-form-field>
-              <input matInput placeholder="image" formControlName="thirdCtrl" required>
-            
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-          </div>
-      
-      </mat-horizontal-stepper>
+
+  <app-admin-header></app-admin-header>
+  <br>
+<div class="row mt-4 ">
+   <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
+       <app-admin-sidenav></app-admin-sidenav>
+   </div>
+   <div class="col-md-9 col-sm-12 my-2 bg-light">
+    <div class="row mt-5">
+        <div class="col-md-6 col-lg-3">
+            <div class="row">
+                <div class="ml-5">
+              <button mat-raised-button (click)="isEditable = !isEditable">
+                {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+              </button>
+              
+              
+              <mat-horizontal-stepper linear #stepper>
+                <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <div class="row">
+                      <div class="col-md-4">
+                    <mat-form-field>
+                      <input matInput placeholder="Name" formControlName="firstCtrl" required>
+                      </mat-form-field>
+                      </div>
+                      <div class="col-md-4">
+                      <mat-form-field>
+                      <input matInput placeholder="Email" formControlName="emailCtrl" required>
+                    
+                    </mat-form-field>
+                  
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field>
+                        <input matInput placeholder="Phonenumber" formControlName="phCtrl" required>
+                      
+                      </mat-form-field>
+                    
+                      </div>
+                      </div>
+                      <div class="row">
+              
+                          <div class="col-md-4">
+                              <mat-form-field>
+                              <input matInput placeholder="Dateofbirth" formControlName="dobCtrl" required>
+                            
+                            </mat-form-field>
+                          
+                            </div>
+                     
+                   
+                    <div class="col-md-4">
+                        <mat-form-field>
+                        <input matInput placeholder="class" formControlName="clCtrl" required>
+                      
+                      </mat-form-field>
+                    
+                      </div>
+                      <div class="col-md-4">
+                          <mat-form-field>
+                          <input matInput placeholder="Age" formControlName="ageCtrl" required>
+                        
+                        </mat-form-field>
+                      
+                        </div>
+                        
+                    </div>
+                      <div>
+                      <button mat-button matStepperNext  class="btn1">Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <div class="row">
+                        <div class="col-md-6">
+                      <mat-form-field>
+                        <input matInput placeholder="Year of Admin" formControlName="yearCtrl" required>
+                        </mat-form-field>
+                        </div>
+                        
+                            <div class="col-md-6">
+                          <mat-form-field>
+                            <input matInput placeholder="BloodGroup" formControlName="bgCtrl" required>
+                            </mat-form-field>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                          <mat-form-field>
+                            <input matInput placeholder="Height" formControlName="hgtCtrl" required>
+                            </mat-form-field>
+                            </div>
+                            
+                                <div class="col-md-6">
+                              <mat-form-field>
+                                <input matInput placeholder="Weight" formControlName="wtCtrl" required>
+                                </mat-form-field>
+                                </div>
+                                
+                            </div>
+                    <div>
+                      <button mat-button matStepperPrevious>Back</button>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
+                  <form [formGroup]="thirdFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <mat-form-field>
+                      <input matInput placeholder="image" formControlName="thirdCtrl" required>
+                    
+                    </mat-form-field>
+                    <div>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+                  <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                  </div>
+              
+              </mat-horizontal-stepper>
+              </div>
+              </div>
+           
+        </div>
+        
+       
+        
+      </div>
+</div>
+</div>
+
+
