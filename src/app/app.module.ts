@@ -73,8 +73,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
-import { EventsComponent } from './admin/events/events.component';
-import { ModalComponent } from './admin/modal/modal.component';
+
 import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { EventsService } from './shared/events.service';
@@ -105,9 +104,8 @@ import { EventsService } from './shared/events.service';
     AthleteComponent,
     FooterComponent,
     AddEventsComponent,
-    EventsComponent,
-    ModalComponent,
-
+   
+  
   
 
   ],
