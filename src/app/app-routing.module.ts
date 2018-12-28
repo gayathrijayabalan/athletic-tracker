@@ -31,8 +31,6 @@ const routes: Routes = [
  {path:'reports',component:ReportsComponent},
  {path:'events',component:EventsComponent},
  {path:'header',component:HeaderComponent},
- {path:'student',component:StudentComponent},
-
  {path:'student',component:StudentComponent}, 
  {path:'forget', component:ForgetComponent},
  {path:'editprofile',component:EditprofileComponent},
