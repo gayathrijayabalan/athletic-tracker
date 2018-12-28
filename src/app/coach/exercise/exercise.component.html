@@ -1,0 +1,35 @@
+<table class="table table hover">
+  <thead>
+    <th>Name</th>
+    <th>Date & Time</th>
+    <th>Distance</th>
+    <th>Tag1</th>
+    <th>Tag2</th>
+    <th>Tag3</th>
+    <th>Tag4</th>
+    <th>Tag5</th>
+    <th>Tag6</th>
+    <th>Tag7</th>
+    <th>Tag8</th>
+    <th>Tag9</th>
+    <th>Tag10</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let exe of list1">
+      <td >{{exe.Name}}</td>
+      <td >{{exe.date}}</td>
+      <td >{{exe.distance}}</td>
+      <td >{{exe.tag1}}</td>
+      <td >{{exe.tag2}}</td>
+      <td >{{exe.tag3}}</td>
+      <td >{{exe.tag4}}</td>
+      <td >{{exe.tag5}}</td>
+      <td >{{exe.tag6}}</td>
+      <td >{{exe.tag7}}</td>
+      <td >{{exe.tag8}}</td>
+      <td >{{exe.tag9}}</td>
+      <td >{{exe.tag10}}</td>
+      <!-- <td ><a class="btn text-danger" (click)="onDelete(exe.id)"><i class="fa fa-trash"></i></a></td> -->
+    </tr>
+  </tbody>
+</table>

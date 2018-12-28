@@ -12,12 +12,15 @@ import { AthleteComponent } from './admin/athlete/athlete.component';
 import { ReportsComponent } from './coach/reports/reports.component';
 import { HeaderComponent } from './coach/header/header.component';
 import { StudentComponent } from './coach/student/student.component';
-import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
+import { DietComponent } from './coach/diet/diet.component';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
+import { ExerciseComponent } from './coach/exercise/exercise.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
+ {path:'',redirectTo:'/login',pathMatch:'full'},
+ {path:'diet',component:DietComponent},
  {path:'navbar',component:NavbarComponent},
  {path:'admin-header',component:AdminHeaderComponent},
  {path:'admin-sidenav',component:AdminSidenavComponent},
@@ -29,11 +32,12 @@ const routes: Routes = [
  {path:'events',component:EventsComponent},
  {path:'header',component:HeaderComponent},
  {path:'student',component:StudentComponent},
- {path:'viewdetail',component:ViewdetailComponent},
+
  {path:'student',component:StudentComponent}, 
  {path:'forget', component:ForgetComponent},
  {path:'editprofile',component:EditprofileComponent},
  {path:'addschedule',component:AddscheduleComponent},
+ {path:'exercise',component:ExerciseComponent},
  
 ];
 

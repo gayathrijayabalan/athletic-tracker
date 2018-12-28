@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { CoachserviceService } from './shared/coachservice.service';
+import { AuthGuardService } from './shared/auth-guard.service';
+import{AuthService}  from './shared/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -21,15 +24,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
-import { AdminComponent } from './src/app/admin/admin.component';
+
 import { EventsComponent } from './coach/events/events.component'; 
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
-  Validators,ReactiveFormsModule  } from '@angular/forms';
+  Validators,ReactiveFormsModule} from '@angular/forms';
+ import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
+ import {AngularFireModule} from 'angularfire2';
+
+import { ForgetComponent } from './coach/forget/forget.component';
+import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -68,25 +77,13 @@ import {  MatAutocompleteModule,
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
-import { ForgetComponent } from './coach/forget/forget.component';
-import { ViewdetailComponent } from './coach/viewdetail/viewdetail.component';
-import { EditprofileComponent } from './coach/editprofile/editprofile.component';
+import { ExerciseComponent } from './coach/exercise/exercise.component';
+import { initializeApp } from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
-import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
-import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-var config = {
-  apiKey: "AIzaSyCtxegniChEpc8jJ1JWndUpDaQ3223jtfc",
-  authDomain: "athletic-tracker-ecae3.firebaseapp.com",
-  databaseURL: "https://athletic-tracker-ecae3.firebaseio.com",
-  projectId: "athletic-tracker-ecae3",
-  storageBucket: "athletic-tracker-ecae3.appspot.com",
-  messagingSenderId: "652486795096"
-};
 
 @NgModule({
    
@@ -108,19 +105,16 @@ var config = {
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-    AdminComponent,
+   
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
     AthleteComponent,
     FooterComponent,
+    ExerciseComponent,
     ForgetComponent,
-    ViewdetailComponent,
     EditprofileComponent,
     AddscheduleComponent,
-
-  
-
   ],
   imports: [
    
@@ -166,19 +160,19 @@ var config = {
     MatTooltipModule,
     MatTreeModule,
     HttpClientModule,  
-    AngularFireModule.initializeApp(config),  // Add this
-    AngularFirestoreModule,    
-  
+    HttpModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
     FormsModule,
     ReactiveFormsModule,
-    DlDateTimePickerDateModule,
-    AngularDateTimePickerModule,
-    OwlDateTimeModule, 
-    OwlNativeDateTimeModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
   
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AngularFirestore,AuthService],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,7 +3,11 @@
     "rules": "database.rules.json"
   },
   "hosting": {
+<<<<<<< HEAD
     "public": "dist/Athletic",
+=======
+    "public": "athletic-tracker",
+>>>>>>> 5de32d868dca2a245ae1a7d4c62de2332d7f65cc
     "ignore": [
       "firebase.json",
       "**/.*",

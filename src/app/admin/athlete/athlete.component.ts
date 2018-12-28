@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
+import { CoachserviceService } from '../../shared/coachservice.service';
+import {AngularFirestore} from 'angularfire2/firestore'
 
 
 @Component({
@@ -8,31 +10,39 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./athlete.component.css']
 })
 export class AthleteComponent implements OnInit {
-  firstFormGroup:FormGroup;
-  secondFormGroup:FormGroup;
-  thirdFormGroup:FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+ 
+  constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
-      emailCtrl: ['',Validators.required],
-      phCtrl: ['',Validators.required],
-      dobCtrl: ['',Validators.required],
-      clCtrl: ['',Validators.required],
-      ageCtrl: ['',Validators.required],
-    });
-   
-    this.secondFormGroup = this._formBuilder.group({
-      yearCtrl: ['', Validators.required],
-      bgCtrl: ['', Validators.required],
-      hgtCtrl: ['', Validators.required],
-      wtCtrl: ['', Validators.required],
-    });
-    this.thirdFormGroup = this._formBuilder.group({
-      thirdCtrl: ['', Validators.required]
-    });
-    
-   
+    this.resetForm();
   }
+ 
+  resetForm(form?: NgForm) {
+    if (form != null)
+      form.resetForm();
+    this.service.formData = {
+      id:'',
+      fullName:'',
+      Email:'',
+      phone:'',
+      dob:'',
+      class:'',
+      age:'',
+      yearofadmin:'',
+      bloodgroup:'',
+      height:'',
+      weight:'',
+    
+    }
+  }
+ 
+ onSubmit(form:NgForm){
+   let data=form.value;
+   this.afs.collection('user').add(data);
+   this.resetForm(form);
+   console.log(data);
+ }
+ 
+
+ 
 }
