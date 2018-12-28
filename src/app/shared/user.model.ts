@@ -11,5 +11,11 @@ export interface User {
     bloodgroup:string;
     height:string;
     weight:string;
-
+    }
+export interface Events{
+    id:string;
+    eventname:string;
+    eventdate:any;
+    eventcity:string;
+    eventcountry:string;
 }

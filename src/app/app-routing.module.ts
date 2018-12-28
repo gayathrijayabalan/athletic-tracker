@@ -15,6 +15,7 @@ import { StudentComponent } from './coach/student/student.component';
 import { DietComponent } from './coach/diet/diet.component';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
+import { AddEventsComponent } from './admin/add-events/add-events.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -33,7 +34,9 @@ const routes: Routes = [
 
  {path:'student',component:StudentComponent}, 
  {path:'forget', component:ForgetComponent},
- {path:'editprofile',component:EditprofileComponent}
+ {path:'editprofile',component:EditprofileComponent},
+   {path:'add-events',component:AddEventsComponent}
+
  
 ];
 
