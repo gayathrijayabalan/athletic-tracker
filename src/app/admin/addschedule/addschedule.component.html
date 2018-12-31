@@ -14,73 +14,81 @@
                     <label>Date and Time</label><br>
                     <div class="input-group">
                         <span [owlDateTimeTrigger]="dt2" class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
-                        <input type="text" [owlDateTime]="dt2" name="Date" #date="ngModel" [(ngModel)]="service.formexercise.Date" placeholder="Date & Time" class="form-control hasDatepicker">
+                        <input type="text" [owlDateTime]="dt2" name="Date" #Date="ngModel" [(ngModel)]="service.formexercise.Date" placeholder="Date & Time" class="form-control hasDatepicker">
                         <owl-date-time #dt2></owl-date-time>
                     </div>
                 </div>
                 <div class="col-lg-3 col-12">
                     <label>Distance</label><br>
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" #distance="ngModel" [(ngModel)]="service.formexercise.Distance">
-                            Distance
+                    <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="vw">VW</option>
+                        <option value="audi" selected>Audi</option>
+                    </select>
+                    <!-- <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="distance" #Distance="ngModel" [(ngModel)]="service.formexercise.Distance">
+                    
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Link 1</a>
-                            <a class="dropdown-item" href="#">Link 2</a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item">100 Meter</a>
+                            <a class="dropdown-item">200 Meter</a>
+                            <a class="dropdown-item">400 Meter</a>
+                            <a class="dropdown-item">1600 Meter</a>
+                            <a class="dropdown-item">3200 Meter</a>
                         </div>
-                    </div>
+                    </div> -->
                   
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag1</label>
-                    <input type="text" class="form-control" name="Tag 1" id="Tag1" placeholder="Tag1" #tag1="ngModel" [(ngModel)]="service.formexercise.Tag1">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag1" #Tag1="ngModel" [(ngModel)]="service.formexercise.Tag1">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag2</label>
-                    <input type="text" class="form-control" name="Tag 2" id="Tag2" placeholder="Tag2" #tag2="ngModel" [(ngModel)]="service.formexercise.Tag2">
+                    <input type="text" class="form-control" name="Tag2" id="Tag2" placeholder="Tag2" #Tag2="ngModel" [(ngModel)]="service.formexercise.Tag2">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag3</label>
-                    <input type="text" class="form-control" name="Tag 3" id="Tag3" placeholder="Tag3" #tag3="ngModel" [(ngModel)]="service.formexercise.Tag3">
+                    <input type="text" class="form-control" name="Tag3" id="Tag3" placeholder="Tag3" #Tag3="ngModel" [(ngModel)]="service.formexercise.Tag3">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag4</label>
-                    <input type="text" class="form-control" name="Tag 4" id="Tag5" placeholder="Tag4" #tag4="ngModel" [(ngModel)]="service.formexercise.Tag4">
+                    <input type="text" class="form-control" name="Tag4" id="Tag4" placeholder="Tag4" #Tag4="ngModel" [(ngModel)]="service.formexercise.Tag4">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag5</label>
-                    <input type="text" class="form-control" name="Tag 5" id="Tag5" placeholder="Tag5" #tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
+                    <input type="text" class="form-control" name="Tag5" id="Tag5" placeholder="Tag5" #Tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag6</label>
-                    <input type="text" class="form-control" name="Tag 6" id="Tag6" placeholder="Tag6" #tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
+                    <input type="text" class="form-control" name="Tag6" id="Tag6" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag7</label>
-                    <input type="text" class="form-control" name="Tag 7" id="Tag7" placeholder="Tag7" #tag7="ngModel" [(ngModel)]="service.formexercise.Tag7">
+                    <input type="text" class="form-control" name="Tag7" id="Tag7" placeholder="Tag7" #Tag7="ngModel" [(ngModel)]="service.formexercise.Tag7">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag8</label>
-                    <input type="text" class="form-control" name="Tag 8" id="Tag8" placeholder="Tag 8" #tag8="ngModel" [(ngModel)]="service.formexercise.Tag8">
+                    <input type="text" class="form-control" name="Tag8" id="Tag8" placeholder="Tag 8" #Tag8="ngModel" [(ngModel)]="service.formexercise.Tag8">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag9</label>
-                    <input type="text" class="form-control" name="Tag 9" id="Tag9" placeholder="Tag 9" #tag9="ngModel" [(ngModel)]="service.formexercise.Tag9">
+                    <input type="text" class="form-control" name="Tag9" id="Tag9" placeholder="Tag 9" #Tag9="ngModel" [(ngModel)]="service.formexercise.Tag9">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag10</label>
-                    <input type="text" class="form-control" name="Tag 10" id="Tag10" placeholder="Tag 10" #tag10="ngModel" [(ngModel)]="service.formexercise.Tag10">
+                    <input type="text" class="form-control" name="Tag10" id="Tag10" placeholder="Tag 10" #Tag10="ngModel" [(ngModel)]="service.formexercise.Tag10">
                 </div>
             </div>
             <div class="row">

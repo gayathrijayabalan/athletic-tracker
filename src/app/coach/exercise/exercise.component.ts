@@ -9,12 +9,12 @@ import {  AngularFirestore } from 'angularfire2/firestore';
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
-  list1:Addschedule[];
+  list:Addschedule[];
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
     this.service.getAddschedule().subscribe(actionArray=>{
-      this.list1=actionArray.map(item=>{
+      this.list=actionArray.map(item=>{
         return{
           id:item.payload.doc.id,
           ...item.payload.doc.data()

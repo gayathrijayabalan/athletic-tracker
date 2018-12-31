@@ -118,8 +118,7 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
     EditprofileComponent,
     AddEventsComponent,
     AddscheduleComponent,
-    OwlDateTimeModule, 
-         OwlNativeDateTimeModule,
+
 
   ],
   imports: [
