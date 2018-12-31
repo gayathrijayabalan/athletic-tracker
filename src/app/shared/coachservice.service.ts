@@ -16,11 +16,13 @@ import { EventsComponent } from '../coach/events/events.component';
 })
 export class CoachserviceService {
 formData:User;
-addData:Events;
+formadd:Events;
 
   constructor(private router:Router, private afs:AngularFirestore) { }
 getUser(){
   return this.afs.collection('user').snapshotChanges();
 }  
-
+getEvent(){
+  return this.afs.collection('events').snapshotChanges()
+}
 } 

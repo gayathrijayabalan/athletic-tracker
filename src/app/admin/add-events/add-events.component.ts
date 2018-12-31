@@ -8,7 +8,7 @@ import { CoachserviceService } from 'src/app/shared/coachservice.service';
   styleUrls: ['./add-events.component.css']
 })
 export class AddEventsComponent implements OnInit {
- constructor(private service:CoachserviceService,private firestore:AngularFirestore) { }
+ constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
 this.resetForm();
@@ -16,18 +16,24 @@ this.resetForm();
   resetForm(form?:NgForm){
     if (form !=null)
     form.resetForm();
-    this.service.addData = {
+    this.service.formadd = {
       id:null,
       eventname:'',
       eventdate:'',
       eventcity:'',
       eventcountry:'',
+      AthleteAttendings:'',
+      MedalsWon:''
 }
+
   }
+
   onSubmit(form:NgForm){
+    console.log("dddddd");
     let data=form.value;
-    this.firestore .collection('events').add(data);
+    this.afs.collection('events').add(data);
     this.resetForm(form);
+    console.log(data+"events");
   }
 
 }
