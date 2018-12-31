@@ -1,9 +1,12 @@
 <app-admin-header></app-admin-header>
-<!-- <app-admin-sidenav></app-admin-sidenav> -->
-<div class="row">
-    <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12  mx-auto">
+<div class="row mt-4">
+        <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav mt-4">
+                <app-admin-sidenav></app-admin-sidenav> 
+            </div>
+    <div class="col-md-9 col-sm-12 my-2 bg-light">
+        <h1 class="text-center mt-5 pt-3">Add-Schedule</h1>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-            <div class="row mt-5 pt-5">
+            <div class="row">
                 <div class="col-lg-5 col-12">
                     <label>Name</label>
                     <input type="text" name="Name" #Name="ngModel" [(ngModel)]="service.formexercise.Name" class="form-control" placeholder="Name">
@@ -20,24 +23,12 @@
                 </div>
                 <div class="col-lg-3 col-12">
                     <label>Distance</label><br>
-                    <select>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="vw">VW</option>
-                        <option value="audi" selected>Audi</option>
+                    <select #Distance="ngModel" name="Distance" [(ngModel)]="service.formexercise.Distance" class="form-control">
+                        <option value="100 Meter">100 Meter</option>
+                        <option value="200 Meter">200 Meter</option>
+                        <option value="300">300 Meter</option>
+                        <option value="1600">1600 Meter</option>
                     </select>
-                    <!-- <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" name="distance" #Distance="ngModel" [(ngModel)]="service.formexercise.Distance">
-                    
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item">100 Meter</a>
-                            <a class="dropdown-item">200 Meter</a>
-                            <a class="dropdown-item">400 Meter</a>
-                            <a class="dropdown-item">1600 Meter</a>
-                            <a class="dropdown-item">3200 Meter</a>
-                        </div>
-                    </div> -->
                   
                 </div>
             </div>
@@ -98,7 +89,4 @@
            
         </form>
     </div>
-</div>
-<div class="row">
-    <app-exercise></app-exercise>
 </div>
