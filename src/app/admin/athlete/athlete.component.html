@@ -1,133 +1,75 @@
-
 <app-admin-header></app-admin-header>
   <br>
-<div class="row mt-4 ">
-   <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
-       <app-admin-sidenav></app-admin-sidenav>
-   </div>
-    <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 mx-auto mt-5">
-             <mat-horizontal-stepper linear #stepper>
-                <mat-step [stepControl]="firstFormGroup">
-                  <form [formGroup]="firstFormGroup">
-                    <ng-template matStepLabel>Personal Details</ng-template>
-                    <div class="row">
-                      <div class="col-md-4">
-                    <mat-form-field>
-                      <input matInput placeholder="Name" formControlName="firstCtrl" required>
-                      </mat-form-field>
-                      </div>
-                      <div class="col-md-4">
-                      <mat-form-field>
-                      <input matInput placeholder="Email" formControlName="emailCtrl" required>
-                    
-                    </mat-form-field>
-                  
-                    </div>
-                    <div class="col-md-4">
-                        <mat-form-field>
-                        <input matInput placeholder="Phonenumber" formControlName="phCtrl" required>
-                      
-                      </mat-form-field>
-                    
-                      </div>
-                      </div>
-                      <div class="row">
-              
-                          <div class="col-md-4">
-                              <mat-form-field>
-                              <input matInput placeholder="Dateofbirth" formControlName="dobCtrl" required>
-                            
-                            </mat-form-field>
-                          
-                            </div>
-                     
-                   
-                    <div class="col-md-4">
-                        <mat-form-field>
-                        <input matInput placeholder="class" formControlName="clCtrl" required>
-                      
-                      </mat-form-field>
-                    
-                      </div>
-                      <div class="col-md-4">
-                          <mat-form-field>
-                          <input matInput placeholder="Age" formControlName="ageCtrl" required>
-                        
-                        </mat-form-field>
-                      
-                        </div>
-                        
-                    </div>
-                      <div>
-                      <button mat-button matStepperNext  class="btn1">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                <mat-step [stepControl]="secondFormGroup" >
-                  <form [formGroup]="secondFormGroup">
-                    <ng-template matStepLabel>Medical</ng-template>
-                    <div class="row">
-                        <div class="col-md-6">
-                      <mat-form-field>
-                        <input matInput placeholder="Year of Admin" formControlName="yearCtrl" required>
-                        </mat-form-field>
-                        </div>
-                        
-                            <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput placeholder="BloodGroup" formControlName="bgCtrl" required>
-                            </mat-form-field>
-                            </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                          <mat-form-field>
-                            <input matInput placeholder="Height" formControlName="hgtCtrl" required>
-                            </mat-form-field>
-                            </div>
-                            
-                                <div class="col-md-6">
-                              <mat-form-field>
-                                <input matInput placeholder="Weight" formControlName="wtCtrl" required>
-                                </mat-form-field>
+  <div class="row mt-4 ">
+        <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav">
+                <app-admin-sidenav></app-admin-sidenav>
+            </div>
+            <div class="col-md-9 col-sm-12 my-2 bg-light">
+                    <div class="row mt-5">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="row">
+                                <div class="ml-5">
+                                        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                                                <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+                                                <div class="row">
+                                                  <div class="form-group  col-md-6">
+                                                    <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" id="name" placeholder="Full name" required>
+                                                    <div *ngIf="fullName.invalid && fullName.touched" class="validation-error">This field is required.</div>
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                    <input name="phone" #phone="ngModel" [(ngModel)]="service.formData.phone" class="form-control" id="phone" placeholder="phone">
+                                                  
+                                                  </div>
+                                                </div>
+                                                
+                                              <div class="row">
+                                                  <div class="form-group col-md-6">
+                                                      <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control"  id="email" placeholder="email">
+                                                      
+                                                  </div>
+                                                  <div class="form-group col-md-6">
+                                                      <input name="dob" #dob="ngModel" [(ngModel)]="service.formData.dob" class="form-control" id="dob" placeholder="Dob">
+                                                      
+                                                      </div>  
+                                                    </div>
+                                                      <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <input name="class" #class="ngModel" [(ngModel)]="service.formData.class" class="form-control" id="class"  placeholder="class">
+                                                          
+                                                        </div>
+                                                        <div class="form-group col-md-6 ">
+                                                            <input name="yearofadmin" #yearofadmin="ngModel" [(ngModel)]="service.formData.yearofadmin" class="form-control"  id="yearofadmin" placeholder="yearofadmin">
+                                                         
+                                                        </div>
+                                                      </div>
+                                                      <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <input name="bloodgroup" #bloodgroup="ngModel" [(ngModel)]="service.formData.bloodgroup" class="form-control"  id="bloodgroup" placeholder="bloodgroup">
+                                                         
+                                                        </div>
+                                                        <div class="form-group col-md-6 ">
+                                                            <input name="height" #height="ngModel" [(ngModel)]="service.formData.height" class="form-control"  id="height" placeholder="height">
+                                                        </div>
+                                                      </div>
+                                                      <div class="row">
+                                                          <div class="form-group col-md-6">
+                                                              <input name="weight" #weight="ngModel" [(ngModel)]="service.formData.weight" class="form-control"  id="weight" placeholder="weight">
+                                                           
+                                                          </div>
+                                                          <div class="form-group col-md-6 ">
+                                                              <input name="age" #age="ngModel" [(ngModel)]="service.formData.age" class="form-control"  id="age" placeholder="age">
+                                                          </div>
+                                                        </div>
+                                          
+                                                <div class="form-group">
+                                                     <div class="col-md-6 mx-auto">
+                                                        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn1  btn-block btn-info">SUBMIT</button>
+                                                     </div>
+                                                    </div>
+                                        </form> 
                                 </div>
-                                
                             </div>
-                    <div>
-                      <button mat-button matStepperPrevious class="btn1 mr-2">Back</button>
-                      <button mat-button matStepperNext class="btn1">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                <mat-step [stepControl]="thirdFormGroup" >
-                  <form [formGroup]="thirdFormGroup">
-                    <ng-template matStepLabel>Profile</ng-template>
-                    <div>
-                      <input type="file" multiple=true (change)="importImages($event)">
-                    </div>
-                      
-                      
-                    
-                    <div>
-                      <button mat-button matStepperNext class="btn1 mt-3">Next</button>
-                    </div>
-                  </form>
-                </mat-step>
-                  <div>
-                    <button mat-button matStepperPrevious class="btn1">Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
+                            </div>
                   </div>
-              
-              </mat-horizontal-stepper>
-              </div> 
-              
-              
-           
-       
-       
-        
-    
-
-
-
+            </div>
+  </div>

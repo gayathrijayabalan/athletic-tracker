@@ -1,0 +1,96 @@
+<app-admin-header></app-admin-header>
+<!-- <app-admin-sidenav></app-admin-sidenav> -->
+<div class="row">
+    <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12  mx-auto">
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <div class="row mt-5 pt-5">
+                <div class="col-lg-5 col-12">
+                    <label>Name</label>
+                    <input type="text" name="Name" #Name="ngModel" [(ngModel)]="service.formexercise.Name" class="form-control" placeholder="Name">
+                    
+                </div>
+
+                <div class="col-lg-4 col-12">
+                    <label>Date and Time</label><br>
+                    <div class="input-group">
+                        <span [owlDateTimeTrigger]="dt2" class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
+                        <input type="text" [owlDateTime]="dt2" name="date" #date="ngModel" [(ngModel)]="service.formexercise.date" placeholder="Date & Time" class="form-control hasDatepicker">
+                        <owl-date-time #dt2></owl-date-time>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                    <label>Distance</label><br>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" #distance="ngModel" [(ngModel)]="service.formexercise.distance">
+                            Distance
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Tag1</label>
+                    <input type="text" class="form-control" name="Tag 1" id="Tag1" placeholder="Tag1" #tag1="ngModel" [(ngModel)]="service.formexercise.tag1">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Tag2</label>
+                    <input type="text" class="form-control" name="Tag 2" id="Tag2" placeholder="Tag2" #tag2="ngModel" [(ngModel)]="service.formexercise.tag2">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Tag3</label>
+                    <input type="text" class="form-control" name="Tag 3" id="Tag3" placeholder="Tag3" #tag3="ngModel" [(ngModel)]="service.formexercise.tag3">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Tag4</label>
+                    <input type="text" class="form-control" name="Tag 4" id="Tag5" placeholder="Tag4" #tag4="ngModel" [(ngModel)]="service.formexercise.tag4">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Tag5</label>
+                    <input type="text" class="form-control" name="Tag 5" id="Tag5" placeholder="Tag5" #tag5="ngModel" [(ngModel)]="service.formexercise.tag5">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Tag6</label>
+                    <input type="text" class="form-control" name="Tag 6" id="Tag6" placeholder="Tag6" #tag6="ngModel" [(ngModel)]="service.formexercise.tag6">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Tag7</label>
+                    <input type="text" class="form-control" name="Tag 7" id="Tag7" placeholder="Tag7" #tag7="ngModel" [(ngModel)]="service.formexercise.tag7">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Tag8</label>
+                    <input type="text" class="form-control" name="Tag 8" id="Tag8" placeholder="Tag 8" #tag8="ngModel" [(ngModel)]="service.formexercise.tag8">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Tag9</label>
+                    <input type="text" class="form-control" name="Tag 9" id="Tag9" placeholder="Tag 9" #tag9="ngModel" [(ngModel)]="service.formexercise.tag9">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Tag10</label>
+                    <input type="text" class="form-control" name="Tag 10" id="Tag10" placeholder="Tag 10" #tag10="ngModel" [(ngModel)]="service.formexercise.tag10">
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-3">Submit</button>
+            </div>
+        
+           
+        </form>
+    </div>
+</div>
+<div class="row">
+    <app-exercise></app-exercise>
+</div>

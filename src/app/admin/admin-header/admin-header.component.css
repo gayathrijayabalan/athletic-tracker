@@ -104,8 +104,8 @@ h1{
 
 .wid-stats:after {
     position: absolute;
-    top: 1px;
-    right: -9rem;
+    top: 7px;
+    right: -12rem;
     z-index: 1;
     display: block;
     width: 40px;

@@ -1,26 +1,10 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import {MatSort, MatPaginator, MatTableDataSource} from '@angular/material';
-
-export interface PeriodicElement {
-  name: string;
-  sno: number;
-  phonenumber: number;
-  email: any;
-  button:any;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {sno: 1, name: 'Swathi', phonenumber: 66554223,email: 'sa@gmail.com',button:''},
-  {sno: 2, name: 'Sindhu', phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-  {sno: 3, name: 'Gayu', phonenumber: 665542233, email: 'sa@gmail.com',button:''},
-  {sno: 4, name: 'Deepa', phonenumber: 66554223,email: 'sa@gmail.com',button:''},
-  {sno: 5, name: 'Mary', phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-  {sno: 6, name: 'Priya', phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-  {sno: 7, name: 'Lavi', phonenumber: 66554223,email: 'sa@gmail.com',button:''},
-  {sno: 8, name: 'Prabha',phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-  {sno: 9, name: 'Arthi', phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-  {sno: 10, name: 'Revathi', phonenumber: 66554223, email: 'sa@gmail.com',button:''},
-
-];
+import { CoachserviceService } from '../../shared/coachservice.service';
+import { User } from '../../shared/user.model';
+import{AngularFirestore} from 'angularfire2/firestore';
+import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
+  
 
 @Component({
   selector: 'app-student',
@@ -29,20 +13,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class StudentComponent implements OnInit {
   displayedColumns: string[] = ['sno', 'name', 'phonenumber', 'email','button'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-  constructor() { }
+  list:User[];
+  constructor(private service:CoachserviceService,private fs:AngularFirestore) { }
 
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    this.service.getUser().subscribe(actionArrray=>{
+      this.list=actionArrray.map(item=>{
+        return {
+          id:item.payload.doc.id,
+          ...item.payload.doc.data()}as User;
+      })
+    });
+  
   }
 
   }
