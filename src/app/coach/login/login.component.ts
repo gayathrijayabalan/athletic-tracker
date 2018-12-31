@@ -17,12 +17,13 @@ export class LoginComponent implements OnInit {
   }
   login(){
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    console.log("gguj");
   }
   logout(){
     this.afAuth.auth.signOut();
   }
   
-
+  
   ngOnInit() {
     
 
