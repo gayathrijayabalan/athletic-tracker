@@ -29,4 +29,5 @@ getEvent(){
 getAddschedule(){
   return this.afs.collection('addschedule').snapshotChanges();
 }
+
 } 
