@@ -1,68 +1,35 @@
-<app-navbar></app-navbar>
-<div class="col-md-9 col-12 mx-auto mt-5 exercise">
-
-  <table class="table table-bordered exercise">
-      <thead>
-        <tr>
-          <th scope="col">Day 1 </th>
-          <th scope="col">Day 2 </th>
-          <th scope="col">Day 3 </th>
-          <th scope="col">Day 4 </th>
-          <th scope="col">Day 5 </th>
-          <th scope="col">Day 6 </th>
-          <th scope="col">Day 7 </th>
-        </tr>
-      </thead>
-    </table>
-    <table class="table table-hover">
-      <tbody>
-      <tr style="background-color:#FF9933; color:#fff;">
-        <th>1 Aerobic Quality</th>
-        <th>SETS</th>
-        <th>REPS/TIME</th>
-        <th>REST(S)</th>
-  </tr>
-  <tr>
-    <td> barball press</td>
-    <td>3</td>
-    <td>10</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td> barball press</td>
-    <td>3</td>
-    <td>10</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td> barball press</td>
-    <td>3</td>
-    <td>10</td>
-    <td>0</td>
-  </tr>   
-  </tbody>
+<table class="table table hover">
+  <thead>
+    <th>Name</th>
+    <th>Date & Time</th>
+    <th>Distance</th>
+    <th>Tag1</th>
+    <th>Tag2</th>
+    <th>Tag3</th>
+    <th>Tag4</th>
+    <th>Tag5</th>
+    <th>Tag6</th>
+    <th>Tag7</th>
+    <th>Tag8</th>
+    <th>Tag9</th>
+    <th>Tag10</th>
+  </thead>
   <tbody>
-    <tr style="background-color:#FF9933; color:#fff;" >
-  
-        <th>2 Warmup</th>
-        <th>SETS</th>
-        <th>REPS/TIME</th>
-        <th>REST(S)</th>
-  
-  </tr>
-  <tr>
-    <td>barball press</td>
-    <td>3</td>
-    <td>10</td>
-    <td>0</td> 
-  </tr>
-  <tr>
-    <td> barball press</td>
-    <td>3</td>
-    <td>10</td>
-    <td>0</td>
-  
-  </tr>  
+    <tr *ngFor="let exe of list1">
+      <td >{{exe.Name}}</td>
+      <td >{{exe.date}}</td>
+      <td >{{exe.distance}}</td>
+      <td >{{exe.tag1}}</td>
+      <td >{{exe.tag2}}</td>
+      <td >{{exe.tag3}}</td>
+      <td >{{exe.tag4}}</td>
+      <td >{{exe.tag5}}</td>
+      <td >{{exe.tag6}}</td>
+      <td >{{exe.tag7}}</td>
+      <td >{{exe.tag8}}</td>
+      <td >{{exe.tag9}}</td>
+      <td >{{exe.tag10}}</td>
+      <!-- <td ><a class="btn text-danger" (click)="onDelete(exe.id)"><i class="fa fa-trash"></i></a></td> -->
+    </tr>
   </tbody>
-  </table>
-  </div>
+</table>
