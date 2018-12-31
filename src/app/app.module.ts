@@ -29,7 +29,7 @@ import { EventsComponent } from './coach/events/events.component';
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
-  Validators,ReactiveFormsModule  } from '@angular/forms';
+  Validators,ReactiveFormsModule} from '@angular/forms';
  import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
  import {AngularFireModule} from 'angularfire2';
 
@@ -38,7 +38,7 @@ import { EditprofileComponent } from './coach/editprofile/editprofile.component'
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -83,8 +83,10 @@ import { FooterComponent } from './coach/footer/footer.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { initializeApp } from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 
 @NgModule({
+   
   declarations: [
     AppComponent,
     LoginComponent,
@@ -111,10 +113,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
     FooterComponent,
     ExerciseComponent,
     ForgetComponent,
-    EditprofileComponent
-
+    EditprofileComponent,
+    AddscheduleComponent,
   ],
   imports: [
+   
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
@@ -158,6 +161,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,

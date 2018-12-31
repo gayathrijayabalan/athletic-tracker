@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{User} from './user.model';
+import{User,Addschedule} from './user.model';
 
 import{ AngularFirestore } from 'angularfire2/firestore';
 import { Router } from '@angular/router';
@@ -15,9 +15,12 @@ import { switchMap, finalize } from 'rxjs/operators';
 })
 export class CoachserviceService {
 formData:User;
+formexercise:Addschedule;
   constructor(private router:Router, private afs:AngularFirestore) { }
 getUser(){
   return this.afs.collection('user').snapshotChanges();
 }  
-
+getAddschedule(){
+    return this.afs.collection('addschedule').snapshotChanges();
+}
 } 
