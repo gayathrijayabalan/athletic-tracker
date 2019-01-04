@@ -1,75 +1,13 @@
-@media screen and (max-width: 768px) { 
-	.event1 {
-   background-image: url('/assets/icons/bg.png');
-   background-repeat: no-repeat;
-   background-size: cover;
-   min-height: 90vh;
-   margin-top: -1rem;
-	} }
-	.event1 {
-	 background-image: url('/assets/icons/bg.png');
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 min-height: 90vh;
-	 margin-top: -1rem;
-	  }
-	@media screen and (max-width: 768px) { 
+.date{
+	background-color: #e9ecef;
+	   width: 20vw;
+	height: 15vh;
+	   color: black;
 	
-	.box{
-	 height:59vh;
-	width: 73vw;
-	background-color: rgba(22, 9, 60,.30);
+   }
+   .event{
+	background: #dc8816;
+	width: 20vw;
+	height: 10vh;
 	
-	margin-top:7rem;
-	}}
-	.box{
-	 height:50vh;
-	width: 21vw;
-	background-color: rgba(22, 9, 60,.30);
-	
-	margin-top:7rem;
-	}
-	
-	
-	@media screen and (max-width: 768px) { 
-	.para1{
-	 margin-top: -1rem;
-	 color:#F79431;
-	}
-	.para{
-	 color:#F79431;
-	 font-weight: bolder
-	}
-	.map{
-	 font-size:20px;
-   
-	 color:#F79431;
-	}
-	.para2{
-	 color:#e54b01;
-	 font-size: 1rem;
-	 text-align: center;
-	}
-	.head1{
-	 margin-top: 10px; }
-	}
-	.para1{
-	 margin-top: -1rem;
-	 color:#F79431;
-	}
-	.para{
-	 color:#F79431;
-	 font-weight: bolder
-	}
-	.map{
-	 font-size:20px;
-   
-	 color:#F79431;
-	}
-	.para2{
-	 color:#e54b01;
-	 font-size: 1rem;
-	 text-align: center;
-	}
-	.head1{
-	 margin-top: 10px; }
+   }

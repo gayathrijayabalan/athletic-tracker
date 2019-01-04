@@ -14,7 +14,7 @@ import { NgForm } from '@angular/forms';
 export class AddscheduleComponent implements OnInit {
 
 
-  constructor(private service: CoachserviceService,private afs :AngularFirestore,) { }
+  constructor(public service: CoachserviceService,private afs :AngularFirestore,) { }
 
   ngOnInit() {
     this.resetForm();

@@ -2,7 +2,7 @@
 export interface User {
     id:string;
    fullName:string;
-   Email:string;
+   email:string;
    phone:string;
     dob:string;
     class:string;
@@ -18,8 +18,8 @@ export interface Events{
     eventdate:any;
     eventcity:string;
     eventcountry:string;
-    AthleteAttendings:string;
-    MedalsWon:string;
+    athleteattendings:string;
+    medalswon:string;
     
 }
 export interface Addschedule{

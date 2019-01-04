@@ -12,7 +12,7 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 export class LoginComponent implements OnInit {
   logintemp:string;
   message:string;
-  constructor(private  afAuth:AngularFireAuth,private service:CoachserviceService){
+  constructor(public afAuth:AngularFireAuth,private service:CoachserviceService){
     
   }
   login(){
