@@ -25,9 +25,9 @@ this.resetForm();
       AthleteAttendings:'',
       MedalsWon:''
 }
-
+console.log("dgh");
   }
-
+ 
   onSubmit(form:NgForm){
     console.log("dddddd");
     let data=form.value;

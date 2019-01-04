@@ -29,5 +29,7 @@ getEvent(){
 getAddschedule(){
   return this.afs.collection('addschedule').snapshotChanges();
 }
-
+loginnext(){
+  this.router.navigate(['/dashboard'],{ skipLocationChange: true });
+}
 } 
