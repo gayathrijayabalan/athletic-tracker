@@ -22,18 +22,18 @@ this.resetForm();
       eventdate:'',
       eventcity:'',
       eventcountry:'',
-      AthleteAttendings:'',
-      MedalsWon:''
+      athleteattendings:'',
+      medalswon:''
 }
 
   }
 
   onSubmit(form:NgForm){
-    console.log("dddddd");
+   
     let data=form.value;
     this.afs.collection('events').add(data);
     this.resetForm(form);
-    console.log(data+"events");
+   
   }
 
 }

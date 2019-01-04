@@ -36,7 +36,8 @@ const routes: Routes = [
  
  {path:'forget', component:ForgetComponent},
  {path:'editprofile',component:EditprofileComponent},
-   {path:'add-events',component:AddEventsComponent}
+   {path:'add-events',component:AddEventsComponent},
+   {path:'events',component:EventsComponent}
 
  
 ];

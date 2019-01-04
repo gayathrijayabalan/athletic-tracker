@@ -33,15 +33,8 @@
     position: absolute;
 }
 .modal-content{
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
-
-div.validation-error{
-    width: 100%;
-    margin-top: .25rem;
-    font-size: 80%;
-    color: #dc3545;
-}
-input.touched.ng-invalid{
-    border-color: red;
+.btn1{
+    margin-left: 2rem;
 }

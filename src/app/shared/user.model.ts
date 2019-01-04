@@ -18,8 +18,8 @@ export interface Events{
     eventdate:any;
     eventcity:string;
     eventcountry:string;
-    AthleteAttendings:string;
-    MedalsWon:string;
+    athleteattendings:string;
+    medalswon:string;
     
 }
 export interface Addschedule{
