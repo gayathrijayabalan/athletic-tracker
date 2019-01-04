@@ -85,6 +85,7 @@ import { initializeApp } from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
+import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 
  
 @NgModule({
@@ -118,6 +119,7 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
     EditprofileComponent,
     AddEventsComponent,
     AddscheduleComponent,
+    ViewdetailsComponent,
 
 
   ],
@@ -171,7 +173,7 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
