@@ -5,9 +5,42 @@
     color: black;
 	
 }
+
 .event{
 	background: #dc8816;
 	width: 20vw;
 	height: 10vh;
 	
+}
+@media(min-width:300px) and (max-width:768px){
+	.date{
+		background-color: #e9ecef;
+		width: 91vw;
+        height: 14vh;
+		color: black;
+		
+	}
+	.top{
+		padding-left: none !important;
+	}
+	.heading{
+		margin-left: 2rem;
+		padding-right: 2rem;
+	}
+
+.event{
+	background: #dc8816;
+	width: 91vw;
+    height: 14vh;
+	
+}
+.name{
+	margin-top: -1rem;
+	margin-left: 5rem;
+}
+.name1{
+	margin-top: -1.5rem;
+	margin-left:9rem;
+}
+
 }

@@ -17,6 +17,7 @@ import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
+import { ExerciseComponent } from './coach/exercise/exercise.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -33,7 +34,7 @@ const routes: Routes = [
  {path:'header',component:HeaderComponent},
  {path:'student',component:StudentComponent}, 
  {path:'addschedule',component:AddscheduleComponent}, 
- 
+ {path:'exercise',component:ExerciseComponent}, 
  {path:'forget', component:ForgetComponent},
  {path:'editprofile',component:EditprofileComponent},
    {path:'add-events',component:AddEventsComponent},
