@@ -15,10 +15,112 @@
         <td>{{us.phone}}</td>
         <td>{{us.email}}</td>
         <td>{{us.age}}</td>
-        <td><a [routerLink]="['/viewdetails']" class="btn text-primary" (click)="onDelete(us.id)"><i class="fa fa-address-card"
+        <td><a class="btn text-primary" (click)="onDelete(us.id)" data-toggle="modal" data-target="#mymodal"><i class="fa fa-address-card"
               aria-hidden="true"></i></a></td>
-
       </tr>
     </tbody>
   </table>
+</div>
+<div class="modal" id="mymodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content pl-5 pt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Athlete Details</h1>
+        </div>
+
+      </div>
+      <div class="modal-header">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="/assets/icons/userdummy.png" class="w-75">
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Name</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">Abitha</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Age</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">20</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Dob</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">04/5/2008</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Ph.no</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">9866446631</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Email</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">abitha2411@gmail.com</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Class</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">2nd</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Height</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">170cm</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Weight</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">56kg</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">year of admin</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">2019</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Blood group</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">o+ve</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
