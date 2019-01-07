@@ -2,3 +2,6 @@
   width: 60vw;
   height: 50vh;
 }
+.modal-header{
+  border-bottom: none;
+}

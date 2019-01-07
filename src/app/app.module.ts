@@ -173,7 +173,7 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
