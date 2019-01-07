@@ -15,6 +15,7 @@ import { StudentComponent } from './coach/student/student.component';
 import { DietComponent } from './coach/diet/diet.component';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
+import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 const routes: Routes = [
@@ -32,10 +33,12 @@ const routes: Routes = [
  {path:'events',component:EventsComponent},
  {path:'header',component:HeaderComponent},
  {path:'student',component:StudentComponent}, 
+ {path:'addschedule',component:AddscheduleComponent}, 
+ {path:'exercise',component:ExerciseComponent}, 
  {path:'forget', component:ForgetComponent},
  {path:'editprofile',component:EditprofileComponent},
- {path:'addschedule',component:AddscheduleComponent},
- {path:'exercise',component:ExerciseComponent},
+   {path:'add-events',component:AddEventsComponent}
+
  
 ];
 

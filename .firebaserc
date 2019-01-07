@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "athletic-tracker-48d1f",
-    "production": "athletic-tracker-7e8cd"
+    "production": "athletic-tracker-48d1f",
+    "staging": "athletic-tracker-7e8cd"
   }
 }

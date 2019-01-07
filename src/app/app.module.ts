@@ -83,8 +83,10 @@ import { FooterComponent } from './coach/footer/footer.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { initializeApp } from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 
+ 
 @NgModule({
    
   declarations: [
@@ -114,7 +116,10 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
     ExerciseComponent,
     ForgetComponent,
     EditprofileComponent,
+    AddEventsComponent,
     AddscheduleComponent,
+
+
   ],
   imports: [
    
