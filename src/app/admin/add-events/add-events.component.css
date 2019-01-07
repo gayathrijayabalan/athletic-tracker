@@ -34,7 +34,11 @@
 }
 .modal-content{
     margin-top: 5rem;
+    widows: 30vw;
 }
-.btn1{
-    margin-left: 2rem;
+.row1{
+    margin-top: -2rem;
+}
+.btn2{
+    margin-left: 17rem;
 }

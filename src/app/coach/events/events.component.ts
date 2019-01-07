@@ -16,6 +16,8 @@ export class EventsComponent implements OnInit {
       return{
         id: item.payload.doc.id,
         ...item.payload.doc.data()
+
+        
       } as Events
     })
   });
