@@ -19,7 +19,7 @@
       <tbody>
         <tr *ngFor="let exe of list">
           <td >{{exe.Name}}</td>
-          <td >{{exe.Date}}</td>
+          <td >{{exe.Date.seconds * 1000 | date:'dd-MM-yyyy HH:mm' }}</td>
           <td >{{exe.Distance}}</td>
           <td >{{exe.Tag1}}</td>
           <td >{{exe.Tag2}}</td>

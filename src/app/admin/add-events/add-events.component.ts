@@ -8,7 +8,7 @@ import { CoachserviceService } from 'src/app/shared/coachservice.service';
   styleUrls: ['./add-events.component.css']
 })
 export class AddEventsComponent implements OnInit {
-  constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
+  constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
 this.resetForm();
