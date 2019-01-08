@@ -1,3 +1,4 @@
+
 .sidenav{
     background-color: #232F3D;
     min-height:65vw;
@@ -16,6 +17,8 @@
 .modal-content{
    
     min-height: 40vh;
+    margin-top: 5rem;
+    width: 53vw;
     
   }
   select{
@@ -32,16 +35,9 @@
     margin-left: 0.9rem;
     position: absolute;
 }
-.modal-content{
-    margin-top: 4rem;
+.row1{
+    margin-top: -2rem;
 }
-
-div.validation-error{
-    width: 100%;
-    margin-top: .25rem;
-    font-size: 80%;
-    color: #dc3545;
-}
-input.touched.ng-invalid{
-    border-color: red;
+.btn2{
+    margin-left: 17rem;
 }

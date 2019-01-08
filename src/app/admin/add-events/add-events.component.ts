@@ -8,7 +8,7 @@ import { CoachserviceService } from 'src/app/shared/coachservice.service';
   styleUrls: ['./add-events.component.css']
 })
 export class AddEventsComponent implements OnInit {
- constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
+  constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
 this.resetForm();
@@ -25,15 +25,15 @@ this.resetForm();
       athleteattendings:'',
       medalswon:''
 }
-console.log("dgh");
+
   }
- 
+
   onSubmit(form:NgForm){
-    console.log("dddddd");
+   
     let data=form.value;
     this.afs.collection('events').add(data);
     this.resetForm(form);
-    console.log(data+"events");
+   
   }
 
 }

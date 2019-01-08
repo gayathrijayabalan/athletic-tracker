@@ -12,7 +12,7 @@
     </div>    
      
   </nav>
-
+<!-- navbar for phone -->
 <nav class="navbar fixed-top navbar-dark bg-primary navph d-lg-none">
   <a class="navbar-brand" href="#"> <img src="/assets/icons/img.png" class="mt-2"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -28,6 +28,9 @@
            </li>
            <li class="nav-item">
                <a class="nav-link" href="#myAlert" data-toggle="collapse">Wow</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" (click)="auth.logout()">Logout</a>
            </li>
        </ul>
        <ul class="navbar-nav ml-auto">

@@ -1,11 +1,7 @@
-table{
-    width:100%;
+.modal-content{
+  width: 60vw;
+  height: 50vh;
 }
-
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  th.mat-sort-header-sorted {
-    color: black;
-  }
+.modal-header{
+  border-bottom: none;
+}

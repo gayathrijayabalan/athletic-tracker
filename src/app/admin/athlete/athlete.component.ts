@@ -23,7 +23,7 @@ export class AthleteComponent implements OnInit {
     this.service.formData = {
       id:'',
       fullName:'',
-      email:'',
+      Email:'',
       phone:'',
       dob:'',
       class:'',
