@@ -17,7 +17,7 @@
                     <label>Date and Time</label><br>
                     <div class="input-group">
                         <span [owlDateTimeTrigger]="dt2" class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
-                        <input type="text" [owlDateTime]="dt2" name="Date" #Date="ngModel" [(ngModel)]="service.formexercise.Date" placeholder="Date & Time" class="form-control hasDatepicker">
+                        <input  [owlDateTime]="dt2" name="Date" #Date="ngModel" [(ngModel)]="service.formexercise.Date" placeholder="Date & Time" class="form-control hasDatepicker">
                         <owl-date-time #dt2></owl-date-time>
                     </div>
                 </div>

@@ -52,7 +52,7 @@
 }
 h1{
     
-    padding: 25px 45px 0 55px;
+    padding: 24px 79px 0 100px;
  
     font-size: 28px;
    
@@ -83,7 +83,7 @@ h1{
 .wid-stats:before {
     position: absolute;
     top: -8px;
-    left: -28px;
+    left: -6px;
     z-index: 1;
     display: block;
     width: 60px;
@@ -104,8 +104,8 @@ h1{
 
 .wid-stats:after {
     position: absolute;
-    top: 7px;
-    right: -12rem;
+    top: 1px;
+    right: -14rem;
     z-index: 1;
     display: block;
     width: 40px;
@@ -116,7 +116,7 @@ h1{
  
 }
 .profile{
-    width:5vw;
+    width:4vw;
 }
 .wid-stats .stats-data {
     position: relative;
@@ -138,3 +138,9 @@ h1{
     height: 50px;
     border-radius: 50%;
 }       
+.navbar-toggler{
+    border:none;
+}
+a:hover{
+    text-decoration: none;
+}

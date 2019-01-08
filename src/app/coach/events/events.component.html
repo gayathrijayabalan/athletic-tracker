@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class=" container row p-3 mt-5 mx-auto">
+    <div *ngFor="let events of list">
+        <div class="col-md-4 col-12">
+            <div class="event mt-5 p-1 text-center p-3">
+                <h5 class="heading  ">{{events.eventname}}</h5>
+                <span class="date1 "> {{events.eventdate|date:'longDate'}}
+                </span>
+            </div>
+
+            <div class="date mx-auto p-3">
+                <div class="map  text-center">
+                    <i class="fa fa-map-marker" aria-hidden="true"> {{events.eventcity}}, {{events.eventcountry}}</i>
+                </div>
+                <div class="row mt-4 ml-3">
+                    <div class=" name col-md-6">
+                        {{events.athleteattendings}}
+                    </div>
+                    <div class=" name1 col-md-6">
+                        {{events.medalswon}}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

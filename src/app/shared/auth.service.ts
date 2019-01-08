@@ -13,8 +13,6 @@ interface User {
   email: string;
   photoURL?: string;
   displayName?: string;
-
-  fcmTokens?: { [token: string]: true };
 }
 
 
@@ -31,7 +29,7 @@ export class AuthService {
       this.user = this.afAuth.authState
         .pipe(switchMap(user => {
           if (user) {
-            return this.afs.doc<User>(`user/${user.uid}`).valueChanges()
+            return this.afs.doc<User>(`Users/${user.uid}`).valueChanges()
           } else {
             return of(null)
           }
@@ -50,14 +48,15 @@ export class AuthService {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
         this.updateUserData(credential.user)
+        this.router.navigate(['/main']);
       })
   }
 
 
   private updateUserData(user) {
+    // Sets user data to firestore on login
 
-
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`user/${user.uid}`);
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`Users/${user.uid}`);
 
     const data: User = {
       uid: user.uid,
