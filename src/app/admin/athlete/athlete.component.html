@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-9 col-sm-12 my-2 bg-light mx-auto">
         <div class="row mt-5">
-            <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form,service.formData.fullName)">
                 <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
                 <div class="row mx-auto">
                     <div class="form-group col-md-6">
