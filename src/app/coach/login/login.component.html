@@ -1,35 +1,38 @@
 <div class="row">
-    <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 header mx-auto">
-        <div class="rectangle mx-auto">
-            <div class="row">
-                <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
-            </div>
-            <div class="row">
-                <img src="/assets/icons/img.png" class="mx-auto ml-5">
-            </div>
-            <div class="col-md-9 mx-auto mt-4">
-                    <div class="box" >
-                            <div *ngIf="auth.user | async; then authenticated else guest">
-                                    <!-- template will replace this div -->
+        <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 header mx-auto">
+            <div class="rectangle mx-auto">
+                <div class="row">
+                    <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
+                </div>
+                <div class="row">
+                    <img src="/assets/icons/img.png" class="mx-auto ml-5">
+                </div>
+                <div class="col-lg-6 mx-auto mt-4">
+                        <div class="box" >
+                                <div *ngIf="auth.user | async; then authenticated else guest">
+                                        <!-- template will replace this div -->
+                                </div>
                             </div>
-                        </div>
-                        
-                        
-                        <!-- User NOT logged in -->
-                        <ng-template #guest class="box">
-                          
-                            <button class="button" (click)="auth.googleLogin()">Login with Google</button>
-                        </ng-template>
-                        
-                        
-                        <!-- User logged in -->
-                        <ng-template #authenticated>
-                            <div *ngIf="auth.user | async as user">
-                         <button type="button" (click)="auth.googleLogin()">logout</button>
+                            
+                            
+                            <!-- User NOT logged in -->
+                            <div class="row mx-auto">
+                                    <ng-template #guest class="box">
+                              
+                                            <button class="btn" (click)="auth.googleLogin()">Login with Google</button>
+                                        </ng-template>
                             </div>
-                        </ng-template>
-                   
+                           
+                            
+                            
+                            <!-- User logged in -->
+                            <ng-template #authenticated>
+                                <div *ngIf="auth.user | async as user">
+                                  
+                                </div>
+                            </ng-template>
+                       
+                </div>
             </div>
         </div>
     </div>
-</div>

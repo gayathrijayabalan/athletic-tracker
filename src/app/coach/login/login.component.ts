@@ -13,11 +13,10 @@ import { AuthService } from '../../shared/auth.service';
 export class LoginComponent implements OnInit {
   logintemp:string;
   message:string;
-  constructor(public afAuth:AngularFireAuth,private service:CoachserviceService,private auth:AuthService){
+  constructor(private  afAuth:AngularFireAuth,private router:Router,private service:CoachserviceService,public auth:AuthService){
     
   }
  
-  
   ngOnInit() {
 
 }

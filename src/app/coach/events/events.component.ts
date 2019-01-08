@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CoachserviceService} from '../../shared/coachservice.service';
-import {Events} from '../../shared/user.model';
+import { Events } from '../../shared/user.model';
+import { CoachserviceService } from '../../shared/coachservice.service';
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
@@ -20,5 +20,4 @@ export class EventsComponent implements OnInit {
   });
 
   }
-
 }
