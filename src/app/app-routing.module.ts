@@ -19,6 +19,7 @@ import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent} from './admin/viewdetails/viewdetails.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
+
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},

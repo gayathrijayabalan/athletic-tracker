@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { NgForm } from '@angular/forms';
+import { toDate } from '@angular/common/src/i18n/format_date';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { NgForm } from '@angular/forms';
 export class AddscheduleComponent implements OnInit {
 
 
-  constructor(private service: CoachserviceService,private afs :AngularFirestore,) { }
+  constructor(public service: CoachserviceService,private afs :AngularFirestore,) { }
 
   ngOnInit() {
     this.resetForm();

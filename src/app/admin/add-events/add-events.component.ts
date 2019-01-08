@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { NgForm } from '@angular/forms';
 import { CoachserviceService } from 'src/app/shared/coachservice.service';
 @Component({
@@ -8,7 +8,7 @@ import { CoachserviceService } from 'src/app/shared/coachservice.service';
   styleUrls: ['./add-events.component.css']
 })
 export class AddEventsComponent implements OnInit {
- constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
+  constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
 this.resetForm();

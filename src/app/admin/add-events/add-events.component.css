@@ -1,13 +1,4 @@
-.sidenav{
-    background-color: #232F3D;
-    min-height:65vw;
-}
-.title{
-    display: block;
-    float: none;
-    margin-left: 1rem;
-    line-height: 25px;
-}
+
 .fa{
     margin-left: 3rem;
     font-size:1.5rem;
@@ -16,7 +7,7 @@
 .modal-content{
    
     min-height: 40vh;
-    
+    margin-top: 4rem;
   }
   select{
     width: 15rem;
@@ -32,13 +23,10 @@
     margin-left: 0.9rem;
     position: absolute;
 }
-.modal-content{
-    margin-top: 5rem;
-    widows: 30vw;
-}
-.row1{
-    margin-top: -2rem;
-}
-.btn2{
-    margin-left: 17rem;
+
+
+@media (min-width:300px) and (max-width:768px){
+    .btn{
+               width: 40vw;
+    }
 }

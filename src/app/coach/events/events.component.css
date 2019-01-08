@@ -1,31 +1,39 @@
 .event
 {
-	background: #dc8816;
-	width: 20vw;
-	height: 10vh;
-	
+ background: #dc8816;
+ width: 20vw;
+ height: 10vh;
+ 
 }
 .date{
-	background-color: #e9ecef;
+ background-color: #e9ecef;
     width: 20vw;
-	height: 20vh;
+ height: 20vh;
     color: black;
     margin-left: 4rem;
-	
+ 
 }
 
 @media(min-width:300px) and (max-width:768px){
     .event
     {
         background: #dc8816;
+<<<<<<< HEAD
         width: 91vw;
+=======
+        width: 76vw;
+>>>>>>> 923c4e1e5ce20ec68d0ad43a7f504092ead554dc
         height: 14vh;
         
     }
     .date
     {
         background:#e9ecef;
+<<<<<<< HEAD
         width: 91vw;
+=======
+        width: 76vw;
+>>>>>>> 923c4e1e5ce20ec68d0ad43a7f504092ead554dc
         height: 17vh;
         
     }
@@ -38,4 +46,8 @@
         margin-top: -1.6rem;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 923c4e1e5ce20ec68d0ad43a7f504092ead554dc

@@ -11,7 +11,7 @@ import {AngularFirestore} from 'angularfire2/firestore'
 })
 export class AthleteComponent implements OnInit {
  
-  constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
+  constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
     this.resetForm();
@@ -23,7 +23,7 @@ export class AthleteComponent implements OnInit {
     this.service.formData = {
       id:'',
       fullName:'',
-      Email:'',
+      email:'',
       phone:'',
       dob:'',
       class:'',

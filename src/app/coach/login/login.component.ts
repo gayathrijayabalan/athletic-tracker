@@ -4,6 +4,7 @@ import{AngularFireAuth} from 'angularfire2/auth';
 import{Router} from '@angular/router';
 import * as firebase from 'firebase/app';
 import { CoachserviceService } from '../../shared/coachservice.service';
+import { AuthService } from '../../shared/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,19 +13,10 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 export class LoginComponent implements OnInit {
   logintemp:string;
   message:string;
-  constructor(private  afAuth:AngularFireAuth,private service:CoachserviceService){
+  constructor(private  afAuth:AngularFireAuth,private router:Router,private service:CoachserviceService,public auth:AuthService){
     
-  }
-  login(){
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    console.log("gguj");
-    
-  }
-  logout(){
-    this.afAuth.auth.signOut();
   }
  
-  
   ngOnInit() {
 
 }
