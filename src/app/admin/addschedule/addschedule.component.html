@@ -1,8 +1,8 @@
 <app-admin-header></app-admin-header>
 <div class="row mt-4">
-        <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav mt-4">
-                <app-admin-sidenav></app-admin-sidenav> 
-            </div>
+    <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav mt-4">
+        <app-admin-sidenav></app-admin-sidenav>
+    </div>
     <div class="col-md-9 col-sm-12 my-2 bg-light">
         <h1 class="text-center mt-5 pt-3">Add-Schedule</h1>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
@@ -10,15 +10,16 @@
                 <div class="col-lg-5 col-12">
                     <label>Name</label>
                     <input type="text" name="Name" #Name="ngModel" [(ngModel)]="service.formexercise.Name" class="form-control" placeholder="Name">
-                    
+
                 </div>
 
                 <div class="col-lg-4 col-12">
                     <label>Date and Time</label><br>
                     <div class="input-group">
-                        <span [owlDateTimeTrigger]="dt2" class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
-                        <input type="date" [owlDateTime]="dt2" name="Date" #Date="ngModel" [(ngModel)]="service.formexercise.Date" placeholder="Date & Time" class="form-control hasDatepicker">
-                        <owl-date-time #dt2></owl-date-time>
+                        <span class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
+                        <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" name="Date" #Date="ngModel" [(ngModel)]="service.formexercise.Date" class="form-control hasDatepicker"
+                            placeholder="Date & Time">
+                        <owl-date-time #dt></owl-date-time>
                     </div>
                 </div>
                 <div class="col-lg-3 col-12">
@@ -29,7 +30,7 @@
                         <option value="300">300 Meter</option>
                         <option value="1600">1600 Meter</option>
                     </select>
-                  
+
                 </div>
             </div>
             <div class="row mt-2">
@@ -85,8 +86,8 @@
             <div class="row">
                 <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-3">Submit</button>
             </div>
-        
-           
+
+
         </form>
     </div>
 </div>
