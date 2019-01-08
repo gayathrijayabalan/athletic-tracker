@@ -11,3 +11,6 @@
     content: " ";
     transform: skewX(30deg);
 }
+.img1,.img2, map area{
+    outline: none;
+  }

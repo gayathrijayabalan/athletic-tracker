@@ -1,23 +1,24 @@
 <app-navbar></app-navbar>
 
-<div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 mx-auto mt-5">
-  <div class="table table hover">
-      <thead>
-        <th>Name</th>
-        <th>phone</th>
-        <th>Email</th>
-        <th>age</th> 
-      </thead>
-      <tbody>
-        <tr *ngFor="let us of list">
-            <td>{{us.fullName +"ghjggjh"}}</td>
-            <td>{{us.phone}}</td>
-            <td>{{us.email}}</td>
-            <td>{{us.age}}</td>
-            <td>{{us.id}}</td>
-            <td><a class="btn text-primary" (click)="onDelete(us.id)"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
-   
-        </tr> 
-      </tbody>
-  </div>
+<div class="offset-lg-2 col-lg-10 col-sm-12 mx-auto mt-5">
+  <table class="table table hover table-striped">
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>View Details</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let us of list">
+        <td>{{us.fullName}}</td>
+        <td>{{us.phone}}</td>
+        <td>{{us.email}}</td>
+        <td>{{us.age}}</td>
+        <td><a [routerLink]="['/viewdetails']" class="btn text-primary" (click)="onDelete(us.id)"><i class="fa fa-address-card"
+              aria-hidden="true"></i></a></td>
+
+      </tr>
+    </tbody>
+  </table>
 </div>
