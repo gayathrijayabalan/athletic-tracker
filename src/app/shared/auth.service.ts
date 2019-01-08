@@ -13,60 +13,67 @@ interface User {
   email: string;
   photoURL?: string;
   displayName?: string;
-
-  fcmTokens?: { [token: string]: true };
 }
 
 
 @Injectable()
 export class AuthService {
 
-  private user: Observable<firebase.User>;
-  private userDetails: firebase.User = null;
-constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
-      this.user = _firebaseAuth.authState;
-this.user.subscribe(
-        (user) => {
+  user: Observable<User>;
+
+  constructor(private afAuth: AngularFireAuth,
+              private afs: AngularFirestore,
+              private router: Router) {
+
+      //// Get auth data, then get firestore user document || null
+      this.user = this.afAuth.authState
+        .pipe(switchMap(user => {
           if (user) {
-            this.userDetails = user;
-            console.log(this.userDetails);
+            return this.afs.doc<User>(`Users/${user.uid}`).valueChanges()
+          } else {
+            return of(null)
           }
-          else {
-            this.userDetails = null;
-          }
-        }
-      );
+        })
+      )
   }
-  signInWithGoogle() {
-    return this._firebaseAuth.auth.signInWithPopup(
-      new firebase.auth.GoogleAuthProvider()
-    )
-    .then((res) => { 
-      this.router.navigate(['/dashboard'])
-    })
-  .catch((err) => console.log(err));
-}
-  
-isLoggedIn() {
-  if (this.userDetails == null ) {
-      return false;
-    } else {
-      return true;
+
+
+
+  googleLogin() {
+    const provider = new firebase.auth.GoogleAuthProvider()
+    return this.oAuthLogin(provider);
+  }
+
+  private oAuthLogin(provider) {
+    return this.afAuth.auth.signInWithPopup(provider)
+      .then((credential) => {
+        this.updateUserData(credential.user)
+        this.router.navigate(['/main']);
+      })
+  }
+
+
+  private updateUserData(user) {
+    // Sets user data to firestore on login
+
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`Users/${user.uid}`);
+
+    const data: User = {
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName,
+      photoURL: user.photoURL
     }
-  }
-logout() {
-    this._firebaseAuth.auth.signOut()
-    .then((res) => this.router.navigate(['/']));
-  }
+
+    return userRef.set(data)
 
   }
 
 
+  signOut() {
+    this.afAuth.auth.signOut().then(() => {
+        this.router.navigate(['/']);
+    });
+  }
 
- 
-
-
-  
-
-  
-
+}

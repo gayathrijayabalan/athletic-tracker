@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { NgForm } from '@angular/forms';
 import { CoachserviceService } from 'src/app/shared/coachservice.service';
 @Component({
