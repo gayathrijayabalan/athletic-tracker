@@ -9,13 +9,11 @@ import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firesto
 import { Observable , of } from 'rxjs';
 import {switchMap} from 'rxjs/operators'
 
-interface User {a
+interface User {
   uid: string;
   email: string;
   photoURL?: string;
   displayName?: string;
-
-  fcmTokens?: { [token: string]: true };
 }
 
 
@@ -29,8 +27,15 @@ export class AuthService {
               private router: Router) {
 
       //// Get auth data, then get firestore user document || null
-    
-      
+      this.user = this.afAuth.authState
+        .pipe(switchMap(user => {
+          if (user) {
+            return this.afs.doc<User>(`Users/${user.uid}`).valueChanges()
+          } else {
+            return of(null)
+          }
+        })
+      )
   }
 
 
@@ -42,16 +47,34 @@ export class AuthService {
 
   private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
-      .then(() => {
-       
-        this.router.navigate(['/dashboard']);
+      .then((credential) => {
+        this.updateUserData(credential.user)
+        this.router.navigate(['/main']);
       })
   }
 
 
+  private updateUserData(user) {
+    // Sets user data to firestore on login
+
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`Users/${user.uid}`);
+
+    const data: User = {
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName,
+      photoURL: user.photoURL
+    }
+
+    return userRef.set(data)
+
+  }
 
 
- 
-  
+  signOut() {
+    this.afAuth.auth.signOut().then(() => {
+        this.router.navigate(['/']);
+    });
+  }
 
 }
