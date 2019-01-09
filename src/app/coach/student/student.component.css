@@ -1,7 +1,25 @@
 .modal-content{
-  width: 60vw;
-  height: 50vh;
+  width: 70vw;
+  height: 60vh;
 }
 .modal-header{
   border-bottom: none;
+}
+img{
+  width:5vw;
+}
+@media (min-width:300px) and (max-width:768px){
+  .modal-content{
+    width: 70vw;
+    height: 80vh;
+  }
+}
+@media (min-width:325px) and (max-width:370px){
+  .modal-content{
+    width: 90vw;
+    height: 80vh;
+  }
+  img{
+    width:11vw;
+  }
 }
