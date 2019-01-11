@@ -34,3 +34,21 @@ button:hover, a:hover {
 .modal-header{
   border-bottom: none;
 }
+img{
+  width:13vw;
+}
+/* @media (min-width:300px) and (max-width:768px){
+  .modal-content{
+    width: 70vw;
+    height: 80vh;
+  }
+}
+@media (min-width:325px) and (max-width:370px){
+  .modal-content{
+    width: 90vw;
+    height: 80vh;
+  }
+  img{
+    width:11vw;
+  }
+} */
