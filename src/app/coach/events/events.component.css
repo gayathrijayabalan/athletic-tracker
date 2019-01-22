@@ -1,18 +1,25 @@
 .event
 {
  background: #dc8816;
- width: 20vw;
+ width: 18vw;
  height: 10vh;
  
 }
 .date{
  background-color: #e9ecef;
-    width: 20vw;
+    width: 18vw;
  height: 20vh;
     color: black;
     margin-left: 4rem;
  
 }
+.map{
+    margin-left: -2rem;
+}
+.date1{
+    margin-left: 2rem;
+}
+
 
 @media(min-width:300px) and (max-width:768px){
     .event
