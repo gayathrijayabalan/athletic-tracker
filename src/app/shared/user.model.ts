@@ -25,9 +25,11 @@ export interface Events{
 }
 export interface Addschedule {
     id: string;
-    Name: string;
+    ExerciseName: string;
     Date: string;
     Distance: string;
+    Rest:string;
+    Notes:string;
     Tag1: string;
     Tag2: string;
     Tag3: string;
