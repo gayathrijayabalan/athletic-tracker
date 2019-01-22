@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{User, Events,Addschedule} from './user.model';
+import{User, Events,Addschedule, Performance} from './user.model';
 
 import{ AngularFirestore } from 'angularfire2/firestore';
 import { Router } from '@angular/router';
@@ -18,6 +18,7 @@ export class CoachserviceService {
 formData:User;
 formadd:Events;
 formexercise:Addschedule;
+formsub:Performance;
 
   constructor(private router:Router, private afs:AngularFirestore) { }
 getUser(){
@@ -29,6 +30,10 @@ getEvent(){
 getAddschedule(){
   return this.afs.collection('addschedule').snapshotChanges();
 }
+getPerformance(){
+  return this.afs.collection('performance').snapshotChanges();
+}
+
 loginnext(){
   this.router.navigate(['/dashboard'],{ skipLocationChange: true });
 }

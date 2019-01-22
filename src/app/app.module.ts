@@ -86,6 +86,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
+import { PerformanceComponent } from './coach/performance/performance.component';
 
  
 @NgModule({
@@ -120,6 +121,8 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     AddEventsComponent,
     AddscheduleComponent,
     ViewdetailsComponent,
+    PerformanceComponent,
+   
 
 
   ],
