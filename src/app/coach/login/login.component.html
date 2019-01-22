@@ -8,33 +8,23 @@
                 <img src="/assets/icons/img.png" class="mx-auto ml-5">
             </div>
             <div class="col-lg-6 mx-auto">
-                    <div class="box" >
-                            <div *ngIf="auth.user | async; then authenticated else guest">
-                                    <!-- template will replace this div -->
-                            </div>
+                <div class="box">
+                    <div *ngIf="auth.user | async; then authenticated else guest">
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <ng-template #guest class="box">
+                        <button class="btn" (click)="auth.googleLogin()">Login with Google</button>
+                    </ng-template>
+                </div>
+                <div class="row mx-auto">
+                    <ng-template #authenticated>
+                        <div *ngIf="auth.user | async as user">
+                            <p class="text-white text-center">Welcome,{{user.displayName}}</p>
+                            <button class="btn" [routerLink]="['/dashboard']" routerLinkActive="active">Enter Dashboard</button>
                         </div>
-                        
-                        
-                        <!-- User NOT logged in -->
-                        <div class="row mx-auto">
-                                <ng-template #guest class="box">
-                          
-                                        <button class="btn" (click)="auth.googleLogin()">Login with Google</button>
-                                </ng-template>
-                        </div>
-                       
-                        
-                        
-                        <div class="row mx-auto">
-                        <ng-template #authenticated>
-                            <div *ngIf="auth.user | async as user" >
-                                <p class="text-white text-center">Welcome,{{user.displayName}}</p>
-                                
-                                <button class="btn" [routerLink]="['/dashboard']" routerLinkActive="active" >Enter Dashboard</button>
-                            </div>
-                        </ng-template>
-                        </div>
-                   
+                    </ng-template>
+                </div>
             </div>
         </div>
     </div>
