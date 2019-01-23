@@ -1,113 +1,109 @@
 <app-navbar></app-navbar>
-<div class="offset-lg-2 col-lg-10 col-sm-12 mx-auto">
-    <div class="row">
-      <div class="col-md-4 col-4" *ngFor="let us of list" >
-        <div class="card mt-5">
-          <img src="/assets/icons/athl.jpg" alt="John" class="rounded-circle mx-auto mt-2" width="200" height="200">
-          <h3>{{us.fullName}}</h3>
-          <p>Harvard University</p>
-          <button type="btn" data-toggle="modal" data-target="#mymodal">View Details</button>
-        </div>
+<div class="offset-lg-2 col-lg-10 col-sm-12 mt-3 mx-auto">
+  <div class="row">
+    <div class="col-md-4 col-12 mt-5" *ngFor="let us of list">
+      <div class="card mt-5">
+        <img src="/assets/icons/athl.jpg" alt="John" class="rounded-circle mx-auto mt-2 img">
+        <h3>{{us.fullName}}</h3>
+        <p>{{us.designation}}</p>
+        <button type="btn" data-toggle="modal" data-target="#mymodal">View Details</button>
       </div>
     </div>
   </div>
-
-  <div class="modal" id="mymodal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content pl-5 pt-5">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Athlete Details</h1>
-          </div>
-
+</div>
+<div class="modal" id="mymodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content pl-5 pt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Athlete Details</h1>
         </div>
-        <div class="modal-header">
-          <div class="col-md-12 ">
-            <div class="row">
-              <div class="col-md-3">
-                <img src="/assets/icons/userdummy.png" class="w-75">
+      </div>
+      <div class="modal-header" *ngFor="let us of list">
+        <div class="col-md-12 ">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="/assets/icons/userdummy.png" class="w-75">
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Name</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.fullName}}</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Age</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.age}}</div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-9">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Name</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(us |async)?.fullName}}</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Age</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.age}}</div>
-                    </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Dob</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.dob}}</div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Dob</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.dob}}</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Ph.no</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.phone}}</div>
-                    </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Ph.no</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.phone}}</div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Email</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.email}}</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Class</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.class}}</div>
-                    </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Email</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.email}}</div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Height</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.height}}</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Weight</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.weight}}</div>
-                    </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Class</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.class}}</div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">year of admin</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.yearofadmin}}
-
-                      </div>
-                    </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Height</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.height}}</div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-md-3 col-3">Blood group</label>
-                      <span>:</span>
-                      <div class="col-md-8 col-8">{{(studentlist |async)?.bloodgroup}}</div>
-                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Weight</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.weight}}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">year of admin</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.yearofadmin}}
+                  </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <label class="col-md-3 col-3">Blood group</label>
+                    <span>:</span>
+                    <div class="col-md-8 col-8">{{us.bloodgroup}}</div>
                   </div>
                 </div>
               </div>
@@ -117,3 +113,4 @@
       </div>
     </div>
   </div>
+</div>

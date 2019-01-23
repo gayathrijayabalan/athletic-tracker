@@ -34,8 +34,16 @@ button:hover, a:hover {
 .modal-header{
   border-bottom: none;
 }
-img{
-  width:13vw;
+.img{
+  width:11vw;
+  height: 25vh;
+}
+@media (min-width:300px) and (max-width:768px){
+  .img{
+    width:40vw;
+    height: 25vh;
+  }
+
 }
 /* @media (min-width:300px) and (max-width:768px){
   .modal-content{
