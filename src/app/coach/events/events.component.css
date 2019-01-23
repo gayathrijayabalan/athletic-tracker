@@ -21,27 +21,28 @@
 }
 
 
+
 @media(min-width:300px) and (max-width:768px){
     .event
     {
         background: #dc8816;
-        width: 76vw;
-        height: 14vh;
+        width: 72vw;
+        height: 8vh;
         
     }
     .date
     {
         background:#e9ecef;
-        width: 76vw;
+        width: 72vw;
         height: 17vh;
         
     }
     .name{
-        margin-left: 1rem;
-        margin-top: 0rem;
+        margin-left: -1rem;
+        margin-top: -1rem;
     }
     .name1{
-        margin-left: 8rem;
+        margin-left: 6rem;
         margin-top: -1.6rem;
     }
 
