@@ -12,9 +12,10 @@ import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_c
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  displayedColumns: string[] = ['sno', 'name', 'phonenumber', 'email','button'];
+  // displayedColumns: string[] = ['sno', 'name', 'phonenumber', 'email','button'];
   list:User[];
-  studentlist:any;
+  us:any;
+ stu:any;
   constructor(private service:CoachserviceService,private fs:AngularFirestore) { }
 
 
@@ -26,13 +27,14 @@ export class StudentComponent implements OnInit {
           ...item.payload.doc.data()}as User;
       })
     });
+
   
   }
   student(a){
     console.log(a);
    var docRef$= this.fs.collection<User>('user').doc(a);
 
-   this.studentlist = docRef$.ref.get().then(function (doc) {
+   this.stu = docRef$.ref.get().then(function (doc) {
     if (doc.exists) {
       console.log("Document data:", doc.data());
       return doc.data()
@@ -44,5 +46,6 @@ export class StudentComponent implements OnInit {
     console.log("Error getting document:", error);
   });
   }
+  
 
   }
