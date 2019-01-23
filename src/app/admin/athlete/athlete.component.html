@@ -10,52 +10,62 @@
                 <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
                 <div class="row mx-auto">
                     <div class="form-group col-md-6">
-                        <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" id="name" placeholder="Full name"
-                            required>
-                        <div *ngIf="fullName.invalid && fullName.touched" class="validation-error">This field is required.</div>
+                        <input name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" id="fullName" placeholder="Full name"lllo>
+                        
                     </div>
                     <div class="form-group col-md-6">
-                        <input name="phone" #phone="ngModel" [(ngModel)]="service.formData.phone" class="form-control" id="phone" placeholder="Phone">
+                            <input name="designation" #designation="ngModel" [(ngModel)]="service.formData.designation" class="form-control" id="designation" placeholder="Designation">
                     </div>
                 </div>
 
                 <div class="row mx-auto">
                     <div class="form-group col-md-6">
-                        <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" id="email" placeholder="Email">
+                        <input name="phone" #phone="ngModel" [(ngModel)]="service.formData.phone" class="form-control" id="phone" placeholder="Phone">
+
                     </div>
+                    <div class="form-group col-md-6">
+                        <input name="email" #email="ngModel" [(ngModel)]="service.formData.email" class="form-control" id="email" placeholder="Email">
+
+                    </div>
+                </div>
+                <div class="row mx-auto">
                     <div class="form-group col-md-6">
                         <input type="date" name="dob" #dob="ngModel" [(ngModel)]="service.formData.dob" class="form-control" id="dob" placeholder="DOB">
+
+                    </div>
+                    <div class="form-group col-md-6 ">
+                        <input name="class" #class="ngModel" [(ngModel)]="service.formData.class" class="form-control" id="class" placeholder="Class">
+
                     </div>
                 </div>
                 <div class="row mx-auto">
                     <div class="form-group col-md-6">
-                        <input name="class" #class="ngModel" [(ngModel)]="service.formData.class" class="form-control" id="class" placeholder="Class">
-                    </div>
-                    <div class="form-group col-md-6 ">
                         <input name="yearofadmin" #yearofadmin="ngModel" [(ngModel)]="service.formData.yearofadmin" class="form-control" id="yearofadmin"
                             placeholder="yearofadmin">
-                    </div>
-                </div>
-                <div class="row mx-auto">
-                    <div class="form-group col-md-6">
-                        <input name="bloodgroup" #bloodgroup="ngModel" [(ngModel)]="service.formData.bloodgroup" class="form-control" id="bloodgroup"
-                            placeholder="bloodgroup">
+
                     </div>
                     <div class="form-group col-md-6 ">
-                        <input name="height" #height="ngModel" [(ngModel)]="service.formData.height" class="form-control" id="height" placeholder="height">
+                        <input name="bloodgroup" #bloodgroup="ngModel" [(ngModel)]="service.formData.bloodgroup" class="form-control" id="bloodgroup"
+                            placeholder="bloodgroup">
+
                     </div>
                 </div>
                 <div class="row mx-auto">
                     <div class="form-group col-md-6">
+                        <input name="height" #height="ngModel" [(ngModel)]="service.formData.height" class="form-control" id="height" placeholder="height">
+
+
+                    </div>
+                    <div class="form-group col-md-6 ">
                         <input name="weight" #weight="ngModel" [(ngModel)]="service.formData.weight" class="form-control" id="weight" placeholder="weight">
 
                     </div>
+                </div>
+                <div class="row mx-auto">
                     <div class="form-group col-md-6 ">
                         <input name="age" #age="ngModel" [(ngModel)]="service.formData.age" class="form-control" id="age" placeholder="age">
                     </div>
-                </div>
-                <div class="row mx-auto">
-                    <div class="col-md-12 col-12">
+                    <div class="col-md-6 col-6">
                         <input type="file" name="file">
                     </div>
                 </div>
