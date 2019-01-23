@@ -108,7 +108,6 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-   
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
