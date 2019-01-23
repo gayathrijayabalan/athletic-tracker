@@ -19,15 +19,17 @@ export interface Events{
     eventdate:any;
     eventcity:string;
     eventcountry:string;
-    athleteattendings:string;
+    athleteAttendings:string;
     medalswon:string;
     
 }
 export interface Addschedule {
     id: string;
-    Name: string;
+    ExerciseName: string;
     Date: string;
     Distance: string;
+    Rest:string;
+    Notes:string;
     Tag1: string;
     Tag2: string;
     Tag3: string;
@@ -38,4 +40,13 @@ export interface Addschedule {
     Tag8: string;
     Tag9: string;
     Tag10: string;
+}
+export interface Performance{
+ 
+    timings:string;
+    heartbeatrate:any;
+    notes:string;
+    rest:string;
+    
+    
 }

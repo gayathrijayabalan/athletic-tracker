@@ -25,9 +25,11 @@ export class AddscheduleComponent implements OnInit {
     form.resetForm();
     this.service.formexercise = {
       id: null,
-      Name: '',
+      ExerciseName: '',
       Date: '',
       Distance: '',
+      Rest:'',
+      Notes:'',
       Tag1: '',
       Tag2: '',
       Tag3: '',

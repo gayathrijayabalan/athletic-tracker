@@ -8,11 +8,10 @@
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
             <div class="row">
                 <div class="col-lg-5 col-12">
-                    <label>Name</label>
-                    <input type="text" name="Name" #Name="ngModel" [(ngModel)]="service.formexercise.Name" class="form-control" placeholder="Name">
-
+                    <label>Exercise Name</label>
+                    <input type="text" name="ExerciseName" #Name="ngModel" [(ngModel)]="service.formexercise.ExerciseName" class="form-control"
+                        placeholder="Exercise Name">
                 </div>
-
                 <div class="col-lg-4 col-12">
                     <label>Date and Time</label><br>
                     <div class="input-group">
@@ -31,6 +30,16 @@
                         <option value="1600">1600 Meter</option>
                     </select>
 
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Rest</label>
+                    <input type="text" class="form-control" name="Rest" id="Rest" placeholder="Rest" #Rest="ngModel" [(ngModel)]="service.formexercise.Rest">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Notes</label>
+                    <textarea rows="2" name="Notes" id="Notes" class="form-control" placeholder="Notes" #Notes="ngModel" [(ngModel)]="service.formexercise.Notes"></textarea>
                 </div>
             </div>
             <div class="row mt-2">
@@ -57,10 +66,10 @@
                 <div class="col-lg-6 col-12">
                     <label>Tag5</label>
                     <input type="text" class="form-control" name="Tag5" id="Tag5" placeholder="Tag5" #Tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
-                           </div>
+                </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag6</label>
-                    <input type="text"      lass="form-control" name="Tag6" id="Tag6" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
+                    <input type="text" class="form-control" name="Tag6" id="Tag6" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
                 </div>
             </div>
             <div class="row mt-2">
