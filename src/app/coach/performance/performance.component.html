@@ -5,9 +5,9 @@
   <div class="row col-md-6 mx-auto">
     <div class="form-group col-md-6 col-12 mt-4 ">
       <label for="Timings">Timings:</label>
-      <input type="name" name="timings" #timings="ngModel" [(ngModel)]="service.formsub.timings" class="form-control"
-        id="timings" placeholder="Timings">
-
+      <input [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" name="timings" #date="ngModel" [(ngModel)]="service.formsub.timings" class="form-control"
+      id="timings" placeholder="Timings">
+    <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
     </div>
     <div class="form-group col-md-6 col-12 mt-4 ">
       <label for="HeartBeat">HeartBeatRate:</label>
