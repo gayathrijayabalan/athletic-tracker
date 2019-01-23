@@ -88,6 +88,7 @@ import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
+import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 
  
 @NgModule({
@@ -123,6 +124,7 @@ import { PerformanceComponent } from './coach/performance/performance.component'
     AddscheduleComponent,
     ViewdetailsComponent,
     PerformanceComponent,
+    StudentPerformanceComponent,
    
 
 
