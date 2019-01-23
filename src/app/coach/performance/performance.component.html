@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<br>
+
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <div class="row col-md-6 mx-auto">
+    <div class="form-group col-md-6 col-12 mt-4 ">
+      <label for="Timings">Timings:</label>
+      <input type="name" name="timings" #timings="ngModel" [(ngModel)]="service.formsub.timings" class="form-control"
+        id="timings" placeholder="Timings">
+
+    </div>
+    <div class="form-group col-md-6 col-12 mt-4 ">
+      <label for="HeartBeat">HeartBeatRate:</label>
+      <input type="name" name="heartbeatrate" #heartbeat="ngModel" [(ngModel)]="service.formsub.heartbeatrate" class="form-control"
+        id="heartbeatrate" placeholder="HeartBeatRate">
+    </div>
+
+  </div>
+  <div class="row col-md-6 mx-auto">
+    <div class="form-group col-md-6 col-12 mt-4">
+      <label for="Notes">Notes:</label>
+      <textarea class="name" name="notes" #notes="ngModel" [(ngModel)]="service.formsub.notes" class="form-control" id="notes"
+        placeholder="Notes" mt-2></textarea>
+
+    </div>
+    <div class="form-group col-md-6 col-12 mt-4">
+      <label for="Rest">Rest:</label>
+      <input type="name" name="rest" #rest="ngModel" [(ngModel)]="service.formsub.rest" class="form-control" id="rest"
+        placeholder="Rest">
+
+    </div>
+    <div class="form-group">
+      <div class="col-md-12 text-center">
+        <div class="btn1">
+        <button type="submit" class="btn btn-lg  btn-block btn-info mx-auto">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

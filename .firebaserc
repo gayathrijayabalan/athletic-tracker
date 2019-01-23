@@ -1,6 +1,9 @@
 {
   "projects": {
 <<<<<<< HEAD
+    "production": "athletic-tracker-f29d8"
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     "default": "athletic-tracker-7e8cd",
     "production": "athletic-tracker-7e8cd",
@@ -12,5 +15,6 @@
 =======
     "production": "athletic-tracker-7e8cd"
 >>>>>>> 923c4e1e5ce20ec68d0ad43a7f504092ead554dc
+>>>>>>> 8b308cbe6e8f74dc5513340b50debcf2eb97b156
   }
 }

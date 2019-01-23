@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { NgForm } from '@angular/forms';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { CoachserviceService } from 'src/app/shared/coachservice.service';
 @Component({
-  selector: 'app-add-events',
-  templateUrl: './add-events.component.html',
-  styleUrls: ['./add-events.component.css']
+  selector: 'app-performance',
+  templateUrl: './performance.component.html',
+  styleUrls: ['./performance.component.css']
 })
+export class PerformanceComponent implements OnInit {
 
-export class AddEventsComponent implements OnInit {
   constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
@@ -17,22 +17,20 @@ this.resetForm();
   resetForm(form?:NgForm){
     if (form !=null)
     form.resetForm();
-    this.service.formadd = {
-      id:null,
-      eventname:'',
-      eventdate:'',
-      eventcity:'',
-      eventcountry:'',
-      athleteAttendings:'',
-      medalswon:''
-}
+    this.service.formsub = {
+      
+      timings:'',
+      heartbeatrate:'',
+       notes:'',
+       rest:''
+      }
 
   }
 
   onSubmit(form:NgForm){
    
     let data=form.value;
-    this.afs.collection('events').add(data);
+    this.afs.collection('performance').add(data);
     this.resetForm(form);
    
   }
