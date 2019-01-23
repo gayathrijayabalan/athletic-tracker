@@ -24,39 +24,32 @@ a {
   color: black;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
-.modal-content{
-  width: 60vw;
-  height: 50vh;
-}
+
 .modal-header{
   border-bottom: none;
 }
 .img{
   width:11vw;
   height: 25vh;
-}
+} 
 @media (min-width:300px) and (max-width:768px){
   .img{
     width:40vw;
     height: 25vh;
   }
 
-}
-/* @media (min-width:300px) and (max-width:768px){
-  .modal-content{
-    width: 70vw;
-    height: 80vh;
+}  
+@media (min-width:768px) and (max-width:1024px){
+  .img{
+    width:24vw;
+    height: 19vh;
   }
-}
+
+} 
+
 @media (min-width:325px) and (max-width:370px){
-  .modal-content{
-    width: 90vw;
-    height: 80vh;
-  }
+
   img{
     width:11vw;
   }
-} */
+}
