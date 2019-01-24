@@ -1,57 +1,45 @@
+
 <app-navbar></app-navbar>
-<div class="offset-lg-2 col-lg-10 col-sm-12 mx-auto mt-5">
-  <table class="table table hover table-striped">
-    <thead>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Date of Birth</th>
-      <th>View Details</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let us of list">
-        <td>{{us.fullName}}</td>
-        <td>{{us.phone}}</td>
-        <td>{{us.email}}</td>
-        <td>{{us.dob}}</td>
-        <td><a class="btn text-primary" (click)="student(us.fullName)" data-toggle="modal" data-target="#mymodal"><i class="fa fa-address-card"
-              aria-hidden="true"></i></a></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="offset-lg-2 col-lg-10 col-sm-12 mt-3 mx-auto">
+  <div class="row">
+    <div class="col-md-4 col-12 mt-5" *ngFor="let us of list">
+      <div class="card mt-5">
+        <img src="/assets/icons/athl.jpg" alt="John" class="rounded-circle mx-auto mt-2 img">
+        <h3>{{us.fullName}}</h3>
+        <p>{{us.designation}}</p>
+        <button type="btn" data-toggle="modal" data-target="#mymodal" (click)="student(us.fullName)">View Details</button>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="modal" id="mymodal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content pl-5 pt-5">
-      <div class="mx-3">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
       <div class="row">
         <div class="col-md-12">
           <h1>Athlete Details</h1>
         </div>
-
       </div>
-      <div class="modal-header">
+      <div class="modal-header"  >
         <div class="col-md-12 ">
           <div class="row">
-            <div class="col-md-3 col-3">
-              <img src="/assets/icons/userdummy.png" class="img">
+            <div class="col-md-3">
+              <img src="/assets/icons/userdummy.png" class="w-75">
             </div>
-            <div class="col-md-9 col-9">
-              <div class="row">
+            <div class="col-md-9">
+              <div class="row" >
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Name</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.fullName}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.fullName}}</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Age</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.age}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.age}}</div>
                   </div>
                 </div>
               </div>
@@ -60,14 +48,14 @@
                   <div class="row">
                     <label class="col-md-3 col-3">Dob</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.dob}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.dob}}</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Ph.no</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.phone}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.phone}}</div>
                   </div>
                 </div>
               </div>
@@ -76,14 +64,14 @@
                   <div class="row">
                     <label class="col-md-3 col-3">Email</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.email}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.email}}</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Class</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.class}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.class}}</div>
                   </div>
                 </div>
               </div>
@@ -92,14 +80,14 @@
                   <div class="row">
                     <label class="col-md-3 col-3">Height</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.height}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.height}}</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Weight</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.weight}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.weight}}</div>
                   </div>
                 </div>
               </div>
@@ -108,14 +96,15 @@
                   <div class="row">
                     <label class="col-md-3 col-3">year of admin</label>
                     <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.yearofadmin}}</div>
+                    <div class="col-md-8 col-8">{{(stu|async)?.yearofadmin}}
+                  </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="row">
                     <label class="col-md-3 col-3">Blood group</label>
-                    <span>:</span>
-                    <div class="col-md-8 col-8">{{(studentlist |async)?.bloodgroup}}</div>
+
+<div class="col-md-8 col-8">{{(stu|async)?.bloodgroup}}</div>
                   </div>
                 </div>
               </div>
