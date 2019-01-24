@@ -30,3 +30,12 @@
                width: 40vw;
     }
 }
+@media (min-width:768px) and (max-width:1024px){
+.modal-content{
+   
+    min-height: 28vh;
+    width: 81vw;
+    margin-top: 4rem;
+    margin-left: -4rem;
+}
+}

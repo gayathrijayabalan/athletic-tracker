@@ -1,11 +1,4 @@
-
-.modal-header{
-  border-bottom: none;
-}
-img{
-  width:5vw;
-}
-card {
+.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -32,4 +25,31 @@ a {
 }
 
 
+.modal-header{
+  border-bottom: none;
+}
+.img{
+  width:11vw;
+  height: 25vh;
+} 
+@media (min-width:300px) and (max-width:768px){
+  .img{
+    width:40vw;
+    height: 25vh;
+  }
 
+}  
+@media (min-width:768px) and (max-width:1024px){
+  .img{
+    width:24vw;
+    height: 19vh;
+  }
+
+} 
+
+@media (min-width:325px) and (max-width:370px){
+
+  img{
+    width:11vw;
+  }
+}

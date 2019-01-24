@@ -39,6 +39,7 @@ import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -87,6 +88,7 @@ import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
+import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 
  
 @NgModule({
@@ -121,6 +123,7 @@ import { PerformanceComponent } from './coach/performance/performance.component'
     AddscheduleComponent,
     ViewdetailsComponent,
     PerformanceComponent,
+    StudentPerformanceComponent,
    
 
 
@@ -172,6 +175,7 @@ import { PerformanceComponent } from './coach/performance/performance.component'
     HttpModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
