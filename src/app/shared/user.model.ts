@@ -42,8 +42,8 @@ export interface Addschedule {
     Tag10: string;
 }
 export interface Performance{
- 
-    timings:string;
+ id:string;
+    timings:any;
     heartbeatrate:any;
     notes:string;
     rest:string;
