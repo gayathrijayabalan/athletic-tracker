@@ -88,7 +88,12 @@ import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
+<<<<<<< HEAD
+import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
+=======
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
+>>>>>>> 18e3da14de8260dadb28ac4b822712e59ae00c9f
 
  
 @NgModule({
@@ -124,7 +129,12 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     AddscheduleComponent,
     ViewdetailsComponent,
     PerformanceComponent,
+<<<<<<< HEAD
+    StudentscheduleComponent,
+    StudentbyathleteComponent,
+=======
     StudentPerformanceComponent,
+>>>>>>> 18e3da14de8260dadb28ac4b822712e59ae00c9f
    
 
 

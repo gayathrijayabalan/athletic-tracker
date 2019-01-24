@@ -13,3 +13,9 @@
 .img1,.img2, map area{
     outline: none;
   }
+  @media (min-width:768px) and (max-width:1024px){
+    .dash{
+        margin-left: 104px;
+    }
+  }
+  
