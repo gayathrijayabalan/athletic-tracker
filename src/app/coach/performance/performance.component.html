@@ -3,7 +3,7 @@
 
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <div class="row col-md-6 mx-auto">
-    <div class="form-group col-md-6 col-12 mt-4 ">
+    <div class="form-group col-md-6 col-12 mt-4">
       <label for="Timings">Timings:</label>
       <input [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" name="timings" #date="ngModel" [(ngModel)]="service.formsub.timings" class="form-control"
       id="timings" placeholder="Timings">
