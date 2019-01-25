@@ -15,7 +15,7 @@ import { toDate } from '@angular/common/src/i18n/format_date';
   export class AddscheduleComponent implements OnInit {
 
 
-    constructor(public service: CoachserviceService,private afs :AngularFirestore,) { }
+  constructor(public service: CoachserviceService,private afs :AngularFirestore) { }
 
     ngOnInit() {
       this.resetForm();

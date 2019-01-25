@@ -1,24 +1,30 @@
 <app-navbar></app-navbar>
-  <div class="offset-lg-2 col-lg-10 col-sm-12 mx-auto"><br>
-    <div class="row">
-      <div class="col-lg-4 col-12 mt-5" *ngFor="let exe of list">
-        <ul class="list-group mt-4">
-          <li class="list-group-item active">{{exe.ExerciseName}}</li>
-          <li class="list-group-item">{{exe.Date.seconds * 1000 | date:'dd-MM-yyyy ; HH:mm' }}</li>
-          <li class="list-group-item">{{exe.Distance}}</li>
-          <li class="list-group-item">{{exe.Rest.seconds * 1000 | date:'HH:mm:ss'}}</li>
-          <li class="list-group-item">{{exe.Notes}}</li>
-          <li class="list-group-item">{{exe.Tag1}}</li>
-          <li class="list-group-item">{{exe.Tag2}}</li>
-          <li class="list-group-item">{{exe.Tag3}}</li>
-          <li class="list-group-item">{{exe.Tag4}}</li>
-          <li class="list-group-item">{{exe.Tag5}}</li>
-          <li class="list-group-item">{{exe.Tag6}}</li>
-          <li class="list-group-item">{{exe.Tag7}}</li>
-          <li class="list-group-item">{{exe.Tag8}}</li>
-          <li class="list-group-item">{{exe.Tag9}}</li>
-          <li class="list-group-item">{{exe.Tag10}}</li>
-        </ul>
-      </div>
+<div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto"><br>
+  <div class="row">
+    <div class="col-lg-4 col-12 mt-5" *ngFor="let work of list">
+      <ul class="list-group mt-4">
+        <li class="list-group-item active">{{work.ExerciseName}}</li>
+        <li class="list-group-item">{{work.Date.seconds * 1000 | date:'dd-MM-yyyy ; HH:mm' }}</li>
+        <li class="list-group-item">{{work.Distance}}</li>
+        <li class="list-group-item">{{work.Rest.seconds * 1000 | date:'HH:mm:ss'}}</li>
+        <li class="list-group-item">{{work.Notes}}</li>
+        <li class="list-group-item">{{work.Tag1}}</li>
+        <li class="list-group-item">{{work.Tag2}}</li>
+        <li class="list-group-item">{{work.Tag3}}</li>
+        <li class="list-group-item">{{work.Tag4}}</li>
+      </ul>
     </div>
   </div>
+  <div class="row">
+    <div class="col-lg-4 col-12 mt-5" *ngFor="let work of list1">
+      <ul class="list-group mt-4">
+        <li class="list-group-item active">{{work.Date.seconds * 1000|date:'dd-MM-yyyy ; HH:mm'}}</li>
+        <li class="list-group-item">{{work.Name}}</li>
+        <li class="list-group-item">{{work.Workout1}}</li>
+        <li class="list-group-item">{{work.Workout2}}</li>
+        <li class="list-group-item">{{work.Workout3}}</li>
+        <li class="list-group-item">{{work.Workout4}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

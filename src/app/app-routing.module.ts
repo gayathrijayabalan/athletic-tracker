@@ -17,11 +17,14 @@ import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
-import { ViewdetailsComponent} from './admin/viewdetails/viewdetails.component';
+import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
+import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
+
+
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -44,6 +47,7 @@ const routes: Routes = [
    {path:'add-events',component:AddEventsComponent},
    {path:'events',component:EventsComponent},
    {path:'performance',component:PerformanceComponent},
+   {path:'workout',component:StudentscheduleComponent},
   
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
