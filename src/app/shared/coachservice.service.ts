@@ -34,6 +34,10 @@ getAddschedule(){
 getPerformance(){
   return this.afs.collection('performance').snapshotChanges();
 }
+
+getProfile(det){
+  return this.afs.doc<User>(`addschedule/${det}`).valueChanges();
+}
 getWorkout(){
   return this.afs.collection('workout').snapshotChanges();
 }

@@ -69,7 +69,7 @@ export class AuthService {
     return userRef.set(data)
 
   }
-
+  x
 
   signOut() {
     this.afAuth.auth.signOut().then(() => {

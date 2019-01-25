@@ -1,3 +1,32 @@
-<p>
-  studentbyathlete works!
-</p>
+<app-navbar></app-navbar>
+<div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto"><br>
+  <div class="row col-md-6 mt-5 mx-auto">
+      <div class="col-md-12 col-12 ">
+         <article class="mt-3">
+         <span class="mr-3">choose athlete name</span>
+         <select [(ngModel)]="studentName" (change)="showStudent($event)">
+
+        <option [value]="exe.id" *ngFor="let exe of list">{{exe.ExerciseName}}</option>
+         </select>
+         
+        </article>
+      
+        </div>
+</div>  
+<div class="row">
+  <div class="col-lg-4 col-12 mt-5" >
+    <ul class="list-group mt-4">
+      <li class="list-group-item active">{{(profile | async)?.ExerciseName}}</li>
+      <li class="list-group-item">{{(profile | async)?.Date.seconds * 1000 | date:'dd-MM-yyyy ; HH:mm' }}</li>
+      <li class="list-group-item">{{(profile | async)?.Distance}}</li>
+      <li class="list-group-item">{{(profile | async)?.Rest.seconds * 1000 | date:'HH:mm:ss'}}</li>
+      <li class="list-group-item">{{(profile | async)?.Notes}}</li>
+      <li class="list-group-item">{{(profile | async)?.Tag1}}</li>
+      <li class="list-group-item">{{(profile | async)?.Tag2}}</li>
+      <li class="list-group-item">{{(profile | async)?.Tag3}}</li>
+      <li class="list-group-item">{{(profile | async)?.Tag4}}</li>
+     
+    </ul>
+  </div>
+</div>
+</div>
