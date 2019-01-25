@@ -17,36 +17,37 @@ import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
-import { ViewdetailsComponent} from './admin/viewdetails/viewdetails.component';
+import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
+import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
 const routes: Routes = [
- {path:'dashboard',component:DashboardComponent},
- {path:'',redirectTo:'/login',pathMatch:'full'},
- {path:'diet',component:DietComponent},
- {path:'navbar',component:NavbarComponent},
- {path:'admin-header',component:AdminHeaderComponent},
- {path:'admin-sidenav',component:AdminSidenavComponent},
- {path:'admin-dashboard',component:AdminDashboardComponent},
- {path:'condition',component:ConditionComponent},
- {path:'login',component:LoginComponent},
- {path:'athlete',component:AthleteComponent},
- {path:'reports',component:ReportsComponent},
- {path:'events',component:EventsComponent},
- {path:'header',component:HeaderComponent},
- {path:'student',component:StudentComponent}, 
- {path:'addschedule',component:AddscheduleComponent}, 
- {path:'exercise',component:ExerciseComponent}, 
- {path:'forget', component:ForgetComponent},
- {path:'editprofile',component:EditprofileComponent},
-   {path:'add-events',component:AddEventsComponent},
-   {path:'events',component:EventsComponent},
-   {path:'performance',component:PerformanceComponent},
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'diet', component: DietComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: 'admin-header', component: AdminHeaderComponent },
+  { path: 'admin-sidenav', component: AdminSidenavComponent },
+  { path: 'admin-dashboard', component: AdminDashboardComponent },
+  { path: 'condition', component: ConditionComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'athlete', component: AthleteComponent },
+  { path: 'reports', component: ReportsComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'student', component: StudentComponent },
+  { path: 'addschedule', component: AddscheduleComponent },
+  { path: 'exercise', component: ExerciseComponent },
+  { path: 'forget', component: ForgetComponent },
+  { path: 'editprofile', component: EditprofileComponent },
+  { path: 'add-events', component: AddEventsComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'performance', component: PerformanceComponent },
+  { path: 'workout', component: StudentscheduleComponent },
+  { path: 'student-performance', component: StudentPerformanceComponent },
 
-   {path:'student-performance',component:StudentPerformanceComponent},
 
- 
 ];
 
 @NgModule({
