@@ -34,6 +34,9 @@ getPerformance(){
   return this.afs.collection('performance').snapshotChanges();
 }
 
+getProfile(det){
+  return this.afs.doc<User>(`addschedule/${det}`).valueChanges();
+}
 loginnext(){
   this.router.navigate(['/dashboard'],{ skipLocationChange: true });
 }

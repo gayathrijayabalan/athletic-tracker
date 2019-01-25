@@ -24,7 +24,7 @@ export interface Events{
     
 }
 export interface Addschedule {
-    id: string;
+    id: string; 
     ExerciseName: string;
     Date: string;
     Distance: string;

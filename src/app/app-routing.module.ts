@@ -21,6 +21,7 @@ import { ViewdetailsComponent} from './admin/viewdetails/viewdetails.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -43,9 +44,9 @@ const routes: Routes = [
    {path:'add-events',component:AddEventsComponent},
    {path:'events',component:EventsComponent},
    {path:'performance',component:PerformanceComponent},
-
+  
    {path:'student-performance',component:StudentPerformanceComponent},
-
+   {path:'studentbyathlete',component:StudentbyathleteComponent},
  
 ];
 
