@@ -20,6 +20,7 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
 import { ViewdetailsComponent} from './admin/viewdetails/viewdetails.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 const routes: Routes = [
  {path:'dashboard',component:DashboardComponent},
@@ -43,7 +44,7 @@ const routes: Routes = [
    {path:'add-events',component:AddEventsComponent},
    {path:'events',component:EventsComponent},
    {path:'performance',component:PerformanceComponent},
-
+   {path:'studentbyathlete',component:StudentbyathleteComponent},
    {path:'student-performance',component:StudentPerformanceComponent},
 
  

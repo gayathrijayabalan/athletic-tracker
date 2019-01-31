@@ -82,18 +82,14 @@ import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import { initializeApp } from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
-<<<<<<< HEAD
-import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
-import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
-=======
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
->>>>>>> 18e3da14de8260dadb28ac4b822712e59ae00c9f
 
  
 @NgModule({
@@ -116,7 +112,7 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-   
+   StudentbyathleteComponent,
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
@@ -129,12 +125,7 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     AddscheduleComponent,
     ViewdetailsComponent,
     PerformanceComponent,
-<<<<<<< HEAD
-    StudentscheduleComponent,
-    StudentbyathleteComponent,
-=======
     StudentPerformanceComponent,
->>>>>>> 18e3da14de8260dadb28ac4b822712e59ae00c9f
    
 
 
