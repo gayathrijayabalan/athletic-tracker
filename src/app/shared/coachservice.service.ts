@@ -44,4 +44,11 @@ getWorkout(){
 loginnext(){
   this.router.navigate(['/dashboard'],{ skipLocationChange: true });
 }
+getStudent(){
+  return this.afs.collection('user').valueChanges();
+}
+
+getSchedulestudent(){
+  return this.afs.collection('addschedule').snapshotChanges();
+}
 } 

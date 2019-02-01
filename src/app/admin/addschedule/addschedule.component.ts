@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { NgForm } from '@angular/forms';
 import { toDate } from '@angular/common/src/i18n/format_date';
-
+import { User } from '../../shared/user.model';
 
 @Component({
   selector: 'app-addschedule',
@@ -13,13 +13,23 @@ import { toDate } from '@angular/common/src/i18n/format_date';
   styleUrls: ['./addschedule.component.css']
 })
   export class AddscheduleComponent implements OnInit {
-
+profile:any;
+list:User[];
 
   constructor(public service: CoachserviceService,private afs :AngularFirestore) { }
 
-    ngOnInit() {
-      this.resetForm();
-    }
+  ngOnInit() {
+    this.resetForm();
+    this.service.getUser().subscribe(actionArrray=>{
+      this.list=actionArrray.map(item=>{
+        return {
+          id:item.payload.doc.id,
+          ...item.payload.doc.data()}as User;
+      })
+    });
+
+  
+  }
     resetForm(form?: NgForm) {
       if (form !=null)
       form.resetForm();

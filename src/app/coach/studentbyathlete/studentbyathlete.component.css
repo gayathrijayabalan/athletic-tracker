@@ -1,0 +1,13 @@
+.sel{
+    width:25vw;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .sel{
+        width:40vw;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .sel{
+        width:25vw;
+    }
+}

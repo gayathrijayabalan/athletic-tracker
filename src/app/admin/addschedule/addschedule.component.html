@@ -44,8 +44,13 @@
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
-                    <label>Tag1</label>
-                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag1" #Tag1="ngModel" [(ngModel)]="service.formexercise.Tag1">
+                        <label>Tag1</label>
+                        <select [(ngModel)]="studentName">
+
+                                <option [value]="exe.fullName" *ngFor="let exe of list" class="form-control">{{exe.fullName}}</option>
+                                 </select>
+   
+                   
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag2</label>
