@@ -24,7 +24,7 @@ export interface Events{
     
 }
 export interface Addschedule {
-    id: string;
+    id: string; 
     ExerciseName: string;
     Date: string;
     Distance: string;
@@ -46,7 +46,14 @@ export interface Performance{
     timings:string;
     heartbeatrate:any;
     notes:string;
-    rest:string;
-    
-    
+    rest:string;    
+}
+export interface Workout{
+    id:string;
+    Date:string;
+    Name:string;
+    Workout1:string;
+    Workout2:string;
+    Workout3:string;
+    Workout4:string;
 }

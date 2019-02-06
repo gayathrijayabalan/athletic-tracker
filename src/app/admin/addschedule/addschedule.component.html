@@ -1,9 +1,14 @@
 <app-admin-header></app-admin-header>
+<<<<<<< HEAD
 
     <div class="d-none d-md-block d-lg-block d-xl-block col-md-3 sidenav mt-4">
+=======
+<div class="row">
+    <div class="d-none d-lg-block d-xl-block col-lg-3 sidenav mt-4">
+>>>>>>> 7bc846938457885a17bd4c8377062eca73836b64
         <app-admin-sidenav></app-admin-sidenav>
     </div>
-    <div class="col-md-9 col-sm-12 my-2 bg-light">
+    <div class="col-lg-9 col-sm-12 my-2 bg-light">
         <h1 class="text-center mt-5 pt-3">Add-Schedule</h1>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
             <div class="row">
@@ -44,8 +49,13 @@
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
-                    <label>Tag1</label>
-                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag1" #Tag1="ngModel" [(ngModel)]="service.formexercise.Tag1">
+                        <label>Tag1</label>
+                        <select [(ngModel)]="studentName">
+
+                                <option [value]="exe.fullName" *ngFor="let exe of list" class="form-control">{{exe.fullName}}</option>
+                                 </select>
+   
+                   
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag2</label>
@@ -62,38 +72,10 @@
                     <input type="text" class="form-control" name="Tag4" id="Tag4" placeholder="Tag4" #Tag4="ngModel" [(ngModel)]="service.formexercise.Tag4">
                 </div>
             </div>
-            <div class="row mt-2">
-                <div class="col-lg-6 col-12">
-                    <label>Tag5</label>
-                    <input type="text" class="form-control" name="Tag5" id="Tag5" placeholder="Tag5" #Tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
-                </div>
-                <div class="col-lg-6 col-12">
-                    <label>Tag6</label>
-                    <input type="text" class="form-control" name="Tag6" id="Tag6" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-lg-6 col-12">
-                    <label>Tag7</label>
-                    <input type="text" class="form-control" name="Tag7" id="Tag7" placeholder="Tag7" #Tag7="ngModel" [(ngModel)]="service.formexercise.Tag7">
-                </div>
-                <div class="col-lg-6 col-12">
-                    <label>Tag8</label>
-                    <input type="text" class="form-control" name="Tag8" id="Tag8" placeholder="Tag 8" #Tag8="ngModel" [(ngModel)]="service.formexercise.Tag8">
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-lg-6 col-12">
-                    <label>Tag9</label>
-                    <input type="text" class="form-control" name="Tag9" id="Tag9" placeholder="Tag 9" #Tag9="ngModel" [(ngModel)]="service.formexercise.Tag9">
-                </div>
-                <div class="col-lg-6 col-12">
-                    <label>Tag10</label>
-                    <input type="text" class="form-control" name="Tag10" id="Tag10" placeholder="Tag 10" #Tag10="ngModel" [(ngModel)]="service.formexercise.Tag10">
-                </div>
-            </div>
+       
+                   
             <div class="row">
-                <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-3">Submit</button>
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
             </div>
 
 

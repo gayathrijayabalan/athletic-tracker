@@ -24,17 +24,17 @@ export class StudentComponent implements OnInit {
         return {
           id: item.payload.doc.id,
           ...item.payload.doc.data()}as User;
-      })
+      });
     });
 }
   student(a){
     console.log(a);
-   var docRef$= this.fs.collection<User>('user').doc(a);
+  var docRef$ = this.fs.collection<User>('user').doc(a);
 
    this.stu = docRef$.ref.get().then(function (doc) {
     if (doc.exists) {
-      console.log("Document data:", doc.data());
-      return doc.data()
+      console.log(" Document data:" , doc.data());
+      return doc.data();
     } else {
       // doc.data() will be undefined in this case
       console.log("No such document!");
