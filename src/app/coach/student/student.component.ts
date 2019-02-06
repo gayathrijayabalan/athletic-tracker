@@ -2,8 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSort, MatPaginator, MatTableDataSource} from '@angular/material';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { User } from '../../shared/user.model';
-import {AngularFirestore} from 'angularfire2/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
+
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
@@ -14,7 +15,7 @@ export class StudentComponent implements OnInit {
   list: User[];
   us: any;
  stu: any;
-  constructor(private service: CoachserviceService, private fs: AngularFirestore) { }
+  constructor(private service: CoachserviceService,  private fs: AngularFirestore) { }
 
 
   ngOnInit() {
@@ -25,8 +26,8 @@ export class StudentComponent implements OnInit {
           ...item.payload.doc.data()}as User;
       });
     });
-  }
-  student(a) {
+}
+  student(a){
     console.log(a);
   var docRef$ = this.fs.collection<User>('user').doc(a);
 
@@ -42,4 +43,4 @@ export class StudentComponent implements OnInit {
     console.log("Error getting document:", error);
   });
   }
-  }
+}
