@@ -23,8 +23,9 @@ import { DietComponent } from './coach/diet/diet.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 
+import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { EventsComponent } from './coach/events/events.component'; 
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
@@ -39,7 +40,7 @@ import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -82,7 +83,7 @@ import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './coach/footer/footer.component';
 import { ExerciseComponent } from './coach/exercise/exercise.component';
-import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
+
 import { initializeApp } from 'firebase';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
@@ -112,7 +113,6 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-   StudentbyathleteComponent,
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
@@ -126,8 +126,8 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     ViewdetailsComponent,
     PerformanceComponent,
     StudentPerformanceComponent,
-   
-
+    StudentbyathleteComponent,
+    StudentscheduleComponent
 
   ],
   imports: [
