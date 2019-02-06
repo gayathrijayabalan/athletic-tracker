@@ -16,6 +16,9 @@ import { User } from '../../shared/user.model';
 profile:any;
 list:User[];
 
+// dropdownList = [];
+// selectedItems = [];
+// dropdownSettings = {};
   constructor(public service: CoachserviceService,private afs :AngularFirestore) { }
 
   ngOnInit() {

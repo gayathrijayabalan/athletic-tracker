@@ -24,6 +24,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
 
+
 import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
 import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { EventsComponent } from './coach/events/events.component'; 
@@ -40,6 +41,7 @@ import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -180,6 +182,7 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
+  
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
