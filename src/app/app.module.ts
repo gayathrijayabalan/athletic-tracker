@@ -34,14 +34,12 @@ import { FormGroup, FormArray, FormBuilder,
   Validators,ReactiveFormsModule} from '@angular/forms';
  import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
  import {AngularFireModule} from 'angularfire2';
-
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -78,6 +76,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
+  import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -92,7 +91,8 @@ import { AddscheduleComponent } from './admin/addschedule/addschedule.component'
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 import { PerformanceComponent } from './coach/performance/performance.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
-
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+ 
  
 @NgModule({
    
@@ -176,7 +176,8 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-    OwlDateTimeModule,
+    NgMultiSelectDropDownModule,
+    OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     
     FormsModule,

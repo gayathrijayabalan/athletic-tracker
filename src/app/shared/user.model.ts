@@ -40,6 +40,10 @@ export interface Addschedule {
     Tag8: string;
     Tag9: string;
     Tag10: string;
+    athletename1:string;
+    athletename2:string;
+    Athlete1:string;
+  
 }
 export interface Performance{
  

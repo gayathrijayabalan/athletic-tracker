@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule, Workout } from '../../shared/user.model';
-import {  AngularFirestore } from 'angularfire2/firestore';
+import {  AngularFirestore,} from 'angularfire2/firestore';
+
 
 @Component({
   selector: 'app-exercise',
@@ -11,7 +12,9 @@ import {  AngularFirestore } from 'angularfire2/firestore';
 export class ExerciseComponent implements OnInit {
   list:Addschedule[];
   list1:Workout[];
-  constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
+  constructor(private service:CoachserviceService,private afs:AngularFirestore) { 
+    
+  }
 
   ngOnInit() {
     this.service.getAddschedule().subscribe(actionArray=>{
