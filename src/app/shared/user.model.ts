@@ -43,6 +43,7 @@ export interface Addschedule {
     athletename1:string;
     athletename2:string;
     Athlete1:string;
+    
   
 }
 export interface Performance{
