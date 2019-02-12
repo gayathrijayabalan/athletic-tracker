@@ -20,14 +20,10 @@ formadd:Events;
 formexercise:Addschedule;
 formsub:Performance;
 formworkout:Workout;
-tut:any;
 
   constructor(private router:Router, private afs:AngularFirestore) { }
 getUser(){
   return this.afs.collection('user').snapshotChanges();
-}  
-getSchedulestudent(){
-  return this.afs.collection('addschedule').snapshotChanges();
 }  
 getEvent(){
   return this.afs.collection('events').snapshotChanges()
@@ -38,19 +34,21 @@ getAddschedule(){
 getPerformance(){
   return this.afs.collection('performance').snapshotChanges();
 }
-getStudent(){
-  return this.afs.collection(`user`).valueChanges();
-}
+
 getProfile(det){
-  return this.afs.doc<User>(`addschedule/${det}`).valueChanges();
+  return this.afs.doc<User>(addschedule/${det}).valueChanges();
 }
 getWorkout(){
   return this.afs.collection('workout').snapshotChanges();
 }
-getdata(rel){
-   return this.afs.collection('addschedule').ref.where("Date.seconds",'==',1551085538).get()
-}
 loginnext(){
   this.router.navigate(['/dashboard'],{ skipLocationChange: true });
 }
-} 
+getStudent(){
+  return this.afs.collection('user').valueChanges();
+}
+
+getSchedulestudent(){
+  return this.afs.collection('addschedule').snapshotChanges();
+}
+}

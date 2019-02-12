@@ -1,6 +1,6 @@
 <app-admin-header></app-admin-header>
 <div class="row mt-4">
-    <div class="d-none d-lg-block d-xl-block col-lg-3 sidenav mt-4">
+    <div class="d-none d-lg-block d-xl-block col-lg-3 sidenav mt-2">
         <app-admin-sidenav></app-admin-sidenav>
     </div>
     <div class="col-md-9 col-sm-12 my-2">
@@ -38,8 +38,6 @@
                                                 <label for="EventCity">EventCity:</label>
                                                 <input name="eventcity" #eventCity="ngModel" [(ngModel)]="service.formadd.eventcity" class="form-control" id="eventcity"
                                                     placeholder="EventCity">
-
-
                                             </div>
                                         </div>
                                         <div class="row p-3">
@@ -54,13 +52,11 @@
                                                 <label for="AthleteAttendings">AthleteAttendings:</label>
                                                 <input name="athleteAttendings" #athleteAttendings="ngModel" [(ngModel)]="service.formadd.athleteattendings" class="form-control"
                                                     placeholder="AthleteAttendings">
-
-
                                             </div>
                                             <div class="col-md-4 col-10">
                                                 <label for="MedalsWon">MedalsWon:</label>
-                                               
-                                                <select #medalswon="ngModel" name="medalswon" [(ngModel)]="service.formadd.medalswon" class="form-control" >
+
+                                                <select #medalswon="ngModel" name="medalswon" [(ngModel)]="service.formadd.medalswon" class="form-control">
                                                     <option value="Gold">Gold</option>
                                                     <option value="Bronze">Bronze</option>
                                                     <option value="Silver">Silver</option>

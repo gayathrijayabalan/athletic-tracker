@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { CoachserviceService } from '../../shared/coachservice.service';
-import { NgForm } from '@angular/forms';
-import { toDate } from '@angular/common/src/i18n/format_date';
+import { NgForm,NgModel } from '@angular/forms';
+
 import { User } from '../../shared/user.model';
 
 @Component({
@@ -15,6 +15,10 @@ import { User } from '../../shared/user.model';
   export class AddscheduleComponent implements OnInit {
 profile:any;
 list:User[];
+user:any;
+// athlete1:any[];
+// athletee:any[];
+
 
   constructor(public service: CoachserviceService,private afs :AngularFirestore) { }
 
@@ -23,13 +27,14 @@ list:User[];
     this.service.getUser().subscribe(actionArrray=>{
       this.list=actionArrray.map(item=>{
         return {
+          
           id:item.payload.doc.id,
           ...item.payload.doc.data()}as User;
       })
     });
-
-  
+   
   }
+ 
     resetForm(form?: NgForm) {
       if (form !=null)
       form.resetForm();
@@ -50,6 +55,10 @@ list:User[];
         Tag8: '',
         Tag9: '',
         Tag10: '',
+        athletename1:'',
+        athletename2:'',
+        Athlete1:'',
+     
       }
     }
     onSubmit(form:NgForm){
@@ -57,4 +66,4 @@ list:User[];
       this.afs.collection('addschedule').add(data);
       this.resetForm(form);
     }
-  }
+    }
