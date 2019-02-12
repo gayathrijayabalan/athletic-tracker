@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import {AngularFirestore} from 'angularfire2/firestore'
+import  {Observable}  from  'rxjs';
 
 
 @Component({
@@ -10,7 +11,21 @@ import {AngularFirestore} from 'angularfire2/firestore'
   styleUrls: ['./athlete.component.css']
 })
 export class AthleteComponent implements OnInit {
- 
+  downloadURL : Observable<string | null>;
+  profilepicRef: any;
+  uid;
+  property:any;
+  name: any;
+  email: any;
+  phone: any;
+  profile: any;
+  brokerage: any;
+  userid:any;
+  phonenumber: number;
+  url:any;
+  uploads: any[];
+  allPercentage: Observable<any>;
+  files: Observable<any>;
   constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {

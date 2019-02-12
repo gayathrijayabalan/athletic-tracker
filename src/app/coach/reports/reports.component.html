@@ -1,20 +1,20 @@
+<app-navbar></app-navbar>
 <div class="row">
     <div class="offset-lg-2 offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 header mx-auto">
         <div class="rectangle mx-auto">
-            <div class="row">
-                <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
-            </div>
-            <div class="row">
-                <img src="/assets/icons/img.png" class="mx-auto ml-5">
-            </div>
-            <div class="col-md-9 mx-auto mt-4">
-                    <div *ngIf="afAuth.authState |async as  authUser; else logintemplate">
-                              
-                            <button (click)="logout()">logout</button>
+           
+            <div class="col-md-9 mx-auto mt-5">
+                    <div *ngFor="let us of list">
+                              {{us.Tag1}}
+                              {{us.Tag2}}
+                              {{us.Tag3}}
+                             
+                              nextlline
+
+                              {{us.assigedby}}
+                           
                         </div>
-                        <ng-template  #logintemplate class="mx-auto">
-                                <button (click)="login()" class="btn" >Login with Google</button>
-                        </ng-template>
+                      
             </div>
         </div>
     </div>
