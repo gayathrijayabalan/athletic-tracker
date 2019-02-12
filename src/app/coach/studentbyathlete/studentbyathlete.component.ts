@@ -66,7 +66,7 @@ studentdata(rel2){
   var  test=new Date(newDate).getTime();
   var test1='Timestamp(seconds=1551292200, nanoseconds=0)';
   console.log("datee"+test1);
-  this.profile=this.service.getdata(rec).then(function(querySnapshot) {
+  this.profile=this.service.g(rec).then(function(querySnapshot) {
    console.log("querySnapshot"+querySnapshot.size);
     for(var i=1;i<querySnapshot.size;i++)
     {

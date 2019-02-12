@@ -26,7 +26,7 @@ getUser(){
   return this.afs.collection('user').snapshotChanges();
 }  
 getEvent(){
-  return this.afs.collection('events').snapshotChanges()
+  return this.afs.collection('events').snapshotChanges();
 }
 getAddschedule(){
   return this.afs.collection('addschedule').snapshotChanges();
@@ -36,7 +36,7 @@ getPerformance(){
 }
 
 getProfile(det){
-  return this.afs.doc<User>(addschedule/${det}).valueChanges();
+  // return this.afs.doc<User>(addschedule/${det}).valueChanges();
 }
 getWorkout(){
   return this.afs.collection('workout').snapshotChanges();

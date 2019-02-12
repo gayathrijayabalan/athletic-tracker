@@ -40,6 +40,7 @@ import { EditprofileComponent } from './coach/editprofile/editprofile.component'
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import{} from 'angularfire2/'
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -76,7 +77,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
-import { CdkTableModule } from '@angular/cdk/table';
+import{CdkTableModule} from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -126,7 +127,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     PerformanceComponent,
     StudentPerformanceComponent,
     StudentbyathleteComponent,
-    StudentscheduleComponent
+    StudentscheduleComponent,
+    AddEventsComponent
 
   ],
   imports: [
@@ -185,7 +187,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AngularFirestore,AuthService],
  
