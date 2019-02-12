@@ -76,9 +76,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
-  import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-
-import { CdkTableModule } from '@angular/cdk/table';
+ import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -176,7 +174,6 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-    NgMultiSelectDropDownModule,
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     
