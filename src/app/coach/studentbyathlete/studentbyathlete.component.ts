@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
@@ -22,8 +23,6 @@ export class StudentbyathleteComponent implements OnInit {
   list:Addschedule[];
   profile:any;
   det:any;
-  rel1:any;
-  tut:any;
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
@@ -36,8 +35,6 @@ export class StudentbyathleteComponent implements OnInit {
         } as Addschedule;
       })
     });
-  
-    
   }
 
 //   onEdit(exercise:Addschedule){
@@ -54,35 +51,5 @@ showStudent(eve){
     console.log(idVal);
   this.profile = this.service.getProfile(idVal);
   console.log(this.profile+"fafafda");
-}
-studentdata(rel2){
-  this.rel1="28-02-2019";
-  var myDate:any="28-02-2019";
-  let time = new Date("28-02-2019");
-  //  let tut=time.getTime();
-  var rec ="Areobic";   
-  myDate=myDate.split("-");
-  var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2];
-  var  test=new Date(newDate).getTime();
-  var test1='Timestamp(seconds=1551292200, nanoseconds=0)';
-  console.log("datee"+test1);
-  this.profile=this.service.g(rec).then(function(querySnapshot) {
-   console.log("querySnapshot"+querySnapshot.size);
-    for(var i=1;i<querySnapshot.size;i++)
-    {
-    console.log("i"+i)
-    }
-    querySnapshot.forEach(function(doc) {
-        // doc.data() is never undefined for query doc snapshots
-         console.log("querySnapshot"+querySnapshot);
-        console.log(doc.id, " => ", doc.data());
-    });
-}) 
-.catch(function(error) {
-  console.log("Error getting documents: ", error);
-});
-
-    
-  console.log(this.profile+"sindhu");
 }
 }

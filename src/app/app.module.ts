@@ -77,7 +77,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
-import{CdkTableModule} from '@angular/cdk/table';
+ import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -176,7 +176,6 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-   
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     
