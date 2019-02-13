@@ -1,6 +1,6 @@
 .sidenav{
     background-color: #232F3D;
-    height: 100%;
+    min-height: 120vh;
 }
 .title{
     display: block;
