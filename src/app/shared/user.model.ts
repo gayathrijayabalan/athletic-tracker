@@ -55,7 +55,7 @@ export interface Performance{
 }
 export interface Workout{
     id:string;
-    Name:string;
+    Athlete1:string;
     Date:string;
     Workout1:string;
     Workout2:string;
