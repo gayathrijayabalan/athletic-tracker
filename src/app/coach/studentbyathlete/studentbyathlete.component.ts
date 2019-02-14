@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
+import { NgForm } from '@angular/forms';  
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 @Component({
   selector: 'app-studentbyathlete',
@@ -36,7 +37,17 @@ export class StudentbyathleteComponent implements OnInit {
       })
     });
   }
-
+  resetForm(form?: NgForm){
+    if(form !=null)
+    form.resetForm();
+    this.service.formstud={
+      id:'',
+      heartbeatrate:'',
+      injure:'',
+      rest:'',
+      notes:'',
+    }
+  }
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }

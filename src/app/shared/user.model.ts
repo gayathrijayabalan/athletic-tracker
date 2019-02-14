@@ -62,3 +62,10 @@ export interface Workout{
     Workout3:string;
     Workout4:string;
 }
+export interface Studentbyathlete{
+    id:string;
+    heartbeatrate:string;
+    injure:string;
+    rest:string;
+    notes:string;
+}
