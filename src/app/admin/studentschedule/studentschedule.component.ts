@@ -30,6 +30,7 @@ export class StudentscheduleComponent implements OnInit {
       Workout2:'', 
       Workout3:'',
       Workout4:'',
+      
     }
   }
   onSubmit(form:NgForm){
