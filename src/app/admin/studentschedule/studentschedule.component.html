@@ -41,12 +41,11 @@
         </div> -->
          <div class="col-lg-6 col-12">
           <label>Date and Time</label><br>
-          <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-calendar fa"></i></span>
-            <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt" name="Date" #Date="ngModel" [(ngModel)]="service.formworkout.Date"  class="form-control hasDatepicker"
-              placeholder="Date & Time">
-            <owl-date-time #dt></owl-date-time>
-          </div>
+          <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" #Date="ngModel" [(ngModel)]="service.formworkout.Date"  class="form-control hasDatepicker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
         </div>
         </div>
         <div class="row mt-2">

@@ -52,4 +52,10 @@ showStudent(eve){
   this.profile = this.service.getProfile(idVal);
   console.log(this.profile+"fafafda");
 }
+                                  
+showdate(a){
+  console.log(a);
+  this.profile = this.afs.collection('workout', ref => ref.where('Date','==', a)).valueChanges();
+  console.log(this.profile);
+}
 }
