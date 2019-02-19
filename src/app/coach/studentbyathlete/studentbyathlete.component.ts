@@ -57,6 +57,11 @@ export class StudentbyathleteComponent implements OnInit {
   
 //   }
 // }
+onSubmit(form:NgForm){
+  let data =form.value;
+  this.afs.collection('Studentbyathlete').add(data);
+  this.resetForm(form);
+}
 showStudent(eve){
   const idVal = eve.target.value;
     console.log(idVal);
