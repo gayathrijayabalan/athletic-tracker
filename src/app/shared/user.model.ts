@@ -46,7 +46,7 @@ export interface Addschedule {
 }
 export interface Workout{
     id:string;
-    Name:string;
+    Athlete1:string;
     Date:string;
     Workout1:string;
     Workout2:string;
@@ -60,3 +60,13 @@ export interface Studentbyathlete{
     rest:string;
     notes:string;
 }
+<<<<<<< HEAD
+=======
+export interface Studentbyathlete{
+    id:string;
+    heartbeatrate:string;
+    injure:string;
+    rest:string;
+    notes:string;
+}
+>>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba

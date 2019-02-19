@@ -25,6 +25,10 @@ list:Studentbyathlete[];
     })
     });
   }
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba
