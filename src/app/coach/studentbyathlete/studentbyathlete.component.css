@@ -1,6 +1,13 @@
 .sel{
     width:25vw;
 }
+.modal-content {
+    width: 60vw;
+    height: 50vh;
+}
+.form-control{
+    width: 20vw;
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
     .sel{
         width:40vw;

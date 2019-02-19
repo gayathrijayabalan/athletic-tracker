@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CoachserviceService } from './shared/coachservice.service';
 import { AuthGuardService } from './shared/auth-guard.service';
-import{AuthService}  from './shared/auth.service';
+import { AuthService }  from './shared/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -76,7 +76,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
-  import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+ 
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -89,9 +89,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
-import { PerformanceComponent } from './coach/performance/performance.component';
+
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
  
  
 @NgModule({
@@ -125,10 +126,11 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     AddEventsComponent,
     AddscheduleComponent,
     ViewdetailsComponent,
-    PerformanceComponent,
+  
     StudentPerformanceComponent,
     StudentbyathleteComponent,
-    StudentscheduleComponent
+    StudentscheduleComponent,
+ 
 
   ],
   imports: [
@@ -176,7 +178,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-    NgMultiSelectDropDownModule,
+    
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     

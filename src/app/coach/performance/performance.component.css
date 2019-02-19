@@ -1,8 +1,0 @@
-.btn1{
-    margin-left: 18rem;
-}
-@media(min-width:300px) and (max-width:768px){
-    .btn1{
-        margin-left: 5rem;
-    }
-}
