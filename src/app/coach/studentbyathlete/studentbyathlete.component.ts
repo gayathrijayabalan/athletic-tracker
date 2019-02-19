@@ -48,6 +48,11 @@ export class StudentbyathleteComponent implements OnInit {
       notes:'',
     }
   }
+  onSubmit(form:NgForm){
+    let data =form.value;
+    this.afs.collection('Studentbyathlete').add(data);
+    this.resetForm(form);
+  }
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }
