@@ -40,6 +40,11 @@ export interface Addschedule {
     Tag8: string;
     Tag9: string;
     Tag10: string;
+    athletename1:string;
+    athletename2:string;
+    Athlete1:string;
+    
+  
 }
 export interface Performance{
  id:string;
@@ -50,10 +55,24 @@ export interface Performance{
 }
 export interface Workout{
     id:string;
+    Athlete1:string;
     Date:string;
-    Name:string;
     Workout1:string;
     Workout2:string;
     Workout3:string;
     Workout4:string;
+}
+export interface Studentbyathlete{
+    id:string;
+    heartbeatrate:string;
+    injure:string;
+    rest:string;
+    notes:string;
+}
+export interface Studentbyathlete{
+    id:string;
+    heartbeatrate:string;
+    injure:string;
+    rest:string;
+    notes:string;
 }

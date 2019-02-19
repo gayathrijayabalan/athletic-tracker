@@ -1,6 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
+import { NgForm } from '@angular/forms';  
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 @Component({
   selector: 'app-studentbyathlete',
@@ -36,7 +38,17 @@ export class StudentbyathleteComponent implements OnInit {
       })
     });
   }
-
+  resetForm(form?: NgForm){
+    if(form !=null)
+    form.resetForm();
+    this.service.formstud={
+      id:'',
+      heartbeatrate:'',
+      injure:'',
+      rest:'',
+      notes:'',
+    }
+  }
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }
@@ -52,10 +64,10 @@ showStudent(eve){
   this.profile = this.service.getProfile(idVal);
   console.log(this.profile+"fafafda");
 }
-showDate(eve){
-  const idVal = eve.target.value;
-    console.log(idVal);
-  this.profile = this.service.getProfiledate(idVal).map;
-  console.log(this.profile+"fafafda");
+                                  
+showdate(a){
+  console.log(a);
+  this.profile = this.afs.collection('workout', ref => ref.where('Date','==', a)).valueChanges();
+  console.log(this.profile);
 }
 }

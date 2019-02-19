@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CoachserviceService } from '../../shared/coachservice.service';
+import { Studentbyathlete } from '../../shared/user.model';
+import {  AngularFirestore } from 'angularfire2/firestore';
+
 
 @Component({
   selector: 'app-viewdetails',
@@ -6,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./viewdetails.component.css']
 })
 export class ViewdetailsComponent implements OnInit {
+list:Studentbyathlete[];
+  constructor(private service:CoachserviceService,private afs:AngularFirestore) {
 
-  constructor() { }
+   }
 
   ngOnInit() {
+    this.service.getStudentbyathlete().subscribe(actionArray=>{
+    this.list=actionArray.map(item=>{
+      return{
+        id:item.payload.doc.id,
+        ...item.payload.doc.data()
+      } as Studentbyathlete;
+    })
+    });
   }
-
 }

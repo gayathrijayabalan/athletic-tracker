@@ -70,6 +70,7 @@ h1{
 .pagetitle {
     position: relative;
     background-color: #fff;
+    margin-top:-1rem;
 }
 .wid-stats {
     position: relative;
@@ -82,7 +83,7 @@ h1{
 }
 .wid-stats:before {
     position: absolute;
-    top: -8px;
+    top: -24px;
     left: -6px;
     z-index: 1;
     display: block;
@@ -104,7 +105,7 @@ h1{
 
 .wid-stats:after {
     position: absolute;
-    top: 1px;
+    top: -15px;
     right: -14rem;
     z-index: 1;
     display: block;
@@ -116,8 +117,8 @@ h1{
  
 }
 .profile{
-    width:4vw;
-}
+    width:3vw;
+    }
 .wid-stats .stats-data {
     position: relative;
     z-index: 2;
@@ -144,3 +145,7 @@ h1{
 a:hover{
     text-decoration: none;
 }
+.img{
+    width: 4vw;
+    height: 7vh;
+}   

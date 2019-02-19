@@ -3,11 +3,11 @@
             <div class="row">
     
                 <div class="logo-area">
-                    <img src="/assets/icons/img.png" class="mt-3 ml-5">
+                    <img src="/assets/icons/img.png" class="mb-5 ml-5">
     
                 </div>
                 <button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon mb-5"></span>
                 </button>
                
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -26,9 +26,19 @@
                     </div>
                 </div>
             </div>
-            <a [routerLink]="['/athlete']"><i class="fa fa-user"></i><span class="text-white pl-2">Register</span></a>
+          
            
-            <img src="/assets/icons/logo6.png" class="mt-2 profile">
+            <a [routerLink]="['/athlete']"><i class="fa fa-user mb-5"></i><span class="text-white pl-2">Register</span></a>
+           
+            <div class="text-right mb-5">
+
+                 
+                <div *ngIf="auth.user | async as user">
+                    
+                    <img [src]="user.photoURL" class="rounded-circle img" (click)="auth.signOut()">
+                </div>
+            </div>
+    
     
     
         </nav>
