@@ -49,7 +49,7 @@ const routes: Routes = [
    {path:'events',component:EventsComponent},
    {path:'performance',component:PerformanceComponent},
    {path:'workout',component:StudentscheduleComponent},
-  
+   {path:'viewdetails',component:ViewdetailsComponent},
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
  
