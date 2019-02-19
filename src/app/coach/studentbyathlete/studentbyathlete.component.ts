@@ -4,7 +4,7 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
 import { NgForm } from '@angular/forms';  
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-studentbyathlete',
@@ -40,7 +40,6 @@ export class StudentbyathleteComponent implements OnInit {
       })
     });
   }
-<<<<<<< HEAD
 resetForm(form?: NgForm){
   if(form !=null)
   form.resetForm();
@@ -57,19 +56,6 @@ onSubmit(form:NgForm){
   this.afs.collection('Studentbyathlete').add(data);
   this.resetForm(form);
 }
-=======
-  resetForm(form?: NgForm){
-    if(form !=null)
-    form.resetForm();
-    this.service.formstud={
-      id:'',
-      heartbeatrate:'',
-      injure:'',
-      rest:'',
-      notes:'',
-    }
-  }
->>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }

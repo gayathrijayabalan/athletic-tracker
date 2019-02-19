@@ -40,7 +40,7 @@ import { EditprofileComponent } from './coach/editprofile/editprofile.component'
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import{} from 'angularfire2/'
+
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -77,13 +77,9 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
-<<<<<<< HEAD
  
 
 import { CdkTableModule } from '@angular/cdk/table';
-=======
- import { CdkTableModule } from '@angular/cdk/table';
->>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba
 import { CdkTreeModule } from '@angular/cdk/tree';
 import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -135,11 +131,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     StudentPerformanceComponent,
     StudentbyathleteComponent,
     StudentscheduleComponent,
-<<<<<<< HEAD
  
-=======
-    AddEventsComponent
->>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba
 
   ],
   imports: [
@@ -187,10 +179,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-<<<<<<< HEAD
     
-=======
->>>>>>> c3be0981f4b9c7ea3cacd87251f3d44f8c9521ba
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     
