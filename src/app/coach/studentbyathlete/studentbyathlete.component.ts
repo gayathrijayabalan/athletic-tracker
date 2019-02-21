@@ -4,6 +4,8 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
 import { NgForm } from '@angular/forms';  
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+
+
 @Component({
   selector: 'app-studentbyathlete',
   templateUrl: './studentbyathlete.component.html',
@@ -27,6 +29,7 @@ export class StudentbyathleteComponent implements OnInit {
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
+    this.resetForm();
     this.service.getAddschedule().subscribe(actionArray=>{
       this.list=actionArray.map(item=>{
         return{
@@ -37,17 +40,22 @@ export class StudentbyathleteComponent implements OnInit {
       })
     });
   }
-  resetForm(form?: NgForm){
-    if(form !=null)
-    form.resetForm();
-    this.service.formstud={
-      id:'',
-      heartbeatrate:'',
-      injure:'',
-      rest:'',
-      notes:'',
-    }
+resetForm(form?: NgForm){
+  if(form !=null)
+  form.resetForm();
+  this.service.formstud={
+    id:'',
+    heartbeatrate:'',
+    injure:'',
+    rest:'',
+    notes:'',
   }
+}
+onSubmit(form:NgForm){
+  let data =form.value;
+  this.afs.collection('Studentbyathlete').add(data);
+  this.resetForm(form);
+}
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }
@@ -57,16 +65,12 @@ export class StudentbyathleteComponent implements OnInit {
   
 //   }
 // }
-onSubmit(form:NgForm){
-  let data =form.value;
-  this.afs.collection('Studentbyathlete').add(data);
-  this.resetForm(form);
-}
+
 showStudent(eve){
   const idVal = eve.target.value;
     console.log(idVal);
   this.profile = this.service.getProfile(idVal);
-  console.log(this.profile+"fafafda");
+  console.log(this.profile);
 }
                                   
 showdate(a){

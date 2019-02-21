@@ -24,7 +24,7 @@ export class StudentscheduleComponent implements OnInit {
     form.resetForm();
     this.service.formworkout= {
       id: null,
-      Athlete1: '',
+      Athlete: '',
       Date: '',
       Workout1:'',
       Workout2:'', 

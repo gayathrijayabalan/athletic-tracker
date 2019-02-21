@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CoachserviceService } from './shared/coachservice.service';
 import { AuthGuardService } from './shared/auth-guard.service';
-import{AuthService}  from './shared/auth.service';
+import { AuthService }  from './shared/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -40,7 +40,7 @@ import { EditprofileComponent } from './coach/editprofile/editprofile.component'
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import{} from 'angularfire2/'
+
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -77,7 +77,9 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
- import { CdkTableModule } from '@angular/cdk/table';
+ 
+
+import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import{HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -88,9 +90,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
-import { PerformanceComponent } from './coach/performance/performance.component';
+
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
  
  
 @NgModule({
@@ -124,11 +127,11 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     AddEventsComponent,
     AddscheduleComponent,
     ViewdetailsComponent,
-    PerformanceComponent,
+  
     StudentPerformanceComponent,
     StudentbyathleteComponent,
     StudentscheduleComponent,
-    AddEventsComponent
+ 
 
   ],
   imports: [
@@ -176,6 +179,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
+    
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     
