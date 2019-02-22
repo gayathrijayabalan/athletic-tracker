@@ -30,7 +30,7 @@ getEvent(){
   return this.afs.collection('events').snapshotChanges()
 }
 getAddschedule(){
-  return this.afs.collection('addschedule').snapshotChanges();
+  return this.afs.collection('user').snapshotChanges();
 }
 getStudentbyathlete(){
   return this.afs.collection('Studentbyathlete').snapshotChanges();

@@ -52,13 +52,17 @@ export class AthleteComponent implements OnInit {
     }
   }
  
- onSubmit(form:NgForm,name:any){
-   let data=form.value;
-   this.afs.doc(`user/${name}`).set(data);
-   this.resetForm(form);
-   console.log(data);
- }
- 
+//  onSubmit(form:NgForm,name:any){
+//    let data=form.value;
+//    this.afs.doc(`user`).set(data);
+//    this.resetForm(form);
+//    console.log(data);
+//  }
+ onSubmit(form:NgForm){
+  let data =form.value;
+  this.afs.collection('user').add(data);
+  this.resetForm(form);
+}
 
  
 }

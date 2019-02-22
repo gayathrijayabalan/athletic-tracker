@@ -48,7 +48,7 @@ const routes: Routes = [
    {path:'add-events',component:AddEventsComponent},
    {path:'events',component:EventsComponent},
    {path:'workout',component:StudentscheduleComponent},
-   {path:'viewdetails',component:ViewdetailsComponent},
+  //  {path:'viewdetails',component:ViewdetailsComponent},
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
  

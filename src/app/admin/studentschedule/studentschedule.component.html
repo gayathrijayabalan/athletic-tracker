@@ -1,35 +1,24 @@
 <app-admin-header></app-admin-header>
 <div class="row">
-  <div class="d-none d-lg-block d-xl-block col-lg-3 sidenav mt-4">
-    <app-admin-sidenav></app-admin-sidenav>
-  </div>
-  <div class="col-lg-9 col-sm-12 my-2 bg-light">
-    <h1 class="text-center mt-5 pt-3">Add-Workout</h1>
-    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-      <div class="row">
-        <div class="col-lg-12 col-12 text-center">
-<!--                   
-            <mat-list-item>
-                <mat-form-field>
-                    
-                    <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" 
-                        multiple >
-                        <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
-                            [(ngModel)]="service.formexercise.Athlete1">
+    <div class="d-none d-lg-block d-xl-block col-lg-3 sidenav mt-4">
+        <app-admin-sidenav></app-admin-sidenav>
+    </div>
+    <div class="col-lg-9 col-sm-12 my-2 bg-light">
+        <h1 class="text-center mt-5 pt-3">Add-Workout</h1>
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <div class="row">
+                <!-- <div class="col-lg-6 col-12 ">
+                    <label>Athlete Name</label><br>
+                    <select #Athlete="ngModel" name="Athlete" [(ngModel)]="service.formworkout.Athlete" class="form-control">
+                        <option value="Iniya">Iniya</option>
+                        <option value="Yamuna">Yamuna</option>
+                        <option value="shakshi">shakshi</option>
 
-                            {{exe.fullName}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </mat-list-item> -->
-        </div>
-        <!-- <div class="col-lg-6 col-12">
-            <label>Athlete Name</label><br>
-            <mat-list-item>
+                    </select>
+                </div> -->
+                <mat-list-item>
                     <mat-form-field>
-                        
-                        <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" 
-                            multiple >
+                        <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
                             <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
                                 [(ngModel)]="service.formexercise.Athlete1">
 
@@ -38,40 +27,39 @@
                         </mat-select>
                     </mat-form-field>
                 </mat-list-item>
-        </div> -->
-         <div class="col-lg-6 col-12">
-          <label>Date and Time</label><br>
-          <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" #Date="ngModel" [(ngModel)]="service.formworkout.Date"  class="form-control hasDatepicker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-        </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-lg-6 col-12">
-                <label>Workout 1</label>
-                <input type="text" class="form-control" name="Workout1" id="Workout1" placeholder="Workout1" #Workout1="ngModel" [(ngModel)]="service.formworkout.Workout1">
+                <div class="col-lg-6 col-12">
+                        <label>Date and Time</label><br>
+                        <mat-form-field>
+                              <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" #Date="ngModel" [(ngModel)]="service.formworkout.Date"  class="form-control hasDatepicker">
+                              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                      </div>
             </div>
-            <div class="col-lg-6 col-12">
-                <label>Workout 2</label>
-                <input type="text" class="form-control" name="Workout2" id="Workout2" placeholder="Workout2" #Workout2="ngModel" [(ngModel)]="service.formworkout.Workout2">
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Workout 1</label>
+                    <input type="text" class="form-control" name="Workout1" id="Workout1" placeholder="Workout1" #Workout1="ngModel" [(ngModel)]="service.formworkout.Workout1">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Workout 2</label>
+                    <input type="text" class="form-control" name="Workout2" id="Workout2" placeholder="Workout2" #Workout2="ngModel" [(ngModel)]="service.formworkout.Workout2">
+                </div>
             </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-lg-6 col-12">
-                <label>Workout 3</label>
-                <input type="text" class="form-control" name="Workout3" id="Workout3" placeholder="Workout3" #Workout3="ngModel" [(ngModel)]="service.formworkout.Workout3">
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Workout 3</label>
+                    <input type="text" class="form-control" name="Workout3" id="Workout3" placeholder="Workout3" #Workout3="ngModel" [(ngModel)]="service.formworkout.Workout3">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Workout 4</label>
+                    <input type="text" class="form-control" name="Workout4" id="Workout4" placeholder="Workout4" #Workout4="ngModel" [(ngModel)]="service.formworkout.Workout4">
+                </div>
             </div>
-            <div class="col-lg-6 col-12">
-                <label>Workout 4</label>
-                <input type="text" class="form-control" name="Workout4" id="Workout4" placeholder="Workout4" #Workout4="ngModel" [(ngModel)]="service.formworkout.Workout4">
+            <div class="row">
+                <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
             </div>
-        </div>
-        <div class="row">
-            <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
-        </div>
 
-      </form>
-      </div>
-  </div>
+        </form>
+    </div>
+</div>
