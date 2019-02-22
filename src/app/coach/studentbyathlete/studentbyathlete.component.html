@@ -22,15 +22,7 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
-      <!-- <article class="mt-3">
-            <span class="mr-3">Choose Date</span>
-            <input type="date">
-            <select [(ngModel)]="studentName" (change)="showStudent($event)" class="sel">
-   
-           <option [value]="exe.id" *ngFor="let exe of list">{{exe.Date}}</option>
-            </select>
-            
-           </article> -->
+      
 
     </div>
    
@@ -77,40 +69,5 @@
       <button type="submit" data-toggle="modal" data-target="#mymodal" class="btn btn-md btn1 btn-info">SUBMIT</button>
     </div>
   </div>
-  <div class="modal mx-auto" id="mymodal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content pl-5 pt-5">
-        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <label>HeartBeatRate:</label>
-              <input type="text" class="form-control" #heartbeatrate="ngModel" id="heartbeatrate" placeholder="HeartBeatRate" name="heartbeatrate"
-                [(ngModel)]="service.formstud.heartbeatrate">
-            </div>
-            <div class="col-md-6 form-group">
-              <label>Injure:</label>
-              <input type="text" class="form-control" #injure="ngModel" id="injure" placeholder="Injure" name="injure" [(ngModel)]="service.formstud.injure">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <label>Rest:</label>
-              <input type="text" class="form-control" #rest="ngModel" id="rest" placeholder="Rest" name="rest" [(ngModel)]="service.formstud.rest">
-            </div>
-            <div class="col-md-6 form-group">
-              <label>Notes:</label>
-              <textarea class="form-control" id="notes" #notes="ngModel" placeholder="Notes" name="notes" [(ngModel)]="service.formstud.notes"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <button type="submit" class="btn btn-md btn1 btn-info">SAVE</button>
-            </div>
-          </div>
-        </form>
-      </div>
   
-  
-    </div>
-  </div>
 </div>
