@@ -1,7 +1,32 @@
 <app-navbar></app-navbar>
 <div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto"><br>
   <div class="row">
-    <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
+      <div class="col-lg-4 col-12 mt-5"  >
+   
+          <ul class="list-group mt-4"   *ngFor='let profile of profile1 | async'>
+          
+            <li class="list-group-item active">{{profile.ExerciseName+"sgsg"}}</li>
+            <li class="list-group-item">{{profile.Date }}</li>
+            <li class="list-group-item">{{profile.Distance}}</li>
+            <li class="list-group-item">{{profile.Rest}}</li>
+            <li class="list-group-item">{{profile.Notes}}</li>
+            <li class="list-group-item">{{profile.Tag1}}</li>
+            <li class="list-group-item">{{profile.Tag2}}</li>
+            <li class="list-group-item">{{profile.Tag3}}</li>
+            <li class="list-group-item">{{profile.Tag4}}</li>
+            <li class="list-group-item">{{profile.Tag5}}</li>
+            <li class="list-group-item">{{profile.Tag6}}</li>
+            <li class="list-group-item">{{profileTag7}}</li>
+            <li class="list-group-item">{{profile.Tag8}}</li>
+            <li class="list-group-item">{{profile.Tag9}}</li>
+            <li class="list-group-item">{{profile.Tag10}}</li>
+            <li class="list-group-item dem">{{profile.Athlete1}}</li>
+           
+          </ul>
+        
+        </div>
+      
+    <!-- <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
       <ul class="list-group mt-4">
         <li class="list-group-item active">{{work.ExerciseName}}</li>
         <li class="list-group-item">{{work.Date | date}}</li>
@@ -18,11 +43,10 @@
         <li class="list-group-item">{{work.Tag8}}</li>
         <li class="list-group-item">{{work.Tag9}}</li>
         <li class="list-group-item">{{work.Tag10}}</li>
-        <!-- <li class="list-group-item">{{work.athletename1}}</li>
-        <li class="list-group-item">{{work.athletename2}}</li> -->
+        
         <li class="list-group-item dem">{{work.Athlete1}}</li>
       </ul>
-    </div>
+    </div> -->
   </div>
   <div class="row">
     <div class="col-lg-4 col-12 mt-5" *ngFor="let work of list1">

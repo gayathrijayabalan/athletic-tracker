@@ -59,6 +59,7 @@ resetForm(form?: NgForm){
     injure:'',
     rest:'',
     notes:'',
+    timing:''
   }
 }
 onSubmit(form:NgForm){

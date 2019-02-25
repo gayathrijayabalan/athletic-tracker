@@ -59,4 +59,5 @@ export interface Studentbyathlete{
     injure:string;
     rest:string;
     notes:string;
+    timing:string;
 }

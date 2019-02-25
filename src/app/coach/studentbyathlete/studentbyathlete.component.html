@@ -66,7 +66,7 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-4 col-12 mt-5">
+    <div class="col-md-3 col-12 mt-5 mx-auto">
       <button type="submit" data-toggle="modal" data-target="#mymodal" class="btn btn-md btn1 btn-info">SUBMIT</button>
     </div>
   </div>
@@ -97,6 +97,13 @@
             <textarea class="form-control" id="notes" #notes="ngModel" placeholder="Notes" name="notes" [(ngModel)]="service.formstud.notes"></textarea>
           </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 form-group mx-auto">
+                <label>Timing:</label>
+                <input type="text" class="form-control" #rest="ngModel" id="rest" placeholder="Timing" name="Timing" [(ngModel)]="service.formstud.Timing">
+              </div>
+        </div>
+          
         <div class="row">
           <div class="col-md-12 text-center mt-2">
             <button type="submit" class="btn btn-md btn1 btn-info ">SAVE</button>
