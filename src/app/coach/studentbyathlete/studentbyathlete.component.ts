@@ -40,7 +40,7 @@ export class StudentbyathleteComponent implements OnInit {
     this.show_date=false;
     this.show_name=false;
     this.resetForm();
-    this.service.getAddschedule().subscribe(actionArray=>{
+    this.service.getStudentName().subscribe(actionArray=>{
       this.list=actionArray.map(item=>{
         return{
           id:item.payload.doc.id,
@@ -91,7 +91,7 @@ showStudent(eve){
   // )
  
   
-  console.log(this.profile);
+  console.log(this.profile1);
 
 }
                                   
