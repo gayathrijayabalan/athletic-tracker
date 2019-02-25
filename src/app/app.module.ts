@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CoachserviceService } from './shared/coachservice.service';
 import { AuthGuardService } from './shared/auth-guard.service';
-import{AuthService}  from './shared/auth.service';
+import { AuthService }  from './shared/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './coach/login/login.component';
 import { DashboardComponent } from './coach/dashboard/dashboard.component';
@@ -23,8 +23,10 @@ import { DietComponent } from './coach/diet/diet.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 
+
+import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
+import { AdminHeaderComponent } from './admin/admin-header/admin-header.component';
 import { EventsComponent } from './coach/events/events.component'; 
 import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
@@ -32,13 +34,14 @@ import { FormGroup, FormArray, FormBuilder,
   Validators,ReactiveFormsModule} from '@angular/forms';
  import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
  import {AngularFireModule} from 'angularfire2';
-
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 import { ForgetComponent } from './coach/forget/forget.component';
 import { EditprofileComponent } from './coach/editprofile/editprofile.component';
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -74,6 +77,7 @@ import {  MatAutocompleteModule,
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
+ 
 
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -87,6 +91,10 @@ import { AddEventsComponent } from './admin/add-events/add-events.component';
 import { AddscheduleComponent } from './admin/addschedule/addschedule.component';
 import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component';
 
+import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+ 
  
 @NgModule({
    
@@ -108,7 +116,6 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     DietComponent,
     NavbarComponent,
     AdminHeaderComponent,
-   
     EventsComponent,
     AdminSidenavComponent,
     AdminDashboardComponent,
@@ -120,7 +127,11 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     AddEventsComponent,
     AddscheduleComponent,
     ViewdetailsComponent,
-
+  
+    StudentPerformanceComponent,
+    StudentbyathleteComponent,
+    StudentscheduleComponent,
+ 
 
   ],
   imports: [
@@ -168,15 +179,18 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-    OwlDateTimeModule,
+    
+    OwlDateTimeModule, 
     OwlNativeDateTimeModule,
+    
     FormsModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
+  
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AngularFirestore,AuthService],
  

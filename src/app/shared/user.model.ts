@@ -1,7 +1,7 @@
-
 export interface User {
     id: string;
     fullName: string;
+    designation: string;
     email: string;
     phone: string;
     dob: string;
@@ -11,6 +11,7 @@ export interface User {
     bloodgroup: string;
     height: string;
     weight: string;
+    
 }
 export interface Events{
     id:string;
@@ -18,15 +19,17 @@ export interface Events{
     eventdate:any;
     eventcity:string;
     eventcountry:string;
-    athleteattendings:string;
+    athleteAttendings:string;
     medalswon:string;
     
 }
 export interface Addschedule {
-    id: string;
-    Name: string;
-    Date:string;
+    id: string; 
+    ExerciseName: string;
+    Date: string;
     Distance: string;
+    Rest:string;
+    Notes:string;
     Tag1: string;
     Tag2: string;
     Tag3: string;
@@ -37,4 +40,30 @@ export interface Addschedule {
     Tag8: string;
     Tag9: string;
     Tag10: string;
+    athletename1:string;
+    athletename2:string;
+    Athlete1:string;
+}
+export interface Workout{
+    id:string;
+    Athlete:string;
+    Date:string;
+    Workout1:string;
+    Workout2:string;
+    Workout3:string;
+    Workout4:string;
+    Workout5:string;
+    Workout6:string;
+    Workout7:string;
+    Workout8:string;
+    Workout9:string;
+    Workout10:string;
+}
+export interface Studentbyathlete{
+    id:string;
+    heartbeatrate:string;
+    injure:string;
+    rest:string;
+    notes:string;
+    timing:string;
 }

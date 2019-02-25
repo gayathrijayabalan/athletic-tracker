@@ -7,6 +7,7 @@ import { CoachserviceService } from 'src/app/shared/coachservice.service';
   templateUrl: './add-events.component.html',
   styleUrls: ['./add-events.component.css']
 })
+
 export class AddEventsComponent implements OnInit {
   constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
@@ -22,7 +23,7 @@ this.resetForm();
       eventdate:'',
       eventcity:'',
       eventcountry:'',
-      athleteattendings:'',
+      athleteAttendings:'',
       medalswon:''
 }
 

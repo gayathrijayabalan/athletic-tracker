@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -19,8 +20,17 @@ interface User {
 @Injectable()
 export class AuthService {
 
-  user: Observable<User>;
-
+  
+  users$ : Observable<User>;
+  authState = null;
+  error: any = null;
+  uid$;
+  user;
+  property:any;
+  phonenumber1:number;
+  usersdocument:any;
+  data: Observable<any[]>;
+  data$:any;
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore,
               private router: Router) {
@@ -37,7 +47,9 @@ export class AuthService {
       )
   }
 
-
+  get currentUserId(): string {
+    return (this.authState !== null) ? this.authState.uid : 'no'
+}
 
   googleLogin() {
     const provider = new firebase.auth.GoogleAuthProvider()
@@ -68,7 +80,7 @@ export class AuthService {
     return userRef.set(data)
 
   }
-
+  
 
   signOut() {
     this.afAuth.auth.signOut().then(() => {

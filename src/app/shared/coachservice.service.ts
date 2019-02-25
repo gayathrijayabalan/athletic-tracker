@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import{User, Events,Addschedule} from './user.model';
+import{User, Events, Addschedule, Workout, Studentbyathlete} from './user.model';
 
 import{ AngularFirestore } from 'angularfire2/firestore';
 import { Router } from '@angular/router';
@@ -18,6 +18,9 @@ export class CoachserviceService {
 formData:User;
 formadd:Events;
 formexercise:Addschedule;
+formstud:Studentbyathlete;
+formworkout:Workout;
+
 
   constructor(private router:Router, private afs:AngularFirestore) { }
 getUser(){
@@ -29,7 +32,28 @@ getEvent(){
 getAddschedule(){
   return this.afs.collection('addschedule').snapshotChanges();
 }
+getStudentbyathlete(){
+  return this.afs.collection('Studentbyathlete').snapshotChanges();
+}
+getStudentName(){
+  return this.afs.collection('user').snapshotChanges();
+}
+
+getProfile(det){
+  return this.afs.doc<User>(`addschedule/${det}`  ).valueChanges();
+}
+getWorkout(){
+  return this.afs.collection('workout').snapshotChanges();
+}
 loginnext(){
   this.router.navigate(['/dashboard'],{ skipLocationChange: true });
 }
-} 
+
+getStudent(){
+  return this.afs.collection('user').valueChanges();
+}
+
+getSchedulestudent(){
+  return this.afs.collection('addschedule').snapshotChanges();
+}
+}
