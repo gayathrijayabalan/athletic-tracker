@@ -6,7 +6,9 @@
         <div class="col-md-4 col-4 text-center">
             <img src="/assets/icons/logo6.png">
         </div>
+  
         <div class="col-md-4 col-4 text-right">
+     
             <div *ngIf="auth.user | async as user">
                 <img [src]="user.photoURL" class="rounded-circle img" (click)="auth.signOut()">
             </div>
