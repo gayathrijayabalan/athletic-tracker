@@ -2,10 +2,10 @@
     <div class="offset-lg-2 col-lg-8 col-md-12 col-xs-12 col-sm-12 header mx-auto">
         <div class="rectangle mx-auto">
             <div class="row">
-                <img src="/assets/icons/logo6.png" class="mx-auto mt-5">
+                <img src="/assets/icons/logo6.png" class="img-reponsive mx-auto mt-5">
             </div>
             <div class="row">
-                <img src="/assets/icons/img.png" class="mx-auto ml-5">
+                <img src="/assets/icons/img.png" class="img-responsive mx-auto ml-5">
             </div>
             <div class="col-lg-6 mx-auto">
                 <div class="box">
@@ -21,7 +21,7 @@
                     <ng-template #authenticated>
                         <div *ngIf="auth.user | async as user">
                             <p class="text-white text-center">Welcome,{{user.displayName}}</p>
-                            <button class="btn" [routerLink]="['/dashboard']" routerLinkActive="active">Enter Dashboard</button>
+                            <button class="btn mx-auto" [routerLink]="['/dashboard']" routerLinkActive="active">Enter Dashboard</button>
                         </div>
                     </ng-template>
                 </div>
