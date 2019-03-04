@@ -63,6 +63,7 @@ user:any;
     }
     onSubmit(form:NgForm){
       let data =form.value;
+      console.log(data+"acfdd");
       this.afs.collection('addschedule').add(data);
       this.resetForm(form);
     }

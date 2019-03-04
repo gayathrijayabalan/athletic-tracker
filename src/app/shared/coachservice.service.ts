@@ -35,6 +35,9 @@ getAddschedule(){
 getStudentbyathlete(){
   return this.afs.collection('Studentbyathlete').snapshotChanges();
 }
+getStudentName(){
+  return this.afs.collection('user').snapshotChanges();
+}
 
 getProfile(det){
   return this.afs.doc<User>(`addschedule/${det}`  ).valueChanges();

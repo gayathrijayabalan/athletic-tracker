@@ -46,12 +46,18 @@ export interface Addschedule {
 }
 export interface Workout{
     id:string;
-    Athlete1:string;
+    Athlete:string;
     Date:string;
     Workout1:string;
     Workout2:string;
     Workout3:string;
     Workout4:string;
+    Workout5:string;
+    Workout6:string;
+    Workout7:string;
+    Workout8:string;
+    Workout9:string;
+    Workout10:string;
 }
 export interface Studentbyathlete{
     id:string;
@@ -59,4 +65,5 @@ export interface Studentbyathlete{
     injure:string;
     rest:string;
     notes:string;
+    timing:string;
 }
