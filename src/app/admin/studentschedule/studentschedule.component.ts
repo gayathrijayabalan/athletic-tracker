@@ -39,7 +39,7 @@ export class StudentscheduleComponent implements OnInit {
       Workout3:'',
       Workout4:'',
       Workout5:'',
-      Workout6:'',
+      Workout6:'', 
       Workout7:'',
       Workout8:'',
       Workout9:'',

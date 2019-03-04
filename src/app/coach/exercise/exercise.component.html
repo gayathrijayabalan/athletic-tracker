@@ -1,64 +1,51 @@
 <app-navbar></app-navbar>
-<div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto"><br>
+<div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto">
   <div class="row">
-      <!-- <div class="col-lg-4 col-12 mt-5"  >
-   
-          <ul class="list-group mt-4"   *ngFor='let profile of profile1 | async'>
-          
-            <li class="list-group-item active">{{profile.ExerciseName+"sgsg"}}</li>
-            <li class="list-group-item">{{profile.Date }}</li>
-            <li class="list-group-item">{{profile.Distance}}</li>
-            <li class="list-group-item">{{profile.Rest}}</li>
-            <li class="list-group-item">{{profile.Notes}}</li>
-            <li class="list-group-item">{{profile.Tag1}}</li>
-            <li class="list-group-item">{{profile.Tag2}}</li>
-            <li class="list-group-item">{{profile.Tag3}}</li>
-            <li class="list-group-item">{{profile.Tag4}}</li>
-            <li class="list-group-item">{{profile.Tag5}}</li>
-            <li class="list-group-item">{{profile.Tag6}}</li>
-            <li class="list-group-item">{{profileTag7}}</li>
-            <li class="list-group-item">{{profile.Tag8}}</li>
-            <li class="list-group-item">{{profile.Tag9}}</li>
-            <li class="list-group-item">{{profile.Tag10}}</li>
-            <li class="list-group-item dem">{{profile.Athlete1}}</li>
-           
-          </ul>
-        
-        </div> -->
-      
-    <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
-      <ul class="list-group mt-4">
-        <li class="list-group-item active">{{work.ExerciseName}}</li>
-        <li class="list-group-item">{{work.Date | date}}</li>
-        <li class="list-group-item">{{work.Distance}}</li>
-        <li class="list-group-item">{{work.Rest}}</li>
-        <li class="list-group-item">{{work.Notes}}</li>
-        <li class="list-group-item">{{work.Tag1}}</li>
-        <li class="list-group-item">{{work.Tag2}}</li>
-        <li class="list-group-item">{{work.Tag3}}</li>
-        <li class="list-group-item">{{work.Tag4}}</li>
-        <li class="list-group-item">{{work.Tag5}}</li>
-        <li class="list-group-item">{{work.Tag6}}</li>
-        <li class="list-group-item">{{work.Tag7}}</li>
-        <li class="list-group-item">{{work.Tag8}}</li>
-        <li class="list-group-item">{{work.Tag9}}</li>
-        <li class="list-group-item">{{work.Tag10}}</li>
-        
-        <li class="list-group-item dem">{{work.Athlete1}}</li>
-      </ul>
+    <div class="col-lg-12 col-12 text-center mt-5">
+     
+        <mat-tab-group>
+          <mat-tab label="hello1">
+            <div class="row">
+                <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
+                    <ul class="list-group mt-4">
+                      <li class="list-group-item active">{{work.ExerciseName}}</li>
+                      <li class="list-group-item">{{work.Date | date}}</li>
+                      <li class="list-group-item">{{work.Distance}}</li>
+                      <li class="list-group-item">{{work.Rest}}</li>
+                      <li class="list-group-item">{{work.Notes}}</li>
+                      <li class="list-group-item">{{work.Tag1}}</li>
+                      <li class="list-group-item">{{work.Tag2}}</li>
+                      <li class="list-group-item">{{work.Tag3}}</li>
+                      <li class="list-group-item">{{work.Tag4}}</li>
+                      <li class="list-group-item">{{work.Tag5}}</li>
+                      <li class="list-group-item">{{work.Tag6}}</li>
+                      <li class="list-group-item">{{work.Tag7}}</li>
+                      <li class="list-group-item">{{work.Tag8}}</li>
+                      <li class="list-group-item">{{work.Tag9}}</li>
+                      <li class="list-group-item">{{work.Tag10}}</li>
+                      
+                      <li class="list-group-item dem">{{work.Athlete1}}</li>
+                    </ul>
+                  </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="hello1">
+              <div class="row">
+                  <div class="col-lg-6 col-12 mt-5" *ngFor="let work of list1">
+                    <ul class="list-group mt-4">
+              
+                      <li class="list-group-item active">{{work.Date.seconds * 1000|date:'dd-MM-yyyy ; HH:mm'}}</li>
+                      <li class="list-group-item">{{work.Workout1}}</li>
+                      <li class="list-group-item">{{work.Workout2}}</li>
+                      <li class="list-group-item">{{work.Workout3}}</li>
+                      <li class="list-group-item">{{work.Workout4}}</li>
+                    </ul>
+                  </div>
+                </div>
+          </mat-tab>
+        </mat-tab-group>
+       
+     
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-4 col-12 mt-5" *ngFor="let work of list1">
-      <ul class="list-group mt-4">
-        
-        <li class="list-group-item active">{{work.Date.seconds * 1000|date:'dd-MM-yyyy ; HH:mm'}}</li>
-        <li class="list-group-item">{{work.Workout1}}</li>
-        <li class="list-group-item">{{work.Workout2}}</li>
-        <li class="list-group-item">{{work.Workout3}}</li>
-        <li class="list-group-item">{{work.Workout4}}</li>
-      </ul>
-    </div>
-  </div>
-  
 </div>
