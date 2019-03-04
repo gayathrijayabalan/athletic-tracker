@@ -4,21 +4,11 @@ aeve{
 .dem{
     background-color: red;
 }
-.mat-tab-body-content {
-    overflow: hidden;
+.mat-tab-body-content{
+    overflow: none;
 }
-.mat-tab-labels {
-    display: none !important;
-}
-.mat-tab-body-content {
-    height: 100%;
-    overflow: hidden !important;
-}
-/* .toolbar-flex{
-    flex:1 0.5 auto;
-} */
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 .tabs{
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 }
