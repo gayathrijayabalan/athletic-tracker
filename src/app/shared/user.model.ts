@@ -52,6 +52,12 @@ export interface Workout{
     Workout2:string;
     Workout3:string;
     Workout4:string;
+    Workout5:string;
+    Workout6:string;
+    Workout7:string;
+    Workout8:string;
+    Workout9:string;
+    Workout10:string;
 }
 export interface Studentbyathlete{
     id:string;

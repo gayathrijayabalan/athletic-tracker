@@ -37,7 +37,7 @@
                     </mat-form-field>
                 </mat-list-item>
         </div> -->
-         <div class="col-lg-6 col-12">
+         <div class="col-lg-6 col-12 text-center">
          
           <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" #Date="ngModel" [(ngModel)]="service.formworkout.Date"  class="form-control hasDatepicker">
@@ -45,7 +45,7 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
         </div>
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-6 col-12 text-center">
         <mat-list-item>
                 <mat-form-field>
                     <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
@@ -78,7 +78,39 @@
                 <label>Workout 4</label>
                 <input type="text" class="form-control" name="Workout4" id="Workout4" placeholder="Workout4" #Workout4="ngModel" [(ngModel)]="service.formworkout.Workout4">
             </div>
+         
+                                   
         </div>
+        <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Workout 5</label>
+                    <input type="text" class="form-control" name="Workout5" id="Workout5" placeholder="Workout5" #Workout5="ngModel" [(ngModel)]="service.formworkout.Workout5">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Workout 6</label>
+                    <input type="text" class="form-control" name="Workout6" id="Workout6" placeholder="Workout6" #Workout6="ngModel" [(ngModel)]="service.formworkout.Workout6">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-6 col-12">
+                    <label>Workout 7</label>
+                    <input type="text" class="form-control" name="Workout7" id="Workout7" placeholder="Workout7" #Workout7="ngModel" [(ngModel)]="service.formworkout.Workout7">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <label>Workout 8</label>
+                    <input type="text" class="form-control" name="Workout8" id="Workout8" placeholder="Workout8" #Workout8="ngModel" [(ngModel)]="service.formworkout.Workout8">
+                </div>
+            </div>
+            <div class="row mt-2">
+                    <div class="col-lg-6 col-12">
+                        <label>Workout 9</label>
+                        <input type="text" class="form-control" name="Workout9" id="Workout9" placeholder="Workout9" #Workout9="ngModel" [(ngModel)]="service.formworkout.Workout9">
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <label>Workout 10</label>
+                        <input type="text" class="form-control" name="Workout10" id="Workout10" placeholder="Workout10" #Workout10="ngModel" [(ngModel)]="service.formworkout.Workout10">
+                    </div>
+                </div>
         <div class="row">
             <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
         </div>
