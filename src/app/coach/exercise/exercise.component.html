@@ -5,10 +5,16 @@
       <nav mat-tab-nav-bar class="tabs">
         <!-- <span class="toolbar-flex"></span> -->
         <mat-tab-group>
-          <mat-tab label="hello1">
+          <mat-tab label="Exercise">
             <div class="row">
-                <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
-                    <ul class="list-group mt-4">
+                <div class="col-lg-12 col-12 mt-5" *ngFor="let work of list">
+                    <div class="col-12 col-lg-6">{{work.ExerciseName}}</div>
+                    <div class="col-12 col-lg-6">{{work.Date | date}}</div>
+                    <div class="col-6 col-lg-6">{{work.Distance}}</div>
+                    <div class="col-6 col-lg-6">{{work.Rest}}</div>
+                    <div class="col-6 col-lg-6">{{work.Notes}}</div>
+
+                    <!-- <ul class="list-group mt-4">
                       <li class="list-group-item active">{{work.ExerciseName}}</li>
                       <li class="list-group-item">{{work.Date | date}}</li>
                       <li class="list-group-item">{{work.Distance}}</li>
@@ -26,13 +32,13 @@
                       <li class="list-group-item">{{work.Tag10}}</li>
                       
                       <li class="list-group-item dem">{{work.Athlete1}}</li>
-                    </ul>
+                    </ul> -->
                   </div>
             </div>
           </mat-tab>
-          <mat-tab label="hello1">
+          <mat-tab label="Workout">
               <div class="row">
-                  <div class="col-lg-6 col-12 mt-5" *ngFor="let work of list1">
+                  <div class="col-lg-12 col-12 mt-5" *ngFor="let work of list1">
                     <ul class="list-group mt-4">
               
                       <li class="list-group-item active">{{work.Date.seconds * 1000|date:'dd-MM-yyyy ; HH:mm'}}</li>
@@ -45,8 +51,7 @@
                 </div>
           </mat-tab>
         </mat-tab-group>
-        <span class="toolbar-flex"></span>
-      </nav>
+       </nav>
     </div>
   </div>
 </div>
