@@ -4,3 +4,11 @@
 .dem{
     background-color: red;
 }
+/* .toolbar-flex{
+    flex:1 0.5 auto;
+} */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+.tabs{
+    margin-top: 5rem;
+}
+}
