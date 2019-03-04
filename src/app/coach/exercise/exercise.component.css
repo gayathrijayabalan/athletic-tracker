@@ -4,6 +4,16 @@ aeve{
 .dem{
     background-color: red;
 }
+.mat-tab-body-content {
+    overflow: hidden;
+}
+.mat-tab-labels {
+    display: none !important;
+}
+.mat-tab-body-content {
+    height: 100%;
+    overflow: hidden !important;
+}
 /* .toolbar-flex{
     flex:1 0.5 auto;
 } */
