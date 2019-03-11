@@ -94,21 +94,7 @@
                     <input type="text" class="form-control" name="Tag10" id="Tag10" placeholder="Tag10" #Tag10="ngModel" [(ngModel)]="service.formexercise.Tag10">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-12 text-center">
-                    <mat-list-item>
-                        <mat-form-field>
-                            <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
-                                <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
-                                    [(ngModel)]="service.formexercise.Athlete1">
-
-                                    {{exe.fullName}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </mat-list-item>
-                </div>
-            </div>
+          
             <div class="row">
                 <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
             </div>
