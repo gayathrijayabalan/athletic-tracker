@@ -23,10 +23,13 @@ export class StudentComponent implements OnInit {
       this.list = actionArrray.map(item => {
         return {
           id: item.payload.doc.id,
-          ...item.payload.doc.data()}as User;
+          ...item.payload.doc.data()}as User; 
+        
+
       });
     });
 }
+
   student(a){
     console.log(a);
   var docRef$ = this.fs.collection<User>('user').doc(a);

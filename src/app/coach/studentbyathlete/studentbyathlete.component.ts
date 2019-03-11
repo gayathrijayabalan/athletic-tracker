@@ -4,6 +4,11 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 import { Addschedule } from '../../shared/user.model';
 import { NgForm } from '@angular/forms';  
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import 'rxjs/add/observable/combineLatest';
+import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';import { combineLatest } from 'rxjs';
+
+
 @Component({
   selector: 'app-studentbyathlete',
   templateUrl: './studentbyathlete.component.html',
@@ -23,11 +28,22 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 export class StudentbyathleteComponent implements OnInit {
   list:Addschedule[];
   profile:any;
+  pro:any;
+  profile1:any;
+  profile2:any;
   det:any;
+<<<<<<< HEAD
   eve:any;
+=======
+  show_name:any;
+  show_date:any;
+>>>>>>> 9460203060641a1628ebb380b6fd563a599a434a
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
+    this.show_date=false;
+    this.show_name=false;
+    this.resetForm();
     this.service.getAddschedule().subscribe(actionArray=>{
       this.list=actionArray.map(item=>{
         return{
@@ -38,17 +54,22 @@ export class StudentbyathleteComponent implements OnInit {
       })
     });
   }
-  resetForm(form?: NgForm){
-    if(form !=null)
-    form.resetForm();
-    this.service.formstud={
-      id:'',
-      heartbeatrate:'',
-      injure:'',
-      rest:'',
-      notes:'',
-    }
+resetForm(form?: NgForm){
+  if(form !=null)
+  form.resetForm();
+  this.service.formstud={
+    id:'',
+    heartbeatrate:'',
+    injure:'',
+    rest:'',
+    notes:'',
   }
+}
+onSubmit(form:NgForm){
+  let data =form.value;
+  this.afs.collection('Studentbyathlete').add(data);
+  this.resetForm(form);
+}
 //   onEdit(exercise:Addschedule){
 //     this.service.formexercise=Object.assign({},exercise);
 // }
@@ -58,16 +79,30 @@ export class StudentbyathleteComponent implements OnInit {
   
 //   }
 // }
+
 showStudent(eve){
   const idVal = eve.target.value;
+ this.show_name=true;
     console.log(idVal);
-  this.profile = this.service.getProfile(idVal);
-  console.log(this.profile+"fafafda");
+  // this.profile = this.service.getProfile("9LRs739uN4r7g11p2doq"
+  // );
+  this.profile1 = this.afs.collection('addschedule', ref => ref.where('Athlete1','array-contains', idVal)).valueChanges();
+  this. profile2= this.afs.collection('workout', ref => ref.where('Athlete','==', idVal)).valueChanges();
+ // this.profile=this.profile1;
+  // this.profile= combineLatest<any[]>(this.profile1, this.profile2).pipe(
+  //   map(arr => arr.reduce((acc, cur) => acc.concat(cur) ) ),
+  // )
+ 
+  
+  console.log(this.profile);
+
 }
                                   
 showdate(a){
   console.log(a);
-  this.profile = this.afs.collection('workout', ref => ref.where('Date','==', a)).valueChanges();
+  this.show_date=true;
+  //this.profile = this.afs.collection('addschedule', ref => ref.where('Athlete1','array-contains', a)).valueChanges();
+ this.profile = this.afs.collection('workout', ref => ref.where('Date','==', a)).valueChanges();
   console.log(this.profile);
 }
 }
