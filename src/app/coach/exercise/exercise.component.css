@@ -1,7 +1,9 @@
 aeve{
     width:50vw;
 }
-
+.box{
+    padding: 1rem;
+}
 .dem{
     background-color: red;
 }

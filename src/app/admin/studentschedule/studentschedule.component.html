@@ -6,6 +6,12 @@
   <div class="col-lg-9 col-sm-12 my-2 bg-light">
     <h1 class="text-center mt-5 pt-3">Add-Workout</h1>
     <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <div class="col-md-6 mx-auto" *ngIf="showMsg" >
+                    <p class="alert alert-success">
+                            <strong>Add Workout added Successfully!</strong> 
+              
+                        </p>
+                    </div>
       <div class="row">
         <div class="col-lg-12 col-12 text-center">
 <!--                   
@@ -52,7 +58,7 @@
                 <mat-form-field>
                     <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
                         <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
-                            [(ngModel)]="service.formexercise.Athlete1">
+                            [(ngModel)]="service.formworkout.Athlete1">
 
                             {{exe.fullName}}
                         </mat-option>

@@ -1,7 +1,9 @@
 .sel{
     width:25vw;
 }
-
+.box:empty {
+    display:none;
+    }
 .modal-header{
     border-bottom: none !important;
 }

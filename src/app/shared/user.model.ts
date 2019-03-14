@@ -27,6 +27,7 @@ export interface Addschedule {
     id: string; 
     ExerciseName: string;
     Date: string;
+   
     Distance: string;
     Rest:string;
     Notes:string;
@@ -43,6 +44,7 @@ export interface Addschedule {
     athletename1:string;
     athletename2:string;
     Athlete1:string;
+    
 }
 export interface Workout{
     id:string;
