@@ -26,6 +26,7 @@ export class AthleteComponent implements OnInit {
   uploads: any[];
   allPercentage: Observable<any>;
   files: Observable<any>;
+  showMsg: boolean = false;
   constructor(public service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
@@ -62,6 +63,8 @@ export class AthleteComponent implements OnInit {
   let data =form.value;
   this.afs.collection('user').add(data);
   this.resetForm(form);
+  this.showMsg=true;
+
 }
 
  

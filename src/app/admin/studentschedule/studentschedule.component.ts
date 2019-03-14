@@ -13,6 +13,7 @@ import { User} from '../../shared/user.model';
 export class StudentscheduleComponent implements OnInit {
   list:User[];
   user:any;
+  showMsg: boolean = false;
   constructor(public service: CoachserviceService,private afs :AngularFirestore) { }
 
   ngOnInit() {
@@ -53,6 +54,7 @@ export class StudentscheduleComponent implements OnInit {
     this.afs.collection('workout').add(data);
     this.resetForm(form);
     console.log("df");
+    this.showMsg=true;
   }
 
 }

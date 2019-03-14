@@ -2,61 +2,62 @@
 <div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto">
   <br>
   <div class="row col-md-12 mt-5 mx-auto top ">
-    <div class="col-md-6 col-12">
+    <div class="col-md-6 col-12 ">
       <div class="form-group"><label class="mr-3">choose athlete name</label>
         <select [(ngModel)]="studentName" (change)="showStudent($event)" class=" form-control">
-          <option [value]="exe.fullName" *ngFor="let exe of list">{{exe.fullName}}</option>
+          <option [value]="exe.fullName" *ngFor="let exe of list" >{{exe.fullName}}</option>
         </select>
       </div>
-          
-    </div>
-    <div class="col-md-6 col-12">
+      </div>
+      <div class="col-md-6 col-12 ">
       <div class="form-group">
       <mat-form-field>  
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" (dateChange)="showdate($event.target.value)"
           class="form-control hasDatepicker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field></div>
+      </mat-form-field>
+    </div>
+        
     </div>
   </div>
   <div class="row" >
-    <div class="col-lg-4 col-md-4 col-12 mt-5" *ngFor='let profile of profile1 | async' >
-   
+    <div class="col-lg-4 col-md-4 col-12 mt-5" *ngFor="let profile of profile1 | async;let i = index">
+        <div *ngFor="let tp of profile.Athlete1;let i = index" class="box">
       <ul class="list-group mt-4"   >
-      
+          <li class="list-group-item box dem">{{profile.Athlete1[i]}}</li>
         <li class="list-group-item active">{{profile.ExerciseName}}</li>
-        <li class="list-group-item">{{profile.Date }}</li>
-        <li class="list-group-item">{{profile.Distance}}</li>
-        <li class="list-group-item">{{profile.Rest}}</li>
-        <li class="list-group-item">{{profile.Notes}}</li>
-        <li class="list-group-item">{{profile.Tag1}}</li>
-        <li class="list-group-item">{{profile.Tag2}}</li>
-        <li class="list-group-item">{{profile.Tag3}}</li>
-        <li class="list-group-item">{{profile.Tag4}}</li>
-        <li class="list-group-item">{{profile.Tag5}}</li>
-        <li class="list-group-item">{{profile.Tag6}}</li>
-        <li class="list-group-item">{{profileTag7}}</li>
-        <li class="list-group-item">{{profile.Tag8}}</li>
-        <li class="list-group-item">{{profile.Tag9}}</li>
-        <li class="list-group-item">{{profile.Tag10}}</li>
-        <li class="list-group-item dem">{{profile.Athlete1}}</li>
+        <li class="list-group-item box">{{profile.Date }}</li>
+        <li class="list-group-item box">{{profile.Distance}}</li>
+        <li class="list-group-item box">{{profile.Rest}}</li>
+        <li class="list-group-item box">{{profile.Notes}}</li>
+        <li class="list-group-item box">{{profile.Tag1}}</li>
+        <li class="list-group-item box ">{{profile.Tag2}}</li>
+        <li class="list-group-item box">{{profile.Tag3}}</li>
+        <li class="list-group-item box ">{{profile.Tag4}}</li>
+        <li class="list-group-item box">{{profile.Tag5}}</li>
+        <li class="list-group-item box">{{profile.Tag6}}</li>
+        <li class="list-group-item box">{{profileTag7}}</li>
+        <li class="list-group-item box">{{profile.Tag8}}</li>
+        <li class="list-group-item box">{{profile.Tag9}}</li>
+        <li class="list-group-item box">{{profile.Tag10}}</li>
+        
        
       </ul>
-    
+    </div>
     </div>
   
       <div class="col-lg-4 col-md-4 col-12 mt-5" *ngFor='let movie of profile | async'>
         <ul class="list-group mt-4" >
-          <li class="list-group-item active">{{movie.Athlete}}</li>
-          <li class="list-group-item">{{movie.Date.seconds * 1000 | date:'dd-MM-yyyy ' }}</li>
-          <li class="list-group-item">{{movie.Workout1}}</li>
-          <li class="list-group-item">{{movie.Workout2}}</li>
-          <li class="list-group-item">{{movie.Workout3}}</li>
-          <li class="list-group-item">{{movie.Workout4}}</li>
-          <li class="list-group-item">{{movie.Date.seconds * 1000 | date:'dd-MM-yyyy ' }}</li>
-          <li class="list-group-item">{{movie.Distance}}</li>
-          <li class="list-group-item">{{movie.Notes}}</li>
+          <li class="list-group-item active box">{{movie.Athlete1}}</li>
+          <li class="list-group-item box">{{movie.Date.seconds * 1000 | date:'dd-MM-yyyy ' }}</li>
+          <li class="list-group-item box">{{movie.Workout1}}</li>
+          <li class="list-group-item box">{{movie.Workout2}}</li>
+          <li class="list-group-item box">{{movie.Workout3}}</li>
+          <li class="list-group-item box">{{movie.Workout4}}</li>
+         
+          <li class="list-group-item box">{{movie.Distance}}</li>
+          <li class="list-group-item box">{{movie.Notes}}</li>
         </ul>
       </div>
 

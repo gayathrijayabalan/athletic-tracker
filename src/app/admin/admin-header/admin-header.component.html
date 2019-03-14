@@ -1,54 +1,65 @@
 <div class="topnav col-md-12  d-none d-lg-block">
-        <nav class="navbar fixed-top navbar-dark top-header">
-            <div class="row">
-    
-                <div class="logo-area">
-                    <img src="/assets/icons/img.png" class="mb-5 ml-5">
-    
-                </div>
-                <button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span class="navbar-toggler-icon mb-5"></span>
-                </button>
-               z
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="r4_counter wid-stats db_box">
-                        <div class="stats-data">
-                            <div class="stats">
-                                <div class="pull-left pagetitle ">
-                                    <span class="line"></span>
-                                    <h1>Dashboard</h1>
-    
-                                </div>
-    
+    <nav class="navbar fixed-top navbar-dark top-header">
+        <div class="row">
+            <div class="logo-area">
+                <img src="/assets/icons/img.png" class="mb-5 ml-5">
+            </div>
+            <button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon mb-5"></span>
+            </button>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="r4_counter wid-stats db_box">
+                    <div class="stats-data">
+                        <div class="stats">
+                            <div class="pull-left pagetitle ">
+                                <span class="line"></span>
+                                <h1>Dashboard</h1>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-          
-            
-           
-            <div class="text-right mb-5">
-
-                 
-                <div *ngIf="auth.user | async as user">
-                    
-                    <img [src]="user.photoURL" class="rounded-circle img" (click)="auth.signOut()">
-                </div>
+        </div>
+        <!-- <a [routerLink]="['/athlete']"><i class="fa fa-user mb-5"></i><span class="text-white pl-2">Register</span></a> -->
+        <div class="text-right mb-5">
+            <div *ngIf="auth.user | async as user">
+                <img [src]="user.photoURL" class="rounded-circle img" (click)="auth.signOut()">
             </div>
-    
-    
-    
-        </nav>
-    </div>
+        </div>
+    </nav>
+</div>
 
 
->
 
 
->
+<nav class="navbar fixed-top navbar-dark bg-primary navph d-lg-none">
+    <a class="navbar-brand" href="#"> <img src="/assets/icons/img.png" class="mt-2"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a routerLink="/admin-dashboard" class="text-white">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/addschedule" class="text-white">Add-Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/viewdetails" class="text-white">Performance</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/workout" class="text-white">Add-Workout</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/add-events" class="text-white">Add-Events</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/athlete" class="text-white">Athlete Register</a>
+            </li>
+        </ul>
 
+<<<<<<< HEAD
       <nav class="navbar fixed-top navbar-dark bg-primary navph d-lg-none">
             <a class="navbar-brand" href="#"> <img src="/assets/icons/img.png" class="mt-2"></a>
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
@@ -81,3 +92,7 @@
                  
              </div>
           </nav>
+=======
+    </div>
+</nav>
+>>>>>>> 520045e39d476f43167d41f8cec2c5da63e95b18

@@ -10,8 +10,12 @@ import {  AngularFirestore,} from 'angularfire2/firestore';
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
+  newTrustFormVisible: false;
+  
   list:Addschedule[];
   list1:Workout[];
+  object:any;
+  
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { 
     
   }
@@ -35,5 +39,8 @@ export class ExerciseComponent implements OnInit {
         } as Workout;
       })
     });
+  }
+  onEdit(work:Addschedule){
+    this.service.formexercise=Object.assign({},work);
   }
 }

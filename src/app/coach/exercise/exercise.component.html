@@ -5,51 +5,56 @@
       <mat-tab-group mat-align-tabs="center" class="tabs">
         <mat-tab label="Exercise">
           <div class="row">
-            <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list">
+            <div class="col-lg-4 col-12 mt-5 col-md-4 " *ngFor="let work of list;let i = index">
+                <div *ngFor="let tp of work.Athlete1;let i = index" class="box">
               <ul class="list-group mt-4">
-                <li class="list-group-item active">{{work.ExerciseName}}</li>
-                <li class="list-group-item">{{work.Date | date}}</li>
-                <li class="list-group-item">{{work.Distance}}</li>
-                <li class="list-group-item">{{work.Rest}}</li>
-                <li class="list-group-item">{{work.Notes}}</li>
-                <li class="list-group-item">{{work.Tag1}}</li>
-                <li class="list-group-item">{{work.Tag2}}</li>
-                <li class="list-group-item">{{work.Tag3}}</li>
-                <li class="list-group-item">{{work.Tag4}}</li>
-                <li class="list-group-item">{{work.Tag5}}</li>
-                <li class="list-group-item">{{work.Tag6}}</li>
-                <li class="list-group-item">{{work.Tag7}}</li>
-                <li class="list-group-item">{{work.Tag8}}</li>
-                <li class="list-group-item">{{work.Tag9}}</li>
-                <li class="list-group-item">{{work.Tag10}}</li>
-                <li class="list-group-item dem">{{work.Athlete1}}</li>
+                  <li class="list-group-item box dem" (click)="onEdit(work)">{{work.Athlete1[i]}}</li>
+                <li class="list-group-item active box" (click)="onEdit(work)">{{work.ExerciseName}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Date | date}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Distance}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Rest}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Notes}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag1}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag2}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag3}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag4}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag5}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag6}}</li>
+                <li class="list-group-item  box" (click)="onEdit(work)">{{work.Tag7}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag8}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag9}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag10}}</li>
+           
               </ul>
+            </div>
             </div>
           </div>
         </mat-tab>
-        <mat-tab label="Workout">
+    <mat-tab label="Workout">
           <div class="row">
-            <div class="col-lg-4 col-12 col-md-4 mt-5" *ngFor="let work of list1">
-              <ul class="list-group mt-4">
+            <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let work of list1;let i = index">
+                <div *ngFor="let st of work.Athlete1;let i = index" class="box">
+                    
+                    <p  class="list-group-item active box">{{work.Athlete1[i]}}</p>
+                    <li class="list-group-item box">{{work.Date.seconds * 1000 | date:'dd-MM-yyyy ' }}</li>
+                    <p class="list-group-item box">{{work.Workout1}}</p>
+                 
+                  <p class="list-group-item box">{{work.Workout2}}</p>
+                  <p class="list-group-item box">{{work.Workout3}}</p>
+                  <p class="list-group-item box">{{work.Workout4}}</p>
+                  <p class="list-group-item box">{{work.Workout5}}</p>
+                  <p class="list-group-item box">{{work.Workout6}}</p>
+                  <p class="list-group-item box">{{work.Workout7}}</p>
+                  <p class="list-group-item box">{{work.Workout8}}</p>
+                  <p class="list-group-item box">{{work.Workout9}}</p>
+                 
 
-                <li class="list-group-item active">{{work.Date.seconds * 1000|date:'dd-MM-yyyy ; HH:mm'}}</li>
-                <li class="list-group-item">{{work.Workout1}}</li>
-                <li class="list-group-item">{{work.Workout2}}</li>
-                <li class="list-group-item">{{work.Workout3}}</li>
-                <li class="list-group-item">{{work.Workout4}}</li>
-                <li class="list-group-item">{{work.Workout5}}</li>
-                <li class="list-group-item">{{work.Workout6}}</li>
-                <li class="list-group-item">{{work.Workout7}}</li>
-                <li class="list-group-item">{{work.Workout8}}</li>
-                <li class="list-group-item">{{work.Workout9}}</li>
-                <li class="list-group-item">{{work.Workout10}}</li>
-                
-              </ul>
+                </div>  
+              
             </div>
           </div>
-        </mat-tab>
+        </mat-tab> -->
       </mat-tab-group>
-
     </div>
   </div>
 </div>
