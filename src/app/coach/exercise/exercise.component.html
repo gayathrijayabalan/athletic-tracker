@@ -5,7 +5,7 @@
       <mat-tab-group mat-align-tabs="center" class="tabs">
         <mat-tab label="Exercise">
           <div class="row">
-            <div class="col-lg-4 col-12 mt-5 col-md-4 " *ngFor="let work of list;let i = index">
+            <div class="col-lg-4 col-12 col-md-4 col-sm-4 mt-5" *ngFor="let work of list;let i = index">
                 <div *ngFor="let tp of work.Athlete1;let i = index" class="box">
               <ul class="list-group mt-4">
                   <li class="list-group-item box dem" (click)="onEdit(work)">{{work.Athlete1[i]}}</li>

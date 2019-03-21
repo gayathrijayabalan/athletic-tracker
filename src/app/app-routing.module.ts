@@ -22,10 +22,11 @@ import { ExerciseComponent } from './coach/exercise/exercise.component';
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
-
-
+import { MainComponent } from './coach/main/main.component';
+import { StudentdetailviewComponent } from './admin/studentdetailview/studentdetailview.component';
 
 const routes: Routes = [
+ {path:'main',component:MainComponent},
  {path:'dashboard',component:DashboardComponent},
  {path:'',redirectTo:'/login',pathMatch:'full'},
  {path:'diet',component:DietComponent},
@@ -51,7 +52,7 @@ const routes: Routes = [
   //  {path:'viewdetails',component:ViewdetailsComponent},
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
- 
+   {path:'exercisedetail',component:StudentdetailviewComponent},
 ];
 
 @NgModule({

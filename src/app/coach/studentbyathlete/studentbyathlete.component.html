@@ -5,11 +5,11 @@
     <div class="col-md-6 col-12 ">
       <div class="form-group"><label class="mr-3">choose athlete name</label>
         <select [(ngModel)]="studentName" (change)="showStudent($event)" class=" form-control">
-          <option [value]="exe.fullName" *ngFor="let exe of list" >{{exe.fullName}}</option>
+          <option  [routerLink]="['/dashboard']" *ngFor="let exe of list" >{{exe.fullName}}</option>
         </select>
       </div>
       </div>
-      <div class="col-md-6 col-12 ">
+      <div class="col-md-6 col-12">
       <div class="form-group">
       <mat-form-field>  
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" (dateChange)="showdate($event.target.value)"

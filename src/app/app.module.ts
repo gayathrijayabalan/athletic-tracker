@@ -93,6 +93,9 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
 
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { MainComponent } from './coach/main/main.component';
+import { ContainerComponent } from './coach/container/container.component';
+import { StudentdetailviewComponent } from './admin/studentdetailview/studentdetailview.component';
 
  
  
@@ -131,6 +134,9 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     StudentPerformanceComponent,
     StudentbyathleteComponent,
     StudentscheduleComponent,
+    MainComponent,
+    ContainerComponent,
+    StudentdetailviewComponent,
  
 
   ],
