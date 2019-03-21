@@ -6,13 +6,13 @@
     <div class="col-lg-9 col-sm-12 my-2 bg-light">
         <h1 class="text-center mt-5 pt-3">View Details</h1>
   <div class="row">
-    <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let student of list">
-      <ul class="list-group mt-4">
-        <li class="list-group-item active">{{student.heartbeatrate}}</li>
-        <li class="list-group-item">{{student.injure}}</li>
-        <li class="list-group-item">{{student.rest}}</li>
-        <li class="list-group-item">{{student.notes}}</li>
-        <li class="list-group-item">{{student.timing}}</li>
+    <div class="col-lg-4 col-12 mt-5 col-md-4" *ngFor="let student of list" >
+      <ul class="list-group mt-4" >
+        <li class="list-group-item active box">{{student.heartbeatrate}}</li>
+        <li class="list-group-item box">{{student.injure}}</li>
+        <li class="list-group-item box">{{student.rest}}</li>
+        <li class="list-group-item box">{{student.notes}}</li>
+        <li class="list-group-item box">{{student.timing}}</li>
       </ul>
     </div>
   </div>

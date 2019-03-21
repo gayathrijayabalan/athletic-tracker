@@ -16,6 +16,7 @@ import { User } from '../../shared/user.model';
 profile:any;
 list:User[];
 user:any;
+showMsg: boolean = false;
 // athlete1:any[];
 // athletee:any[];
 
@@ -66,5 +67,6 @@ user:any;
       console.log(data+"acfdd");
       this.afs.collection('addschedule').add(data);
       this.resetForm(form);
+      this.showMsg=true;
     }
     }

@@ -40,7 +40,7 @@ import { EditprofileComponent } from './coach/editprofile/editprofile.component'
 import { AthleteComponent } from './admin/athlete/athlete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-
+import { SimpleNotificationsModule } from 'angular2-notifications';
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import {  MatAutocompleteModule,
   MatBadgeModule,
@@ -94,6 +94,9 @@ import { ViewdetailsComponent } from './admin/viewdetails/viewdetails.component'
 
 import { StudentPerformanceComponent } from './coach/student-performance/student-performance.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { MainComponent } from './coach/main/main.component';
+import { ContainerComponent } from './coach/container/container.component';
+import { StudentdetailviewComponent } from './admin/studentdetailview/studentdetailview.component';
 
  
  
@@ -132,6 +135,9 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     StudentPerformanceComponent,
     StudentbyathleteComponent,
     StudentscheduleComponent,
+    MainComponent,
+    ContainerComponent,
+    StudentdetailviewComponent,
  
 
   ],
@@ -143,6 +149,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     AppRoutingModule,
     CdkTableModule,
     CdkTreeModule,
+    SimpleNotificationsModule.forRoot(),
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -180,7 +187,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     MatTreeModule,
     HttpClientModule,  
     HttpModule,
-    
+ 
+    SimpleNotificationsModule,
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
     

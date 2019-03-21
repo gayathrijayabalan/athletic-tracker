@@ -5,7 +5,14 @@
     </div>
     <div class="col-lg-9 col-sm-12 my-2 bg-light">
         <h1 class="text-center mt-5 pt-3">Add-Schedule</h1>
+        <button type="button" class="btn btn-info float-right mb-5" [routerLink]="['/exercisedetail']" >Edit</button>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                <div class="col-md-6 mx-auto" *ngIf="showMsg" >
+                        <p class="alert alert-success">
+                                <strong>Add Schedule added Successfully!</strong> 
+                  
+                            </p>
+                        </div>
             <div class="row">
                 <div class="col-lg-5 col-12">
                     <label>Exercise Name</label>
@@ -42,6 +49,9 @@
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
+                        <div *ngFor="">
+                                <input [formControlName]="i" placeholder="City">
+                              </div>
                     <label>Tag1</label>
                     <!-- <select [(ngModel)]="studentName">
 
@@ -51,64 +61,62 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag2</label>
-                    <input type="text" class="form-control" name="Tag2" id="Tag2" placeholder="Tag2" #Tag2="ngModel" [(ngModel)]="service.formexercise.Tag2">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag2" #Tag2="ngModel" [(ngModel)]="service.formexercise.Tag2">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag3</label>
-                    <input type="text" class="form-control" name="Tag3" id="Tag3" placeholder="Tag3" #Tag3="ngModel" [(ngModel)]="service.formexercise.Tag3">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag3" #Tag3="ngModel" [(ngModel)]="service.formexercise.Tag3">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag4</label>
-                    <input type="text" class="form-control" name="Tag4" id="Tag4" placeholder="Tag4" #Tag4="ngModel" [(ngModel)]="service.formexercise.Tag4">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag4" #Tag4="ngModel" [(ngModel)]="service.formexercise.Tag4">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag5</label>
-                    <input type="text" class="form-control" name="Tag5" id="Tag5" placeholder="Tag5" #Tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag5" #Tag5="ngModel" [(ngModel)]="service.formexercise.Tag5">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag6</label>
-                    <input type="text" class="form-control" name="Tag6" id="Tag6" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag6" #Tag6="ngModel" [(ngModel)]="service.formexercise.Tag6">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag7</label>
-                    <input type="text" class="form-control" name="Tag7" id="Tag7" placeholder="Tag7" #Tag7="ngModel" [(ngModel)]="service.formexercise.Tag7">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag7" #Tag7="ngModel" [(ngModel)]="service.formexercise.Tag7">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag8</label>
-                    <input type="text" class="form-control" name="Tag8" id="Tag8" placeholder="Tag8" #Tag8="ngModel" [(ngModel)]="service.formexercise.Tag8">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag8" #Tag8="ngModel" [(ngModel)]="service.formexercise.Tag8">
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-lg-6 col-12">
                     <label>Tag9</label>
-                    <input type="text" class="form-control" name="Tag9" id="Tag9" placeholder="Tag9" #Tag9="ngModel" [(ngModel)]="service.formexercise.Tag9">
+                    <input type="text" class="form-control" name="Tag1" id="Tag1" placeholder="Tag9" #Tag9="ngModel" [(ngModel)]="service.formexercise.Tag9">
                 </div>
                 <div class="col-lg-6 col-12">
                     <label>Tag10</label>
                     <input type="text" class="form-control" name="Tag10" id="Tag10" placeholder="Tag10" #Tag10="ngModel" [(ngModel)]="service.formexercise.Tag10">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 col-12 text-center">
+            <div class="col-lg-6 col-12 text-center">
                     <mat-list-item>
-                        <mat-form-field>
-                            <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
-                                <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
-                                    [(ngModel)]="service.formexercise.Athlete1">
-
-                                    {{exe.fullName}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </mat-list-item>
-                </div>
-            </div>
+                            <mat-form-field>
+                                <mat-select placeholder="Athlete Names" name="Athlete1" class="filter-select" [(ngModel)]="Athlete1" multiple>
+                                    <mat-option [value]="exe.fullName" *ngFor="let exe of list" class="form-control" name="Athlete1" id="Athlete1" #Athlete1="ngModel"
+                                        [(ngModel)]="service.formexercise.Athlete1">
+            
+                                        {{exe.fullName}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </mat-list-item>
+                        </div>
             <div class="row">
                 <button type="submit" [disabled]="form.invalid" class="btn btn-primary mx-auto mt-5">Submit</button>
             </div>
