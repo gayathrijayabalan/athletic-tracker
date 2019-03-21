@@ -1,28 +1,29 @@
 <app-navbar></app-navbar>
 <div class="offset-lg-2 col-lg-10 col-sm-12 col-md-4 mx-auto">
   <br>
-  <div class="row col-md-12 mt-5 mx-auto">
-    <div class="col-md-6 col-12 ">
-      <article class="mt-3">
-        <span class="mr-3">choose athlete name</span>
-        <select [(ngModel)]="studentName" (change)="showStudent($event)" class="sel">
+  <div class="row col-md-12 mt-5 mx-auto top ">
+    <div class="col-md-6 col-12">
+      <div class="form-group"><label class="mr-3">choose athlete name</label>
+        <select [(ngModel)]="studentName" (change)="showStudent($event)" class=" form-control">
           <option [value]="exe.fullName" *ngFor="let exe of list">{{exe.fullName}}</option>
         </select>
-      </article>
+      </div>
+          
     </div>
-    <div class="col-md-6 col-12 ">
+    <div class="col-md-6 col-12">
+      <div class="form-group">
       <mat-form-field>  
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="Date" (dateChange)="showdate($event.target.value)"
           class="form-control hasDatepicker">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      </mat-form-field></div>
     </div>
   </div>
   <div class="row" >
-    <div class="col-lg-4 col-12 mt-5"  >
+    <div class="col-lg-4 col-md-4 col-12 mt-5" *ngFor='let profile of profile1 | async' >
    
-      <ul class="list-group mt-4"   *ngFor='let profile of profile1 | async'>
+      <ul class="list-group mt-4"   >
       
         <li class="list-group-item active">{{profile.ExerciseName}}</li>
         <li class="list-group-item">{{profile.Date }}</li>
@@ -45,10 +46,8 @@
     
     </div>
   
-
-    <div class="row" *ngFor='let movie of profile | async'>
-      <div class="col-lg-4 col-12 mt-5">
-        <ul class="list-group mt-4">
+      <div class="col-lg-4 col-md-4 col-12 mt-5" *ngFor='let movie of profile | async'>
+        <ul class="list-group mt-4" >
           <li class="list-group-item active">{{movie.Athlete}}</li>
           <li class="list-group-item">{{movie.Date.seconds * 1000 | date:'dd-MM-yyyy ' }}</li>
           <li class="list-group-item">{{movie.Workout1}}</li>
@@ -63,10 +62,10 @@
 
     </div> 
 
-  </div>
+
 
   <div class="row">
-    <div class="col-lg-12 col-12 mt-5 text-center mx-auto">
+    <div class=" mt-5 mx-auto">
       <button type="submit" data-toggle="modal" data-target="#mymodal" class="btn btn-md btn1 btn-info">SUBMIT</button>
     </div>
   </div>
@@ -74,7 +73,12 @@
 
 <div class="modal mx-auto" id="mymodal">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content pl-5 pt-5">
+    <div class="modal-content p-3">
+        <div class="modal-header">
+          <h3></h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
       <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
         <div class="row">
           <div class="col-md-6 form-group">
@@ -86,8 +90,7 @@
             <label>Injure:</label>
             <input type="text" class="form-control" #injure="ngModel" id="injure" placeholder="Injure" name="injure" [(ngModel)]="service.formstud.injure">
           </div>
-        </div>
-        <div class="row">
+        
           <div class="col-md-6 form-group">
             <label>Rest:</label>
             <input type="text" class="form-control" #rest="ngModel" id="rest" placeholder="Rest" name="rest" [(ngModel)]="service.formstud.rest">
@@ -96,13 +99,18 @@
             <label>Notes:</label>
             <textarea class="form-control" id="notes" #notes="ngModel" placeholder="Notes" name="notes" [(ngModel)]="service.formstud.notes"></textarea>
           </div>
-        </div>
-        <div class="row">
+        
+            <div class="col-md-6 form-group mx-auto">
+                <label>Timing:</label>
+                <input type="text" class="form-control" #rest="ngModel" id="rest" placeholder="Timing" name="Timing" [(ngModel)]="service.formstud.Timing">
+              </div>
+        
           <div class="col-md-12 text-center mt-2">
             <button type="submit" class="btn btn-md btn1 btn-info ">SAVE</button>
           </div>
         </div>
       </form>
+      </div>
     </div>
 
 

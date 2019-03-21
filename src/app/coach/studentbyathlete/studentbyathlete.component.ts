@@ -32,19 +32,15 @@ export class StudentbyathleteComponent implements OnInit {
   profile1:any;
   profile2:any;
   det:any;
-<<<<<<< HEAD
-  eve:any;
-=======
   show_name:any;
   show_date:any;
->>>>>>> 9460203060641a1628ebb380b6fd563a599a434a
   constructor(private service:CoachserviceService,private afs:AngularFirestore) { }
 
   ngOnInit() {
     this.show_date=false;
     this.show_name=false;
     this.resetForm();
-    this.service.getAddschedule().subscribe(actionArray=>{
+    this.service.getStudentName().subscribe(actionArray=>{
       this.list=actionArray.map(item=>{
         return{
           id:item.payload.doc.id,
@@ -63,6 +59,7 @@ resetForm(form?: NgForm){
     injure:'',
     rest:'',
     notes:'',
+    timing:''
   }
 }
 onSubmit(form:NgForm){
@@ -94,7 +91,7 @@ showStudent(eve){
   // )
  
   
-  console.log(this.profile);
+  console.log(this.profile1);
 
 }
                                   

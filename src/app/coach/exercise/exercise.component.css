@@ -1,6 +1,14 @@
-.eve{
+aeve{
     width:50vw;
 }
 .dem{
     background-color: red;
+}
+.mat-tab-body-content{
+    overflow: none;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+.tabs{
+    margin-top: 3rem;
+}
 }
