@@ -5,27 +5,28 @@
       <mat-tab-group mat-align-tabs="center" class="tabs">
         <mat-tab label="Exercise">
           <div class="row">
-            <div class="col-lg-4 col-12 mt-5 col-md-4 " *ngFor="let work of list;let i = index">
-              <div *ngFor="let tp of work.Athlete1;let i = index" class="box">
-                <ul class="list-group mt-4">
-                     <li class="list-group-item box dem" (click)="onEdit(work)"  >{{work.Athlete1[i]}}<i class="glyphicon glyphicon-pencil"></i></li>
-                  <li class="list-group-item active box" (click)="onEdit(work)">{{work.ExerciseName}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Date | date}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Distance}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Rest}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Notes}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag1}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag2}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag3}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag4}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag5}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag6}}</li>
-                  <li class="list-group-item  box" (click)="onEdit(work)">{{work.Tag7}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag8}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag9}}</li>
-                  <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag10}}</li>
-                </ul>
-              </div>
+            <div class="col-lg-4 col-12 col-md-4 col-sm-4 mt-5" *ngFor="let work of list;let i = index">
+                <div *ngFor="let tp of work.Athlete1;let i = index" class="box">
+              <ul class="list-group mt-4">
+                  <li class="list-group-item box dem" (click)="onEdit(work)">{{work.Athlete1[i]}}</li>
+                <li class="list-group-item active box" (click)="onEdit(work)">{{work.ExerciseName}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Date | date}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Distance}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Rest}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Notes}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag1}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag2}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag3}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag4}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag5}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag6}}</li>
+                <li class="list-group-item  box" (click)="onEdit(work)">{{work.Tag7}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag8}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag9}}</li>
+                <li class="list-group-item box" (click)="onEdit(work)">{{work.Tag10}}</li>
+           
+              </ul>
+            </div>
             </div>
           </div>
         </mat-tab>
