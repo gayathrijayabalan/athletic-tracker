@@ -74,6 +74,7 @@ import {  MatAutocompleteModule,
   MatStepperModule,
   MatTableModule,
   MatTabsModule,
+
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule } from '@angular/material';
@@ -95,7 +96,9 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { MainComponent } from './coach/main/main.component';
 import { ContainerComponent } from './coach/container/container.component';
-import { StudentdetailviewComponent } from './admin/studentdetailview/studentdetailview.component';
+import { StudentviewComponent } from './admin/studentview/studentview.component';
+
+
 
  
  
@@ -136,7 +139,8 @@ import { StudentdetailviewComponent } from './admin/studentdetailview/studentdet
     StudentscheduleComponent,
     MainComponent,
     ContainerComponent,
-    StudentdetailviewComponent,
+    StudentviewComponent,
+
  
 
   ],
@@ -172,6 +176,7 @@ import { StudentdetailviewComponent } from './admin/studentdetailview/studentdet
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
+  
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,

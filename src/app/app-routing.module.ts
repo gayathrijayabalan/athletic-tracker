@@ -23,8 +23,7 @@ import { StudentPerformanceComponent } from './coach/student-performance/student
 import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyathlete.component';
 import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
 import { MainComponent } from './coach/main/main.component';
-import { StudentdetailviewComponent } from './admin/studentdetailview/studentdetailview.component';
-
+import { StudentviewComponent } from './admin/studentview/studentview.component';
 const routes: Routes = [
  {path:'main',component:MainComponent},
  {path:'dashboard',component:DashboardComponent},
@@ -52,7 +51,9 @@ const routes: Routes = [
   //  {path:'viewdetails',component:ViewdetailsComponent},
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
-   {path:'exercisedetail',component:StudentdetailviewComponent},
+   {path:'Studentview',component:StudentviewComponent},
+ 
+ 
 ];
 
 @NgModule({
