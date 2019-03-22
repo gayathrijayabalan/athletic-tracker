@@ -72,7 +72,8 @@
                         <input name="age" #age="ngModel" [(ngModel)]="service.formData.age" class="form-control" id="age" placeholder="age">
                     </div>
                     <div class="col-md-6 col-12 text-center">
-                        <input id="file-input" type="file" single=true (change)="upload($event)"  name="file-input" accept=".png,.jpg">
+                        <input class="file-input" type="file" (change)="startUpload($event.target.files)">
+
                     </div>
                 </div>
                 <div class="row ">

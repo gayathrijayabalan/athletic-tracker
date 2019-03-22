@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Performance } from '../../shared/user.model';
-import { CoachserviceService } from '../../shared/coachservice.service';
 
 @Component({
   selector: 'app-student-performance',
@@ -9,19 +7,9 @@ import { CoachserviceService } from '../../shared/coachservice.service';
 })
 export class StudentPerformanceComponent implements OnInit {
 
+  constructor() { }
 
-
-  list:Performance[];
-  constructor(private service:CoachserviceService) { }
-  ngOnInit() { this.service.getPerformance().subscribe(actionArray=>{
-    this.list=actionArray.map(item=>{
-      return{
-        id: item.payload.doc.id,
-        ...item.payload.doc.data()
-      } as Performance
-    })
-  });
-
+  ngOnInit() {
   }
+
 }
-  
