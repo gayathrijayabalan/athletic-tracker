@@ -4,7 +4,35 @@
         <app-admin-sidenav></app-admin-sidenav>
     </div>
     <div class="col-lg-9 col-sm-12 my-2 bg-light">
-       
- 
+      <div class="container">
+
+        <h2>Common Fruits</h2>
+        <table class="table table-bordered table-striped table-responsive-stack"  id="tableOne">
+           <thead class="thead-dark">
+              <tr>
+                 <th>Exercise Name</th>
+                 <th>Date and Time</th>
+                 <th>Distance</th>
+                 <th>Rest</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr *ngFor="let work of list;let i = index">
+
+                  <td>{{work.ExerciseName}}</td>
+                  <td>{{work.Date | date}}</td>
+                  <td>{{work.Distance}}</td>
+                  <td>{{work.Rest}}</td>
+                <td class="actions-col">  <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+                
+                 Edit </button></td>
+                  
+                  <td><a (click)="onDeleteClick()" class="btn btn-danger">Delete</a></td>
+              </tr>
+             
+           </tbody>
+        </table> 
+     </div>
+     <!-- /.container -->
   </div>
   </div>

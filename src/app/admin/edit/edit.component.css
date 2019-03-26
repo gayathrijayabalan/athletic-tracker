@@ -1,0 +1,10 @@
+.submit-button-container {
+    justify-content: flex-center;
+}
+    .submit-button{
+      width: 50%;
+    }
+
+    .delete-button{
+      width: 50%;
+    }

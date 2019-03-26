@@ -97,6 +97,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { MainComponent } from './coach/main/main.component';
 import { ContainerComponent } from './coach/container/container.component';
 import { StudentviewComponent } from './admin/studentview/studentview.component';
+import { EditComponent } from './admin/edit/edit.component';
 
 
 
@@ -140,6 +141,7 @@ import { StudentviewComponent } from './admin/studentview/studentview.component'
     MainComponent,
     ContainerComponent,
     StudentviewComponent,
+    EditComponent,
 
  
 
