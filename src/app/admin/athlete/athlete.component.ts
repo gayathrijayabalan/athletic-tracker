@@ -1,18 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators, NgForm} from '@angular/forms';
+import { CoachserviceService } from '../../shared/coachservice.service';
+import {AngularFirestore} from 'angularfire2/firestore'
+import  {Observable}  from  'rxjs';
 import { AngularFireStorage, AngularFireUploadTask } from 'angularfire2/storage';
-import { AngularFirestore } from 'angularfire2/firestore';
-import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { finalize } from 'rxjs/operators';
 @Component({
   selector: 'app-athlete',
   templateUrl: './athlete.component.html',
   styleUrls: ['./athlete.component.css']
 })
-export class AthleteComponent {
-
-  // Main task 
+export class AthleteComponent implements OnInit {
+  downloadURL : Observable<string | null>;
+  profilepicRef: any;
+  uid;
+  property:any;
+  name: any;
+  email: any;
+  phone: any;
+  profile: any;
+  brokerage: any;
+  userid:any;
+  phonenumber: number;
+  url:any;
+  uploads: any[];
+  allPercentage: Observable<any>;
+  files: Observable<any>;
+  showMsg: boolean = false;
   task: AngularFireUploadTask;
 
   // Progress monitoring
@@ -21,19 +36,15 @@ export class AthleteComponent {
   snapshot: Observable<any>;
 
   // Download URL
-  downloadURL: Observable<string>;
-
+  
   // State for dropzone CSS toggling
   isHovering: boolean;
 
-  constructor(private storage: AngularFireStorage, private db: AngularFirestore) { }
-
-  
+  constructor(public service:CoachserviceService,private afs:AngularFirestore , private storage: AngularFireStorage) { }
   toggleHover(event: boolean) {
     this.isHovering = event;
   }
-
-
+  
   startUpload(event: FileList) {
     // The File object
     const file = event.item(0)
@@ -62,18 +73,48 @@ export class AthleteComponent {
         console.log(snap)
         if (snap.bytesTransferred === snap.totalBytes) {
           // Update firestore on completion
-          this.db.collection('photos').add( { path, size: snap.totalBytes })
+          this.afs.collection('photos').add( { path, size: snap.totalBytes })
         }
       })
     )
   }
-
-
-
-  // Determines if the upload task is active
-  isActive(snapshot) {
-    return snapshot.state === 'running' && snapshot.bytesTransferred < snapshot.totalBytes
+  ngOnInit() {
+    this.resetForm();
   }
+ 
+  resetForm(form?: NgForm) {
+    if (form != null)
+      form.resetForm();
+    this.service.formData = {
+      id:'',
+      fullName:'',
+      designation:'',
+      email:'',
+      phone:'',
+      dob:'',
+      class:'',
+      age:'',
+      yearofadmin:'',
+      bloodgroup:'',
+      height:'',
+      weight:'',
+    
+    }
+  }
+ 
+//  onSubmit(form:NgForm,name:any){
+//    let data=form.value;
+//    this.afs.doc(user).set(data);
+//    this.resetForm(form);
+//    console.log(data);
+//  }
+ onSubmit(form:NgForm){
+  let data =form.value;
+  this.afs.collection('user').add(data);
+  this.resetForm(form);
+  this.showMsg=true;
 
+}
 
+ 
 }

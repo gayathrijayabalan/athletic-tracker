@@ -46,6 +46,14 @@ export interface Addschedule {
     Athlete1:string;
     
 }
+export class Issue {
+    id: number;
+    title: string;
+    state: string;
+    url: string;
+    created_at: string;
+    updated_at: string;
+  }
 export interface Workout{
     id:string;
     Athlete:string;
