@@ -32,7 +32,7 @@ import { AdminSidenavComponent } from './admin/admin-sidenav/admin-sidenav.compo
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { FormGroup, FormArray, FormBuilder,
   Validators,ReactiveFormsModule} from '@angular/forms';
- import {AngularFirestore,AngularFirestoreModule} from 'angularfire2/firestore';
+ import {AngularFirestoreModule,} from 'angularfire2/firestore';
  import {AngularFireModule} from 'angularfire2';
 import { FirestoreSettingsToken } from '@angular/fire/firestore';
 import { ForgetComponent } from './coach/forget/forget.component';
@@ -97,7 +97,8 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { MainComponent } from './coach/main/main.component';
 import { ContainerComponent } from './coach/container/container.component';
 import { StudentviewComponent } from './admin/studentview/studentview.component';
-import { UploadDirective } from './upload.directive';
+import { EditComponent } from './admin/edit/edit.component';
+import { from } from 'rxjs';
 import { AngularFireStorage } from 'angularfire2/storage';
 
 
@@ -142,7 +143,7 @@ import { AngularFireStorage } from 'angularfire2/storage';
     MainComponent,
     ContainerComponent,
     StudentviewComponent,
-    UploadDirective,
+    EditComponent,
 
  
 
@@ -203,12 +204,13 @@ import { AngularFireStorage } from 'angularfire2/storage';
     ReactiveFormsModule,
     AngularFirestoreModule,
   
+  
     AngularFireModule.initializeApp(environment.firebaseConfig),
 
   
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
-  providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AngularFirestore,AuthService,AngularFireStorage],
+  providers: [CoachserviceService,AuthGuardService, AngularFireAuth,AuthService,AngularFireStorage],
  
   bootstrap: [AppComponent]
 })

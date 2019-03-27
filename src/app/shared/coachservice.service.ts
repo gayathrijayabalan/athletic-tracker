@@ -24,7 +24,31 @@ formworkout:Workout;
 
 
   constructor(private router:Router, private afs:AngularFirestore,private httpClient: HttpClient) { }
+  getUsers(){
+    return this.afs.collection('userss').snapshotChanges();
+  }
   
+  getUserss(userKey){
+    return this.afs.collection('userss').doc(userKey).snapshotChanges();
+  }
+
+  searchUsers(searchValue){
+    return this.afs.collection('userss',ref => ref.where('nameToSearch', '>=', searchValue)
+      .where('nameToSearch', '<=', searchValue + '\uf8ff'))
+      .snapshotChanges()
+  }
+
+  searchUsersByAge(value){
+    return this.afs.collection('userss',ref => ref.orderBy('age').startAt(value)).snapshotChanges();
+  }
+
+  deleteUser(userKey){
+    return this.afs.collection('userss').doc(userKey).delete();
+  }
+
+
+
+
 getUser(){
   return this.afs.collection('user').snapshotChanges();
 }  

@@ -1,0 +1,27 @@
+//Create a random (unique) UID for file to use in Firestore and Storage
+let fileID = this.afs.createId();
+
+//Set path for Firestore upload
+var firestorePath = 'Files/' + fileID
+const storagePath = "/Uploads/" + fileID;
+
+//Actually upload file to Firestore now
+const storageRef: firebase.storage.Reference = firebase.storage().ref(storagePath);
+const uploadTask: firebase.storage.UploadTask = storageRef.put(firestorePath);
+
+//After uploading the file
+uploadTask.then((uploadSnapshot: firebase.storage.UploadTaskSnapshot) => {
+    
+    //Fetch the download URL of the Storage file
+    uploadSnapshot.ref.getDownloadURL().then((downloadURL) => {
+
+        //Now create the Firestore entry
+        this.afs.doc(path).set({
+            FileName: uploadSnapshot.metadata.name,
+            FileContentType: uploadSnapshot.metadata.contentType,
+            FileSize: uploadSnapshot.metadata.size,
+            FileURL: downloadURL,
+            FileTimeCreated: uploadSnapshot.metadata.timeCreated,
+        })
+    }
+})

@@ -26,6 +26,7 @@ import { StudentbyathleteComponent } from './coach/studentbyathlete/studentbyath
 import { StudentscheduleComponent } from './admin/studentschedule/studentschedule.component';
 import { MainComponent } from './coach/main/main.component';
 import { StudentviewComponent } from './admin/studentview/studentview.component';
+import { EditComponent } from './admin/edit/edit.component';
 const routes: Routes = [
  {path:'main',component:MainComponent},
  {path:'dashboard',component:DashboardComponent},
@@ -54,6 +55,7 @@ const routes: Routes = [
    {path:'student-performance',component:StudentPerformanceComponent},
    {path:'studentbyathlete',component:StudentbyathleteComponent},
    {path:'Studentview',component:StudentviewComponent},
+   {path:'edit',component:EditComponent},
  
  
 ];

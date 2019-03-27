@@ -2,15 +2,18 @@
 <app-navbar></app-navbar>
 <div class="offset-lg-2 col-lg-10 col-sm-12 mt-3 mx-auto">
   <div class="row">
+      
     <div class="col-md-4 col-12 mt-5" *ngFor="let us of list">
       <div class="card mt-5">
-        <img src="/assets/icons/athl.jpg" alt="John" class="rounded-circle mx-auto mt-2 img">
+    
         <h3>{{us.fullName}}</h3>
         <p>{{us.designation}}</p>
+        <a [href]="us" download> <img [src]="{{}}" class="imagesize"></a>
         <button type="btn" data-toggle="modal" data-target="#mymodal" (click)="student(us.fullName)">View Details</button>
       </div>
     </div>
   </div>
+  
 </div>
 <div class="modal" id="mymodal">
   <div class="modal-dialog modal-lg">
@@ -33,6 +36,7 @@
                     <label class="col-md-3 col-3">Name</label>
                     <span>:</span>
                     <div class="col-md-8 col-8">{{(stu|async)?.fullName}}</div>
+              
                   </div>
                 </div>
                 <div class="col-md-6">
