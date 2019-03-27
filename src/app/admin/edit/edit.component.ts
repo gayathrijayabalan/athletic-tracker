@@ -19,22 +19,27 @@ export class EditComponent implements OnInit {
   list:User[];
   user:any;
   item:any;
+  exercisen:any;
   showMsg: boolean = false;
   // athlete1:any[];
   // athletee:any[];
-  constructor(public service: CoachserviceService,private router: Router,private afs :AngularFirestore) { }
+  constructor(public service: CoachserviceService,private router: Router,private afs :AngularFirestore, private route: ActivatedRoute) { }
 
  
   ngOnInit() {
-    this.resetForm();
-    this.service.getUser().subscribe(actionArrray=>{
-      this.list=actionArrray.map(item=>{
-        return {
+this.route.queryParams.subscribe(params => {
+    this.exercisen=params;
+    console.log(this.exercisen)
+});
+    //     this.resetForm();
+    // this.service.getAddschedule().subscribe(actionArrray=>{
+    //   this.list=actionArrray.map(item=>{
+    //     return {
           
-          id:item.payload.doc.id,
-          ...item.payload.doc.data()}as User;
-      })
-    });
+    //       id:item.payload.doc.id,
+    //       ...item.payload.doc.data()}as User;
+    //   })
+    // });
    
   }
   
